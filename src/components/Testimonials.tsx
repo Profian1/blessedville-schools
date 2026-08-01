@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight, PlayCircle } from "lucide-react";
 import { TESTIMONIALS } from "../data";
@@ -20,7 +20,7 @@ export default function Testimonials() {
         />
 
         <Reveal className="mt-14">
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-white bg-white p-8 shadow-[0_30px_80px_-30px_rgba(30,90,168,0.4)] sm:p-14">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-white bg-white p-8 shadow-[0_30px_80px_-30px_rgba(8,8,8,0.4)] sm:p-14">
             <Quote className="absolute right-8 top-8 h-20 w-20 text-gold/10" />
             <div className="flex items-center gap-1 text-gold">
               {Array.from({ length: t.rating }).map((_, i) => (

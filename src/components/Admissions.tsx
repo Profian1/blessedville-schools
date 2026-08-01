@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Mail, MapPin, FileText, MessageCircle, PartyPopper, ArrowRight, Download } from "lucide-react";
 import { ADMISSIONS } from "../data";
 import { Container, Reveal, SectionHeading, EASE, Button } from "../lib/ui";
@@ -39,7 +39,7 @@ export default function Admissions() {
                   transition={{ duration: 0.7, ease: EASE, delay: i * 0.1 }}
                   className="relative text-center"
                 >
-                  <div className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/40 bg-navy text-gold shadow-[0_0_0_8px_rgba(30,90,168,1)]">
+                  <div className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/40 bg-navy text-gold shadow-[0_0_0_8px_rgba(8,8,8,1)]">
                     <Icon className="h-6 w-6" />
                     <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gold font-button text-xs font-bold text-navy">
                       {s.step}

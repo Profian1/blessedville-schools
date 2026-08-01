@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { CalendarDays, MapPin, ArrowRight } from "lucide-react";
 import { EVENTS } from "../data";
 import { Container, Reveal, SectionHeading, EASE } from "../lib/ui";
@@ -22,7 +22,7 @@ export default function Events() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, ease: EASE, delay: i * 0.07 }}
-                className="group flex gap-5 rounded-3xl border border-white bg-white p-6 shadow-[0_14px_40px_-24px_rgba(30,90,168,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_24px_60px_-26px_rgba(30,90,168,0.45)]"
+                className="group flex gap-5 rounded-3xl border border-white bg-white p-6 shadow-[0_14px_40px_-24px_rgba(8,8,8,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_24px_60px_-26px_rgba(8,8,8,0.45)]"
               >
                 <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-navy text-white">
                   <span className="text-[10px] font-semibold uppercase tracking-widest text-gold">

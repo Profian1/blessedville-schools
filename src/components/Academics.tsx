@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { ACADEMICS } from "../data";
@@ -24,7 +24,7 @@ export default function Academics() {
               key={p.name}
               onClick={() => setActive(i)}
               className={`group relative overflow-hidden rounded-2xl text-left transition-all duration-300 ${
-                active === i ? "ring-2 ring-gold shadow-[0_20px_50px_-22px_rgba(244,196,48,0.6)]" : "hover:shadow-lg"
+                active === i ? "ring-2 ring-gold shadow-[0_20px_50px_-22px_rgba(245,184,19,0.6)]" : "hover:shadow-lg"
               }`}
               aria-pressed={active === i}
             >

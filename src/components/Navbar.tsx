@@ -1,34 +1,9 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MapPin, Phone } from "lucide-react";
-import { NAV, SCHOOL, SOCIALS } from "../data";
+import { NAV, SCHOOL } from "../data";
 import { Button } from "../lib/ui";
-
-const SocialIcon = ({ name }: { name: string }) => {
-  const paths: Record<string, React.ReactNode> = {
-    Instagram: (
-      <>
-        <rect x="2" y="2" width="20" height="20" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-      </>
-    ),
-    Facebook: <path d="M14 9V7c0-1 .5-2 2-2h1V2.5h-2A3.5 3.5 0 0 0 11.5 6v3H9v3.5h2.5V22H15V12.5H18l.5-3.5h-3.5z" fill="currentColor" stroke="none" />,
-    Youtube: (
-      <>
-        <rect x="2" y="5" width="20" height="14" rx="4" />
-        <path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none" />
-      </>
-    ),
-    X: <path d="M4 4l6.5 8L4.5 20H7l4.2-5 3.8 5H21l-7-8.5L20 4h-2.4l-3.7 4.5L10 4H4z" fill="currentColor" stroke="none" />,
-  };
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7} className="h-3.5 w-3.5">
-      {paths[name]}
-    </svg>
-  );
-};
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -66,25 +41,13 @@ export default function Navbar() {
               {SCHOOL.phone}
             </span>
           </div>
-          <div className="flex items-center gap-2.5">
-            {SOCIALS.map((s) => (
-              <a
-                key={s.name}
-                href={s.url}
-                aria-label={s.name}
-                className="flex h-6 w-6 items-center justify-center rounded text-white/60 transition-colors hover:text-gold"
-              >
-                <SocialIcon name={s.name} />
-              </a>
-            ))}
-          </div>
         </div>
       </div>
 
       <header
         className={`fixed inset-x-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "top-0 bg-white/90 shadow-[0_8px_30px_-12px_rgba(30,90,168,0.18)] backdrop-blur-md"
+            ? "top-0 bg-white/90 shadow-[0_8px_30px_-12px_rgba(8,8,8,0.18)] backdrop-blur-md"
             : "top-9 bg-transparent"
         }`}
       >

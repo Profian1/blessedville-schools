@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import { GraduationCap, Star, Heart, Globe, ChevronDown, PlayCircle } from "lucide-react";
+import { GraduationCap, Star, Heart, Globe, PlayCircle } from "lucide-react";
 import { BADGES, HERO_IMAGES, SCHOOL } from "../data";
 import { Button, EASE } from "../lib/ui";
 
@@ -45,7 +45,7 @@ export default function Hero() {
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/65 to-navy/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(244,196,48,0.16),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,184,19,0.16),transparent_55%)]" />
 
       {/* Content */}
       <motion.div
@@ -106,18 +106,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <a
-        href="#stats"
-        aria-label="Scroll to explore"
-        className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/70 sm:flex"
-      >
-        <span className="text-[10px] font-medium uppercase tracking-[0.3em]">Scroll</span>
-        <span className="flex h-9 w-5 items-start justify-center rounded-full border border-white/40 p-1">
-          <span className="scrolldot h-1.5 w-1.5 rounded-full bg-gold" />
-        </span>
-        <ChevronDown className="h-4 w-4 animate-bounce" />
-      </a>
+      {/* Scroll indicator removed */}
     </section>
   );
 }

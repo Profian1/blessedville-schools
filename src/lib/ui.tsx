@@ -1,4 +1,4 @@
-import { motion, useInView, useReducedMotion, type Transition } from "framer-motion";
+﻿import { motion, useInView, useReducedMotion, type Transition } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 
@@ -102,8 +102,8 @@ export function Button({
   const base =
     "group relative inline-flex items-center justify-center gap-2 rounded-full font-button text-sm font-semibold tracking-wide px-7 py-3.5 transition-all duration-300 will-change-transform focus-visible:outline-none overflow-hidden";
   const variants: Record<string, string> = {
-    gold: "bg-gold text-navy hover:shadow-[0_14px_40px_-8px_rgba(244,196,48,0.6)] hover:-translate-y-0.5",
-    navy: "bg-navy text-white hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(30,90,168,0.55)]",
+    gold: "bg-gold text-navy hover:shadow-[0_14px_40px_-8px_rgba(245,184,19,0.6)] hover:-translate-y-0.5",
+    navy: "bg-navy text-white hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(8,8,8,0.55)]",
     outline: "border border-white/40 text-white hover:bg-white hover:text-navy",
     ghost: "border border-navy/20 text-navy hover:border-navy hover:bg-navy hover:text-white",
   };

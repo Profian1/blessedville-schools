@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import {
   Users,
   GraduationCap,
@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, ease: EASE, delay: i * 0.07 }}
               >
-                <div className="group relative h-full overflow-hidden rounded-3xl border border-white bg-white p-7 shadow-[0_14px_40px_-22px_rgba(30,90,168,0.35)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-24px_rgba(30,90,168,0.5)]">
+                <div className="group relative h-full overflow-hidden rounded-3xl border border-white bg-white p-7 shadow-[0_14px_40px_-22px_rgba(8,8,8,0.35)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-24px_rgba(8,8,8,0.5)]">
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-navy/0 via-navy/0 to-gold/0 transition-all duration-500 group-hover:from-navy/5 group-hover:to-gold/10" />
                   <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold transition-all duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:text-navy">
                     <Icon className="h-7 w-7" />

@@ -1,22 +1,22 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @theme {
-  --color-navy: #1E5AA8;
-  --color-navy-700: #123D73;
-  --color-navy-600: #174D91;
-  --color-royal: #1E5AA8;
-  --color-royal-light: #3070C0;
-  --color-gold: #F4C430;
+  --color-navy: #080808;
+  --color-navy-700: #2B2B2B;
+  --color-navy-600: #2B2B2B;
+  --color-royal: #080808;
+  --color-royal-light: #2B2B2B;
+  --color-gold: #F5B813;
   --color-gold-light: #F8D560;
-  --color-ink: #2F2F2F;
+  --color-ink: #2B2B2B;
   --color-mist: #FAFBFC;
 
   --font-playfair: "Playfair Display", Georgia, serif;
   --font-inter: "Inter", system-ui, sans-serif;
   --font-poppins: "Poppins", system-ui, sans-serif;
 
-  --shadow-soft: 0 20px 60px -20px rgba(30, 90, 168, 0.25);
-  --shadow-card: 0 12px 40px -12px rgba(30, 90, 168, 0.18);
+  --shadow-soft: 0 20px 60px -20px rgba(8,8,8,0.25);
+  --shadow-card: 0 12px 40px -12px rgba(8,8,8,0.18);
 }
 
 /* ---------- Base ---------- */
@@ -117,10 +117,10 @@ body {
 @keyframes goldpulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(244, 196, 48, 0.45);
+    box-shadow: 0 0 0 0 rgba(245, 184, 19, 0.45);
   }
   50% {
-    box-shadow: 0 0 0 14px rgba(244, 196, 48, 0);
+    box-shadow: 0 0 0 14px rgba(245, 184, 19, 0);
   }
 }
 .goldpulse {
@@ -135,7 +135,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
 .glass-dark {
-  background: rgba(30, 90, 168, 0.55);
+  background: rgba(8,8,8,0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -143,13 +143,13 @@ body {
 
 /* ---------- Gradient text ---------- */
 .text-gold-gradient {
-  background: linear-gradient(120deg, #F8D560 0%, #F4C430 45%, #D4A51E 100%);
+  background: linear-gradient(120deg, #F8D560 0%, #F5B813 45%, #D4A51E 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .text-navy-gradient {
-  background: linear-gradient(120deg, #174D91 0%, #1E5AA8 100%);
+  background: linear-gradient(120deg, #2B2B2B 0%, #080808 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

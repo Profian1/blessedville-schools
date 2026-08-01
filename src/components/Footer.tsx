@@ -2,32 +2,6 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Send, ArrowUp } from "lucide-react";
 import { NAV, SCHOOL } from "../data";
 
-const SocialIcon = ({ name }: { name: string }) => {
-  const paths: Record<string, React.ReactNode> = {
-    Instagram: (
-      <>
-        <rect x="2" y="2" width="20" height="20" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-      </>
-    ),
-    Facebook: <path d="M14 9V7c0-1 .5-2 2-2h1V2.5h-2A3.5 3.5 0 0 0 11.5 6v3H9v3.5h2.5V22H15V12.5H18l.5-3.5h-3.5z" fill="currentColor" stroke="none" />,
-    Youtube: (
-      <>
-        <rect x="2" y="5" width="20" height="14" rx="4" />
-        <path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none" />
-      </>
-    ),
-    X: <path d="M4 4l6.5 8L4.5 20H7l4.2-5 3.8 5H21l-7-8.5L20 4h-2.4l-3.7 4.5L10 4H4z" fill="currentColor" stroke="none" />,
-  };
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7} className="h-4 w-4">
-      {paths[name]}
-    </svg>
-  );
-};
-const SOCIALS = ["Instagram", "Facebook", "Youtube", "X"];
-
 const LINK_GROUPS = [
   {
     title: "Explore",
@@ -130,30 +104,15 @@ export default function Footer() {
           <p className="text-sm text-white/50">
             © {new Date().getFullYear()} {SCHOOL.name}. All rights reserved.
           </p>
-          <div className="flex items-center gap-3">
-            {SOCIALS.map((s) => (
-              <a
-                key={s}
-                href="#"
-                aria-label={s}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/70 transition-colors hover:bg-gold hover:text-navy"
-              >
-                <SocialIcon name={s} />
-              </a>
-            ))}
-          </div>
+          <button
+            aria-label="Back to top"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white/60 transition-all hover:bg-gold hover:text-navy"
+          >
+            <ArrowUp className="h-4 w-4" />
+          </button>
         </div>
       </div>
-
-      {/* Back to top */}
-      <Link
-        to="/"
-        aria-label="Back to top"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-28 right-5 z-40 hidden h-11 w-11 items-center justify-center rounded-full bg-navy text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-gold hover:text-navy sm:flex"
-      >
-        <ArrowUp className="h-5 w-5" />
-      </Link>
     </footer>
   );
 }

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import {
   Waves,
   Disc,
@@ -42,7 +42,7 @@ export default function Facilities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7, ease: EASE, delay: (i % 3) * 0.1 }}
-                className="group overflow-hidden rounded-3xl bg-white shadow-[0_14px_40px_-24px_rgba(30,90,168,0.35)]"
+                className="group overflow-hidden rounded-3xl bg-white shadow-[0_14px_40px_-24px_rgba(8,8,8,0.35)]"
               >
                 <div className="relative h-56 overflow-hidden">
                   <img
