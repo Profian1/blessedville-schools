@@ -21,8 +21,8 @@ export default function Admissions() {
         <SectionHeading
           light
           eyebrow="Admissions"
-          title={<>Your journey to <span className="text-gold-gradient">Meridian</span>.</>}
-          subtitle="A warm, guided process designed to help your family find its place with us."
+          title={<>Your journey to <span className="text-gold-gradient">Blessedville</span>.</>}
+          subtitle="A warm, simple process designed to help your family feel at home with us from the very first step."
         />
 
         <div className="relative mt-16">
@@ -39,7 +39,7 @@ export default function Admissions() {
                   transition={{ duration: 0.7, ease: EASE, delay: i * 0.1 }}
                   className="relative text-center"
                 >
-                  <div className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/40 bg-navy text-gold shadow-[0_0_0_8px_rgba(11,31,58,1)]">
+                  <div className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/40 bg-navy text-gold shadow-[0_0_0_8px_rgba(30,90,168,1)]">
                     <Icon className="h-6 w-6" />
                     <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gold font-button text-xs font-bold text-navy">
                       {s.step}
@@ -56,7 +56,7 @@ export default function Admissions() {
         </div>
 
         <Reveal delay={0.2} className="mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href="#contact" variant="gold">
+          <Button href="/contact" variant="gold">
             Apply Now <ArrowRight className="h-4 w-4" />
           </Button>
           <Button href="#" variant="outline">

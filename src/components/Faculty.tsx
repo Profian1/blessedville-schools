@@ -8,9 +8,9 @@ export default function Faculty() {
     <section className="bg-white py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Our Faculty"
-          title={<>Guided by <span className="text-gold-gradient">exceptional</span> educators.</>}
-          subtitle="A team of passionate specialists who know every student by name — and by dream."
+          eyebrow="Our Team"
+          title={<>Guided by <span className="text-gold-gradient">caring</span> educators.</>}
+          subtitle="A dedicated team of teachers and caregivers who know every child by name — and nurture them with love and patience."
         />
 
         <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">

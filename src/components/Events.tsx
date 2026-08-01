@@ -9,7 +9,7 @@ export default function Events() {
       <Container>
         <SectionHeading
           eyebrow="School Calendar"
-          title={<>What's on at <span className="text-gold-gradient">Meridian</span>.</>}
+          title={<>What is on at <span className="text-gold-gradient">Blessedville</span>.</>}
           subtitle="Open days, performances, sports, and celebrations throughout the year."
         />
 
@@ -22,7 +22,7 @@ export default function Events() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, ease: EASE, delay: i * 0.07 }}
-                className="group flex gap-5 rounded-3xl border border-white bg-white p-6 shadow-[0_14px_40px_-24px_rgba(11,31,58,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_24px_60px_-26px_rgba(11,31,58,0.45)]"
+                className="group flex gap-5 rounded-3xl border border-white bg-white p-6 shadow-[0_14px_40px_-24px_rgba(30,90,168,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_24px_60px_-26px_rgba(30,90,168,0.45)]"
               >
                 <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-navy text-white">
                   <span className="text-[10px] font-semibold uppercase tracking-widest text-gold">
@@ -40,7 +40,7 @@ export default function Events() {
                     <MapPin className="h-3.5 w-3.5 text-gold" /> {e.text}
                   </p>
                   <a
-                    href="#admissions"
+                    href="/admissions"
                     className="mt-auto inline-flex items-center gap-1 pt-3 text-sm font-semibold text-navy opacity-0 transition-opacity group-hover:opacity-100"
                   >
                     Add to calendar <ArrowRight className="h-3.5 w-3.5" />
@@ -54,8 +54,8 @@ export default function Events() {
             <div className="flex items-center gap-3 text-white">
               <CalendarDays className="h-8 w-8 text-gold" />
               <div>
-                <p className="font-display text-xl font-semibold">Download the full school calendar</p>
-                <p className="text-sm text-white/60">Term dates, holidays, and key events for 2026–27.</p>
+                <p className="font-display text-xl font-semibold">Download the school calendar</p>
+                <p className="text-sm text-white/60">Term dates, holidays, and key events for the academic year.</p>
               </div>
             </div>
             <a

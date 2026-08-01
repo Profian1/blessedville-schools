@@ -12,9 +12,9 @@ export default function Academics() {
     <section id="academics" className="bg-white py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Academics"
+          eyebrow="Programmes"
           title={<>A learning journey for <span className="text-gold-gradient">every age</span>.</>}
-          subtitle="From a child's first day to their final exam, each stage is crafted to build confidence, knowledge, and character."
+          subtitle="From a baby's first days at daycare through to confident lower primary — every stage is designed to nurture, challenge, and inspire."
         />
 
         {/* Program selector */}
@@ -24,7 +24,7 @@ export default function Academics() {
               key={p.name}
               onClick={() => setActive(i)}
               className={`group relative overflow-hidden rounded-2xl text-left transition-all duration-300 ${
-                active === i ? "ring-2 ring-gold shadow-[0_20px_50px_-22px_rgba(212,175,55,0.6)]" : "hover:shadow-lg"
+                active === i ? "ring-2 ring-gold shadow-[0_20px_50px_-22px_rgba(244,196,48,0.6)]" : "hover:shadow-lg"
               }`}
               aria-pressed={active === i}
             >
@@ -85,7 +85,7 @@ export default function Academics() {
                   ))}
                 </div>
                 <a
-                  href="#admissions"
+                  href="/admissions"
                   className="mt-8 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 font-button text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-700"
                 >
                   Learn More <ArrowUpRight className="h-4 w-4" />

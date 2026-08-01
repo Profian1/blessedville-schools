@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { Users, GraduationCap, School, Award, Trophy, type LucideIcon } from "lucide-react";
+import { Users, GraduationCap, Award, Star, Trophy, type LucideIcon } from "lucide-react";
 import { STATS } from "../data";
 import { Counter, Container, EASE } from "../lib/ui";
 
-const ICONS: Record<string, LucideIcon> = { Users, GraduationCap, School, Award, Trophy };
+const ICONS: Record<string, LucideIcon> = { Users, GraduationCap, Award, Star, Trophy };
 
 export default function Stats() {
   return (
     <section id="stats" className="relative -mt-1 bg-navy py-16 sm:py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(212,175,55,0.12),transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(244,196,48,0.12),transparent_45%)]" />
       <Container className="relative">
         <div className="grid grid-cols-2 gap-y-10 sm:gap-x-6 lg:grid-cols-5">
           {STATS.map((s, i) => {

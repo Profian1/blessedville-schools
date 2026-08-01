@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight, Expand } from "lucide-react";
 import { GALLERY } from "../data";
 import { Container, Reveal, SectionHeading, EASE } from "../lib/ui";
 
-const CATEGORIES = ["All", "Academic", "Sports", "Events", "Campus", "Graduation"];
+const CATEGORIES = ["All", "Learning", "Sports", "Events", "Activities"];
 
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
@@ -28,7 +28,7 @@ export default function Gallery() {
           light
           eyebrow="Student Life & Gallery"
           title={<>Moments that <span className="text-gold-gradient">matter</span>.</>}
-          subtitle="From the classroom to the stage, every day at Meridian is a story worth remembering."
+          subtitle="From morning lessons to swimming and creative arts — every day at Blessedville is filled with discovery and joy."
         />
 
         {/* Filters */}

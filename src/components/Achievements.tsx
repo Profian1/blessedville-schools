@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Globe, Music, FlaskConical, Award, ScrollText, type LucideIcon } from "lucide-react";
+import { Trophy, Globe, Music, Star, Award, Heart, type LucideIcon } from "lucide-react";
 import { ACHIEVEMENTS } from "../data";
 import { Container, SectionHeading, EASE } from "../lib/ui";
 
@@ -7,9 +7,9 @@ const ICONS: Record<string, LucideIcon> = {
   Trophy,
   Globe,
   Music,
-  FlaskConical,
+  Star,
   Award,
-  ScrollText,
+  Heart,
 };
 
 export default function Achievements() {
@@ -19,8 +19,8 @@ export default function Achievements() {
       <Container>
         <SectionHeading
           eyebrow="Achievements"
-          title={<>A record of <span className="text-gold-gradient">excellence</span>.</>}
-          subtitle="Our students and staff consistently reach the highest stages — locally and globally."
+          title={<>A record of <span className="text-gold-gradient">growth and excellence</span>.</>}
+          subtitle="Our learners and teachers consistently demonstrate the impact of quality CBC education and a nurturing environment."
         />
 
         <div className="relative mx-auto mt-16 max-w-4xl">
@@ -43,7 +43,7 @@ export default function Achievements() {
                   }`}
                 >
                   <span
-                    className={`absolute top-0 flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold shadow-[0_14px_30px_-12px_rgba(11,31,58,0.5)] ${
+                    className={`absolute top-0 flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold shadow-[0_14px_30px_-12px_rgba(30,90,168,0.5)] ${
                       left
                         ? "left-0 -translate-x-0 sm:left-auto sm:right-[-28px] sm:translate-x-0"
                         : "left-0 sm:left-[-28px]"
@@ -52,7 +52,7 @@ export default function Achievements() {
                     <Icon className="h-6 w-6" />
                   </span>
                   <span className="font-display text-lg font-semibold text-gold sm:hidden">{a.year}</span>
-                  <div className="ml-20 rounded-2xl border border-navy/10 bg-mist p-6 transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-24px_rgba(11,31,58,0.4)] sm:ml-0">
+                  <div className="ml-20 rounded-2xl border border-navy/10 bg-mist p-6 transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-24px_rgba(30,90,168,0.4)] sm:ml-0">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-navy/50">{a.year}</span>
                     <h3 className="mt-1 font-display text-xl font-semibold text-navy">{a.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-ink/65">{a.text}</p>

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(npm:*)",
+      "Shell(npx vite build 2>&1)",
+      "Shell(rmdir /s /q node_modules 2>nul & npm install 2>&1)",
+      "powershell",
+      "Shell(dir:*)",
+      "Shell(node -e \"const p = require('./package.json'); console.log('deps:', Object.keys(p.dependencies||{})); console.log('devDeps:', Object.keys(p.devDependencies||{}))\")",
+      "Shell(cmd:*)",
+      "Shell(git:*)",
+      "Shell(type:*)",
+      "Shell(git diff stash@{0}^..stash@{0} -- src/ index.html > temp.patch 2>&1 & git diff stash@{0} -- src/ index.html >> temp.patch 2>&1)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

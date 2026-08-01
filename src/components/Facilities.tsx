@@ -1,31 +1,25 @@
 import { motion } from "framer-motion";
 import {
-  BookOpen,
-  FlaskConical,
-  MonitorSmartphone,
-  Trophy,
   Waves,
+  Disc,
   Music,
+  Sparkles,
+  Trophy,
+  TreeDeciduous,
   Palette,
-  Bus,
-  Utensils,
-  HeartPulse,
   type LucideIcon,
 } from "lucide-react";
 import { FACILITIES } from "../data";
 import { Container, SectionHeading, EASE } from "../lib/ui";
 
 const ICONS: Record<string, LucideIcon> = {
-  BookOpen,
-  FlaskConical,
-  MonitorSmartphone,
-  Trophy,
   Waves,
+  Disc,
   Music,
+  Sparkles,
+  Trophy,
+  TreeDeciduous,
   Palette,
-  Bus,
-  Utensils,
-  HeartPulse,
 };
 
 export default function Facilities() {
@@ -33,14 +27,14 @@ export default function Facilities() {
     <section className="bg-mist py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Facilities"
-          title={<>Spaces that <span className="text-gold-gradient">inspire</span>.</>}
-          subtitle="World-class environments designed to spark curiosity, creativity, and wellbeing."
+          eyebrow="Co-curricular Activities"
+          title={<>Activities that <span className="text-gold-gradient">spark joy</span>.</>}
+          subtitle="From splashing in the pool to painting masterpieces — our activities build confidence, creativity, and teamwork in every child."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FACILITIES.map((f, i) => {
-            const Icon = ICONS[f.icon] ?? BookOpen;
+            const Icon = ICONS[f.icon] ?? Sparkles;
             return (
               <motion.div
                 key={f.title}
@@ -48,7 +42,7 @@ export default function Facilities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7, ease: EASE, delay: (i % 3) * 0.1 }}
-                className="group overflow-hidden rounded-3xl bg-white shadow-[0_14px_40px_-24px_rgba(11,31,58,0.35)]"
+                className="group overflow-hidden rounded-3xl bg-white shadow-[0_14px_40px_-24px_rgba(30,90,168,0.35)]"
               >
                 <div className="relative h-56 overflow-hidden">
                   <img

@@ -1,323 +1,334 @@
 /* ------------------------------------------------------------------ */
-/*  Meridian International Academy — central content store              */
-/*  (In a full Laravel build this would be powered by Filament CMS)    */
+/*  Blessedville Schools — central content store                       */
 /* ------------------------------------------------------------------ */
 
 export const SCHOOL = {
-  name: "Meridian International Academy",
-  short: "Meridian",
-  motto: "Lux et Veritas — Light and Truth",
-  tagline: "Shaping Tomorrow's Leaders Today",
-  email: "admissions@meridian.academy",
-  phone: "+1 (212) 555-0188",
-  whatsapp: "+12125550188",
-  address: "1200 Beacon Avenue, Riverside Park, New York",
-  hours: "Mon – Fri · 8:00 AM – 5:00 PM",
-  founded: 1996,
+  name: "Blessedville Schools",
+  short: "Blessedville",
+  motto: "Every Step Counts",
+  tagline: "Nurturing Every Child, Every Step of the Way",
+  email: "blessedville@gmail.com",
+  phone: "+254 791 480427",
+  whatsapp: "+254791480427",
+  address: "Kiwanja, Northern Bypass, Next to Maple Inn Hotel, Kahawa West, Nairobi",
+  hours: "Mon – Fri · 7:00 AM – 5:00 PM",
+  founded: 2015,
 };
 
+export const SOCIALS = [
+  { name: "Facebook", url: "https://www.facebook.com/people/blessedville-schools/61553840668941/" },
+  { name: "Instagram", url: "#" },
+  { name: "Youtube", url: "#" },
+  { name: "X", url: "#" },
+];
+
 export const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Academics", href: "#academics" },
-  { label: "Admissions", href: "#admissions" },
-  { label: "Campus Life", href: "#campus" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "News", href: "#news" },
-  { label: "Events", href: "#events" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Programmes", href: "/programmes" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Activities", href: "/activities" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const STATS = [
-  { value: 1500, suffix: "+", label: "Students", icon: "Users" },
-  { value: 120, suffix: "+", label: "Teachers", icon: "GraduationCap" },
-  { value: 98, suffix: "%", label: "University Placement", icon: "School" },
-  { value: 30, suffix: "+", label: "Years of Excellence", icon: "Award" },
-  { value: 20, suffix: "+", label: "Sports Activities", icon: "Trophy" },
+  { value: 15, suffix: "+", label: "Qualified Teachers", icon: "GraduationCap" },
+  { value: 200, suffix: "+", label: "Happy Learners", icon: "Users" },
+  { value: 10, suffix: "+", label: "Years of Excellence", icon: "Award" },
+  { value: 98, suffix: "%", label: "Parent Satisfaction", icon: "Star" },
+  { value: 12, suffix: "+", label: "Co-curricular Activities", icon: "Trophy" },
 ];
 
 export const BADGES = [
-  { icon: "Trophy", text: "100% National Exam Pass Rate" },
-  { icon: "Star", text: "25+ Years of Excellence" },
-  { icon: "GraduationCap", text: "4,000+ Alumni" },
-  { icon: "Globe", text: "International Curriculum" },
+  { icon: "GraduationCap", text: "Qualified & Caring Teachers" },
+  { icon: "Star", text: "Competency Based Curriculum" },
+  { icon: "Heart", text: "Safe Child-Friendly Environment" },
+  { icon: "Globe", text: "Christian Values & Character" },
 ];
 
 export const VALUES = [
   {
-    icon: "Target",
+    icon: "Star",
     title: "Excellence",
-    text: "We hold every student to the highest standard — academically, ethically, and personally.",
+    text: "We set high standards in everything we do — from academics to character — so every child reaches their full potential.",
   },
   {
-    icon: "Compass",
-    title: "Character",
-    text: "Integrity, empathy, and resilience are taught alongside every lesson.",
+    icon: "Shield",
+    title: "Integrity",
+    text: "Honesty, accountability, and strong moral principles guide every lesson and interaction at Blessedville.",
+  },
+  {
+    icon: "Handshake",
+    title: "Respect",
+    text: "We teach children to value themselves, honour others, and care for the world around them.",
   },
   {
     icon: "Lightbulb",
-    title: "Innovation",
-    text: "STEM labs, design thinking, and global perspectives prepare students for what's next.",
+    title: "Curiosity",
+    text: "We nurture natural wonder through hands-on discovery, encouraging children to ask questions and explore boldly.",
   },
   {
     icon: "Heart",
     title: "Community",
-    text: "A warm, inclusive family where every child is known, valued, and supported.",
+    text: "A warm, inclusive family where every child is known by name, valued for who they are, and supported to grow.",
   },
 ];
 
 export const MILESTONES = [
-  { year: "1996", title: "A Vision Takes Root", text: "Meridian opens its doors with 40 students and a bold promise." },
-  { year: "2004", title: "The IB Diploma Arrives", text: "We become an authorised International Baccalaureate World School." },
-  { year: "2012", title: "A Campus Reimagined", text: "The science wing, arts centre, and Olympic pool open." },
-  { year: "2019", title: "Global Recognition", text: "Ranked among the top 10 international schools worldwide." },
-  { year: "2024", title: "4,000 Alumni Strong", text: "Graduates lead across 38 countries and every major industry." },
+  { year: "2015", title: "A Vision is Born", text: "Blessedville Schools opens its doors in Kahawa West with a handful of children and a big dream." },
+  { year: "2017", title: "Full CBC Rollout", text: "We fully embrace the Competency Based Curriculum, putting every child at the centre of learning." },
+  { year: "2019", title: "Growing Community", text: "Enrolment doubles as families across Nairobi discover our nurturing approach to education." },
+  { year: "2021", title: "New Programmes Launch", text: "Daycare and playgroup programmes open, giving the youngest learners a gentle, loving start." },
+  { year: "2025", title: "A Decade of Impact", text: "Ten years of shaping confident, curious children — and we are only just beginning." },
 ];
 
 export const WHY = [
-  { icon: "Users", title: "Small Class Sizes", text: "An average of 14 students per class means every voice is heard." },
-  { icon: "GraduationCap", title: "Experienced Teachers", text: "90% of faculty hold postgraduate degrees from leading universities." },
-  { icon: "MonitorSmartphone", title: "Smart Classrooms", text: "Interactive displays and 1:1 devices in every learning space." },
-  { icon: "FlaskConical", title: "STEM Labs", text: "Hands-on robotics, coding, and applied sciences from age 6." },
-  { icon: "BookOpen", title: "Modern Library", text: "30,000 volumes plus a digital archive and quiet study atria." },
-  { icon: "Trophy", title: "Sports Facilities", text: "Olympic pool, full-size pitch, and 20+ competitive teams." },
-  { icon: "Sparkles", title: "Character Development", text: "Leadership, service, and mindfulness woven into the week." },
-  { icon: "Globe", title: "Global Opportunities", text: "Exchange programmes across 12 partner schools worldwide." },
+  {
+    icon: "GraduationCap",
+    title: "Qualified Teachers",
+    text: "Every teacher is trained, passionate, and committed to bringing out the best in your child through caring, child-centred instruction.",
+  },
+  {
+    icon: "BookOpen",
+    title: "Competency Based Curriculum",
+    text: "We follow the CBC framework — building practical skills, critical thinking, and creativity rather than just memorising facts.",
+  },
+  {
+    icon: "Shield",
+    title: "Safe Child-Friendly Environment",
+    text: "Secure classrooms, supervised play areas, and a nurturing atmosphere where every child feels protected and loved.",
+  },
+  {
+    icon: "Users",
+    title: "Small Class Sizes",
+    text: "We keep groups small so every child gets individual attention, builds confidence, and never gets lost in the crowd.",
+  },
+  {
+    icon: "MonitorSmartphone",
+    title: "Modern Learning Resources",
+    text: "Age-appropriate learning materials, colourful classrooms, and interactive tools that make every lesson come alive.",
+  },
+  {
+    icon: "Heart",
+    title: "Christian Values",
+    text: "Faith-based guidance woven gently into daily routines — teaching kindness, gratitude, and respect for all people.",
+  },
+  {
+    icon: "Sparkles",
+    title: "Rich Co-curricular Activities",
+    text: "Swimming, skating, ballet, music, art, and outdoor learning that build confidence, creativity, and teamwork.",
+  },
+  {
+    icon: "Handshake",
+    title: "Strong Parent Partnership",
+    text: "We keep parents involved with regular feedback, open communication, and a shared commitment to your child's growth.",
+  },
+  {
+    icon: "MapPin",
+    title: "Convenient Location",
+    text: "Located along the Northern Bypass in Kahawa West, with easy access for families across Nairobi and Kiambu.",
+  },
 ];
 
 export const ACADEMICS = [
   {
-    name: "Early Years",
-    age: "Ages 3–5",
+    name: "Daycare",
+    age: "Ages 1–2",
+    image:
+      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80",
+    overview:
+      "A warm, loving environment where our youngest children feel safe and cherished. Gentle routines, sensory play, and lots of cuddles help babies and toddlers feel at home while building early motor and social skills.",
+    subjects: ["Sensory Play", "Gentle Routines", "Early Motor Skills", "Social Bonding"],
+    approach: "Nurturing, attachment-focused care with trained caregivers who treat every child like their own.",
+  },
+  {
+    name: "Playgroup",
+    age: "Ages 2–3",
     image:
       "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80",
     overview:
-      "A gentle, play-rich foundation where curiosity is protected and a lifelong love of learning begins.",
-    subjects: ["Literacy & Story", "Numeracy Play", "Art & Music", "Outdoor Discovery"],
-    approach: "Reggio-inspired, inquiry-led, and joyfully hands-on.",
+      "Through guided play, songs, and simple activities, toddlers begin to explore the world around them. Language blossoms, friendships form, and independence takes root — all in a cheerful, stimulating setting.",
+    subjects: ["Language & Stories", "Music & Movement", "Simple Art", "Outdoor Play"],
+    approach: "Play-based learning that follows each child's natural rhythm and curiosity.",
   },
   {
-    name: "Primary School",
-    age: "Ages 6–11",
+    name: "Kindergarten",
+    age: "Ages 3–4",
     image:
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
     overview:
-      "Strong foundations in literacy, maths, and science, balanced with creativity, sport, and character.",
-    subjects: ["English & Literature", "Mathematics", "Science", "World Languages"],
-    approach: "Project-based learning with dedicated homeroom mentors.",
+      "A joyful introduction to structured learning. Children build early literacy and numeracy skills through hands-on activities, creative arts, and cooperative play — preparing them for the school years ahead.",
+    subjects: ["Early Literacy", "Basic Numeracy", "Creative Arts", "Social Skills"],
+    approach: "Activity-based learning with patient, encouraging teachers who celebrate every milestone.",
   },
   {
-    name: "Junior School",
-    age: "Ages 12–14",
+    name: "Preschool",
+    age: "Ages 4–5",
     image:
       "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80",
     overview:
-      "Students explore deeper subjects and discover their passions through electives and clubs.",
-    subjects: ["Humanities", "STEM", "Performing Arts", "Design & Tech"],
-    approach: "Rotational scheduling with specialist teachers and labs.",
+      "Children grow in confidence and readiness as they master pre-reading, number sense, and problem-solving. Our preschool programme sparks curiosity and builds the foundation for a smooth transition into primary school.",
+    subjects: ["Reading Readiness", "Number Work", "Science Discovery", "Art & Music"],
+    approach: "Inquiry-led and hands-on, with a strong emphasis on building confidence and independence.",
   },
   {
-    name: "Senior School",
-    age: "Ages 15–18",
+    name: "Lower Primary",
+    age: "Grades 1–4",
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
     overview:
-      "The IB Diploma and A-Levels pathway, university counselling, and real-world capstone projects.",
-    subjects: ["IB Diploma", "A-Levels", "Advanced Research", "Leadership"],
-    approach: "University-bound, with personalised academic coaching.",
+      "A comprehensive CBC programme that develops strong academic foundations while nurturing each child's unique talents. Mathematics, languages, science, and social studies come alive through projects, discussions, and real-world connections.",
+    subjects: ["English & Kiswahili", "Mathematics", "Science & Environment", "Creative Arts & Sports"],
+    approach: "Competency-based, project-driven learning with dedicated classroom teachers who know every child personally.",
   },
 ];
 
 export const FACILITIES = [
   {
-    icon: "BookOpen",
-    title: "Library & Learning Atrium",
-    text: "A sunlit, three-storey library with quiet study pods and a digital media lab.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: "FlaskConical",
-    title: "Science Laboratories",
-    text: "Six fully-equipped labs for biology, chemistry, and physics with research-grade tools.",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: "MonitorSmartphone",
-    title: "ICT & Innovation Lab",
-    text: "3D printers, VR stations, and a coding studio for the next generation of builders.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: "Trophy",
-    title: "Sports Complex",
-    text: "An Olympic-length pool, indoor arena, and full-size floodlit pitch.",
-    image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80",
-  },
-  {
     icon: "Waves",
-    title: "Swimming Pool",
-    text: "A temperature-controlled 25m pool with learn-to-swim and competitive squads.",
+    title: "Swimming",
+    text: "Our splash pool and qualified instructors make swimming lessons safe, fun, and confidence-building. Children learn water safety and basic strokes in small, supervised groups.",
     image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80",
   },
   {
+    icon: "Disc",
+    title: "Skating",
+    text: "Roller skating develops balance, coordination, and persistence. Our supervised skating sessions fill the playground with laughter and determined little learners on wheels.",
+    image: "https://images.unsplash.com/photo-1475506632779-4d4ff9af7524?auto=format&fit=crop&w=800&q=80",
+  },
+  {
     icon: "Music",
-    title: "Music & Performance Hall",
-    text: "A 400-seat acoustic auditorium with recording studios and practice suites.",
+    title: "Ballet & Dance",
+    text: "From first pliés to joyful routines, ballet and dance build grace, discipline, and self-expression. Children gain body awareness and confidence while having pure fun.",
+    image: "https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: "Sparkles",
+    title: "Dance & Fitness",
+    text: "Energetic sessions that keep children active and healthy. Modern dance, aerobics, and fitness games teach teamwork while building strength, stamina, and a love for movement.",
+    image: "https://images.unsplash.com/photo-1523450001312-faa4e2f24dd6?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: "Trophy",
+    title: "Gymnastics",
+    text: "Tumbling, balancing, and stretching — gymnastics helps children develop flexibility, strength, and body awareness in a safe, padded environment with patient coaching.",
+    image: "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: "TreeDeciduous",
+    title: "Outdoor Learning",
+    text: "Our outdoor spaces are living classrooms. Gardening, nature walks, and open-air discovery sessions connect children with the natural world and build environmental awareness.",
+    image: "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: "Music",
+    title: "Music",
+    text: "Singing, drumming, and simple instruments introduce children to the joy of music. Rhythms and melodies build listening skills, memory, and a lifelong appreciation for the arts.",
     image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: "Palette",
-    title: "Art & Design Studio",
-    text: "Natural-light studios for painting, sculpture, ceramics, and digital design.",
+    title: "Creative Arts",
+    text: "Painting, drawing, crafts, and clay work let imaginations run wild. Art sessions build fine motor skills and give children a joyful outlet for expressing their inner world.",
     image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: "Bus",
-    title: "Safe School Transport",
-    text: "GPS-tracked, staffed buses covering the wider metro region.",
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: "Utensils",
-    title: "Dining Hall",
-    text: "A chef-led, nutritionist-designed menu with fresh, locally-sourced produce.",
-    image: "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: "HeartPulse",
-    title: "Medical Centre",
-    text: "On-site nurses and a resident physician for round-the-clock student wellbeing.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
 export const ACHIEVEMENTS = [
-  { year: "2024", icon: "Trophy", title: "National Robotics Champions", text: "First place at the National STEM Olympiad for the third year running." },
-  { year: "2023", icon: "Globe", title: "Global Debate Finalists", text: "Our team reached the world finals in Oxford, ranking top 8 globally." },
-  { year: "2023", icon: "Music", title: "Gold at International Music Fest", text: "The Meridian Symphony earned gold at the Vienna youth festival." },
-  { year: "2022", icon: "FlaskConical", title: "Young Scientist of the Year", text: "A student-led clean-water project won national acclaim." },
-  { year: "2022", icon: "Award", title: "School of the Decade", text: "Awarded by the International Education Board for sustained excellence." },
-  { year: "2021", icon: "ScrollText", title: "100% IB Pass Rate", text: "Every diploma candidate passed, with 41% earning the bilingual award." },
+  { year: "2024", icon: "Trophy", title: "Top CBC Performance", text: "Our Grade 3 learners achieved outstanding results in the national CBC assessment, reflecting our commitment to quality teaching." },
+  { year: "2023", icon: "Music", title: "Inter-school Music Festival", text: "Blessedville children earned accolades for their choir and instrumental performances at the regional festival." },
+  { year: "2023", icon: "Star", title: "Growing Alumni", text: "Our first cohort of learners successfully transitioned to top primary schools across Nairobi." },
+  { year: "2022", icon: "Heart", title: "Community Impact Award", text: "Recognised by the local community for our outreach programme supporting vulnerable children." },
+  { year: "2021", icon: "Award", title: "Safe School Certification", text: "Awarded full compliance in health, safety, and child protection standards." },
+  { year: "2020", icon: "Globe", title: "Digital Learning Pioneer", text: "Among the first schools in Kahawa West to integrate digital tools into early years learning." },
 ];
 
 export const TESTIMONIALS = [
   {
-    name: "Mrs. Amara Okafor",
-    role: "Parent of Year 9 Student",
+    name: "Mrs. Wanjiku M.",
+    role: "Parent of Preschooler",
     quote:
-      "From the first school tour, we felt something different. My daughter is challenged, happy, and genuinely excited to learn. Meridian changed our family's trajectory.",
+      "Blessedville has been a blessing to our family. My daughter wakes up every morning excited to go to school. The teachers are warm, patient, and they genuinely care about each child. I cannot imagine a better start for her.",
     avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80",
     rating: 5,
   },
   {
-    name: "Daniel Reyes",
-    role: "Alumnus · Class of 2018",
+    name: "Mr. Otieno K.",
+    role: "Parent of Grade 2 Learner",
     quote:
-      "The teachers saw potential in me I couldn't see myself. Today I'm an engineering student at Stanford — and it started in a Meridian classroom.",
+      "We moved our son to Blessedville last year and the transformation has been remarkable. His confidence has soared, he is reading well above his level, and the small class sizes mean he gets the attention he needs. A truly wonderful school.",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
     rating: 5,
   },
   {
-    name: "Dr. Priya Nair",
-    role: "Parent of Two Alumni",
+    name: "Mrs. Akinyi O.",
+    role: "Parent of Two Learners",
     quote:
-      "Both our children thrived here. The balance of rigour and care is rare. We recommend Meridian to every family we meet.",
+      "Both my children attend Blessedville — one in daycare and one in lower primary. I love that they are in one school where the Christian values I teach at home are reinforced every day. The location along Northern Bypass is so convenient too.",
     avatar: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80",
     rating: 5,
   },
   {
-    name: "James Whitfield",
-    role: "Current Parent & Governor",
+    name: "Mr. Kamau N.",
+    role: "Parent of Kindergarten Learner",
     quote:
-      "A school that lives its values. The leadership is transparent, the community is warm, and the results speak for themselves.",
+      "What sets Blessedville apart is how well they know each child. Every teacher greets my daughter by name, they tell me about her day in detail, and she is learning so much through play. I recommend this school to every parent I meet.",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
     rating: 5,
   },
 ];
 
-export const NEWS = [
-  {
-    category: "Academics",
-    title: "Meridian Students Win National Robotics Championship",
-    excerpt:
-      "Our senior STEM team took first place at the National Olympiad, beating 120 schools with an autonomous recycling robot.",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80",
-    date: "March 18, 2026",
-    featured: true,
-  },
-  {
-    category: "Community",
-    title: "Annual Charity Gala Raises $240,000 for Local Schools",
-    excerpt: "Families, alumni, and partners came together for a record-breaking evening of generosity.",
-    image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=700&q=80",
-    date: "March 9, 2026",
-  },
-  {
-    category: "Arts",
-    title: "Spring Concert Showcases 200 Young Musicians",
-    excerpt: "The Meridian Symphony filled the auditorium with a stirring programme of classical and contemporary works.",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=700&q=80",
-    date: "February 27, 2026",
-  },
-  {
-    category: "Admissions",
-    title: "Applications Open for the 2026–27 Academic Year",
-    excerpt: "Limited places are available across all year groups. Book a personal tour to experience Meridian first-hand.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=700&q=80",
-    date: "February 12, 2026",
-  },
-];
-
 export const EVENTS = [
-  { date: "Apr 12", day: "Sat", title: "Spring Open Day", category: "Open Day", text: "Tour the campus, meet faculty, and watch lessons in action." },
-  { date: "Apr 25", day: "Fri", title: "IB Art Exhibition", category: "Arts", text: "Senior students present two years of visual inquiry." },
-  { date: "May 03", day: "Sat", title: "Junior Sports Day", category: "Sports", text: "House rivalry, records, and community spirit on the pitch." },
-  { date: "May 18", day: "Sun", title: "Admissions Workshop", category: "Admissions", text: "A guided session for prospective parents on the application journey." },
-  { date: "Jun 02", day: "Mon", title: "Founders' Assembly", category: "School", text: "Celebrating 30 years of Meridian with our community." },
-  { date: "Jun 21", day: "Sat", title: "Class of 2026 Graduation", category: "School", text: "A milestone ceremony for our graduating leaders." },
+  { date: "Apr 12", day: "Sat", title: "Open Day & School Tour", category: "Admissions", text: "Tour our classrooms, meet our teachers, and see learning in action." },
+  { date: "Apr 25", day: "Fri", title: "Creative Arts Exhibition", category: "Arts", text: "Our young artists showcase paintings, crafts, and creative projects." },
+  { date: "May 03", day: "Sat", title: "Sports & Fitness Day", category: "Sports", text: "Swimming, skating, and gymnastics displays — families welcome." },
+  { date: "May 18", day: "Sun", title: "Parent Workshop — Supporting Learning at Home", category: "Community", text: "Practical tips for reinforcing CBC skills through everyday activities." },
+  { date: "Jun 02", day: "Mon", title: "Founders' Day Assembly", category: "School", text: "Celebrating a decade of nurturing young leaders at Blessedville." },
+  { date: "Jun 21", day: "Sat", title: "End of Term Concert", category: "Arts", text: "Dance, music, and drama performances by every class — a highlight of the year." },
 ];
 
 export const ADMISSIONS = [
-  { step: "01", title: "Enquiry", text: "Tell us about your child and receive our prospectus within 24 hours.", icon: "Mail" },
-  { step: "02", title: "School Tour", text: "Walk the campus, meet our teachers, and feel the Meridian difference.", icon: "MapPin" },
-  { step: "03", title: "Application", text: "Complete a simple online form with reports and a personal statement.", icon: "FileText" },
-  { step: "04", title: "Assessment & Interview", text: "A friendly age-appropriate assessment and family conversation.", icon: "MessageCircle" },
-  { step: "05", title: "Enrolment", text: "Receive your offer and join the Meridian family.", icon: "PartyPopper" },
+  { step: "01", title: "Enquiry", text: "Reach out by phone, email, or visit us. We will answer your questions and share our prospectus.", icon: "Mail" },
+  { step: "02", title: "School Tour", text: "Walk through our classrooms, meet the teachers, and feel the warmth of the Blessedville community.", icon: "MapPin" },
+  { step: "03", title: "Application", text: "Fill in a simple form with your child's details. Our admissions team will guide you through every step.", icon: "FileText" },
+  { step: "04", title: "Meet & Greet", text: "A friendly conversation with you and your child so we can understand how best to support their learning journey.", icon: "MessageCircle" },
+  { step: "05", title: "Enrolment", text: "Receive your offer, complete registration, and welcome your child into the Blessedville family.", icon: "PartyPopper" },
 ];
 
 export const FACULTY = [
-  { name: "Dr. Eleanor Hayes", role: "Head of School", dept: "Leadership", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mr. Tomas Lindqvist", role: "Director of Academics", dept: "IB Diploma", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" },
-  { name: "Ms. Aisha Rahman", role: "Head of STEM", dept: "Science", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mr. David Osei", role: "Director of Sport", dept: "Athletics", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" },
-  { name: "Dr. Mei Lin", role: "Head of Arts", dept: "Performing Arts", image: "https://images.unsplash.com/photo-159855800ABCD-9fd8a47d146a?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mrs. Sofia Romano", role: "Wellbeing Lead", dept: "Pastoral Care", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mrs. Grace Mwangi", role: "Head Teacher", dept: "Leadership", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mr. Peter Ndung'u", role: "Deputy Head", dept: "Academics", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Ms. Aisha Juma", role: "Kindergarten Lead", dept: "Early Years", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mr. David Ochieng", role: "Activities Coordinator", dept: "Co-curricular", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mrs. Faith Wambui", role: "Daycare Supervisor", dept: "Early Years", image: "https://images.unsplash.com/photo-159855800ABCD-9fd8a47d146a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mrs. Naomi Chebet", role: "Pastoral Lead", dept: "Student Welfare", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" },
 ];
 
 export const GALLERY = [
-  { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80", category: "Graduation", title: "Class of 2025" },
-  { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80", category: "Academic", title: "Morning lessons" },
-  { src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80", category: "Sports", title: "Swim squad" },
-  { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80", category: "Events", title: "Spring concert" },
-  { src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80", category: "Campus", title: "Art studio" },
-  { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80", category: "Academic", title: "Senior seminar" },
-  { src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80", category: "Events", title: "Community gala" },
-  { src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80", category: "Sports", title: "Aquatics" },
-  { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80", category: "Campus", title: "Classroom" },
+  { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80", category: "Learning", title: "Learning Through Play" },
+  { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80", category: "Learning", title: "CBC Classroom" },
+  { src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80", category: "Sports", title: "Swimming Lessons" },
+  { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80", category: "Events", title: "School Concert" },
+  { src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80", category: "Activities", title: "Creative Arts" },
+  { src: "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=800&q=80", category: "Activities", title: "Outdoor Activities" },
+  { src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80", category: "Events", title: "Family Fun Day" },
+  { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80", category: "Learning", title: "Classroom Learning" },
+  { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80", category: "Events", title: "School Events" },
 ];
 
 export const CAMPUS_HOTSPOTS = [
-  { top: "30%", left: "22%", label: "The Atrium Library" },
-  { top: "46%", left: "58%", label: "Science Wing" },
-  { top: "64%", left: "38%", label: "Olympic Pool" },
-  { top: "22%", left: "74%", label: "Arts Centre" },
+  { top: "30%", left: "22%", label: "Main Classroom Block" },
+  { top: "46%", left: "58%", label: "Playground & Sports" },
+  { top: "64%", left: "38%", label: "Splash Pool" },
+  { top: "22%", left: "74%", label: "Creative Arts Room" },
 ];
 
 export const HERO_VIDEO_POSTER =
   "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80";
 
 export const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1920&q=80",

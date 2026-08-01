@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import { Trophy, Star, GraduationCap, Globe, ChevronDown, PlayCircle } from "lucide-react";
+import { GraduationCap, Star, Heart, Globe, ChevronDown, PlayCircle } from "lucide-react";
 import { BADGES, HERO_IMAGES, SCHOOL } from "../data";
 import { Button, EASE } from "../lib/ui";
 
-const ICONS: Record<string, React.ElementType> = { Trophy, Star, GraduationCap, Globe };
+const ICONS: Record<string, React.ElementType> = { GraduationCap, Star, Heart, Globe };
 
 const container: Variants = {
   hidden: {},
@@ -45,7 +45,7 @@ export default function Hero() {
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/65 to-navy/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,175,55,0.16),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(244,196,48,0.16),transparent_55%)]" />
 
       {/* Content */}
       <motion.div
@@ -56,32 +56,34 @@ export default function Hero() {
       >
         <motion.div variants={item} className="mb-6 inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold-light">
           <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-          Est. {SCHOOL.founded} · {SCHOOL.motto}
+          Est. {SCHOOL.founded} · "{SCHOOL.motto}"
         </motion.div>
 
         <motion.h1
           variants={item}
           className="max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
         >
-          Shaping Tomorrow's
-          <span className="block text-gold-gradient">Leaders Today.</span>
+          Where Little Minds
+          <span className="block text-gold-gradient">Sparkle and Grow.</span>
         </motion.h1>
 
         <motion.p
           variants={item}
           className="mt-7 max-w-xl text-lg leading-relaxed text-white/80"
         >
-          Empowering young minds through excellence, innovation, discipline, and character — a
-          premium international education for a changing world.
+          At Blessedville Schools, we provide a safe, nurturing environment where every child
+          thrives. Guided by the Competency Based Curriculum, our qualified teachers inspire
+          confidence, creativity, and Christian values — giving each child the foundation
+          to grow academically, socially, and spiritually.
         </motion.p>
 
         <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
-          <Button href="#admissions" variant="gold">
+          <Button href="/contact" variant="gold">
             Book a School Tour
           </Button>
-          <Button href="#admissions" variant="outline">
+          <Button href="/admissions" variant="outline">
             <PlayCircle className="h-4 w-4" />
-            Apply Online
+            Enroll Today
           </Button>
         </motion.div>
 

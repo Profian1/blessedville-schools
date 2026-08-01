@@ -14,15 +14,15 @@ export default function CampusTour() {
         <SectionHeading
           light
           eyebrow="Virtual Tour"
-          title={<>Step inside <span className="text-gold-gradient">Meridian</span>.</>}
-          subtitle="Explore our campus from anywhere in the world. Hover over the map to discover our spaces — or take a live drone tour."
+          title={<>Step inside <span className="text-gold-gradient">Blessedville</span>.</>}
+          subtitle="Explore our school from anywhere. Hover over the map to discover our learning spaces — or take a closer look at our classrooms and play areas."
         />
 
         <Reveal delay={0.1} className="mt-14">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)]">
             <img
               src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80"
-              alt="Aerial view of the Meridian campus"
+              alt="Aerial view of the Blessedville Schools campus"
               className="h-[28rem] w-full object-cover sm:h-[34rem]"
               loading="lazy"
             />
@@ -53,16 +53,16 @@ export default function CampusTour() {
               >
                 <Play className="ml-1 h-8 w-8 fill-current" />
               </button>
-              <p className="mt-5 max-w-xs font-display text-xl text-white">Take the 360° drone tour</p>
+              <p className="mt-5 max-w-xs font-display text-xl text-white">Take a closer look</p>
             </div>
           </div>
 
           {/* Quick links */}
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
-              { icon: RotateCcw, t: "360° Classrooms", d: "Walk through our smart learning spaces." },
-              { icon: MapPin, t: "Interactive Map", d: "Find every building at a glance." },
-              { icon: Play, t: "Live Drone Feed", d: "See the campus from the sky." },
+              { icon: RotateCcw, t: "Classroom Tour", d: "Peek inside our warm, colourful learning spaces." },
+              { icon: MapPin, t: "Find Us", d: "Located along the Northern Bypass, Kahawa West." },
+              { icon: Play, t: "Virtual Walkthrough", d: "Experience a day at Blessedville from home." },
             ].map((c) => (
               <motion.div
                 key={c.t}

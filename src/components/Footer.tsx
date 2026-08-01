@@ -1,4 +1,5 @@
-import { GraduationCap, Mail, Phone, MapPin, Send, ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, Send, ArrowUp } from "lucide-react";
 import { NAV, SCHOOL } from "../data";
 
 const SocialIcon = ({ name }: { name: string }) => {
@@ -35,21 +36,16 @@ const LINK_GROUPS = [
   {
     title: "Admissions",
     links: [
-      { label: "How to Apply", href: "#admissions" },
-      { label: "Book a Tour", href: "#contact" },
-      { label: "Prospectus", href: "#" },
-      { label: "Fees & Aid", href: "#" },
-      { label: "Open Days", href: "#events" },
+      { label: "How to Apply", href: "/admissions" },
+      { label: "Book a Tour", href: "/contact" },
+      { label: "Programmes", href: "/programmes" },
     ],
   },
   {
     title: "Community",
     links: [
-      { label: "News", href: "#news" },
-      { label: "Events", href: "#events" },
-      { label: "Alumni", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Parent Portal", href: "#" },
+      { label: "Gallery", href: "/gallery" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
 ];
@@ -61,7 +57,7 @@ export default function Footer() {
       <div className="border-b border-white/10">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:items-center lg:px-10">
           <div>
-            <h3 className="font-display text-3xl font-semibold">Stay connected with Meridian.</h3>
+            <h3 className="font-display text-3xl font-semibold">Stay connected with Blessed Ville.</h3>
             <p className="mt-3 max-w-md text-white/60">
               Receive stories, open-day invitations, and admissions insights — a few times a term, never more.
             </p>
@@ -95,7 +91,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold text-navy">
-              <GraduationCap className="h-6 w-6" />
+              <img src="/blessedville.svg" alt={`${SCHOOL.name} logo`} className="h-7 w-7" />
             </span>
             <span className="font-display text-xl font-semibold">{SCHOOL.short}</span>
           </div>
@@ -118,9 +114,9 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {g.links.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-sm text-white/65 transition-colors hover:text-white">
+                  <Link to={l.href} className="text-sm text-white/65 transition-colors hover:text-white">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -150,13 +146,14 @@ export default function Footer() {
       </div>
 
       {/* Back to top */}
-      <a
-        href="#home"
+      <Link
+        to="/"
         aria-label="Back to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-28 right-5 z-40 hidden h-11 w-11 items-center justify-center rounded-full bg-navy text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-gold hover:text-navy sm:flex"
       >
         <ArrowUp className="h-5 w-5" />
-      </a>
+      </Link>
     </footer>
   );
 }

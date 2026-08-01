@@ -4,7 +4,7 @@ import { Mail, Phone, MessageCircle, Clock, MapPin, Send, CheckCircle2 } from "l
 import { SCHOOL } from "../data";
 import { Container, Reveal, SectionHeading } from "../lib/ui";
 
-const PROGRAMS = ["Early Years", "Primary", "Junior", "Senior", "General Enquiry"];
+const PROGRAMS = ["Daycare", "Playgroup", "Kindergarten", "Preschool", "Lower Primary", "General Enquiry"];
 
 function Field({
   id,
@@ -84,8 +84,8 @@ export default function Contact() {
       <Container>
         <SectionHeading
           eyebrow="Get in Touch"
-          title={<>We'd love to <span className="text-gold-gradient">meet you</span>.</>}
-          subtitle="Book a personal tour or ask us anything. Our admissions team replies within one working day."
+          title={<>We would love to <span className="text-gold-gradient">meet you</span>.</>}
+          subtitle="Book a personal tour or ask us anything. Our team will get back to you promptly."
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-5">
@@ -111,10 +111,10 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-            <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-[0_20px_50px_-26px_rgba(11,31,58,0.4)]">
+            <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-[0_20px_50px_-26px_rgba(30,90,168,0.4)]">
               <iframe
-                title="Meridian International Academy location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-73.98%2C40.79%2C-73.94%2C40.82&layer=mapnik&marker=40.805%2C-73.96"
+                title="Blessedville Schools location"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=36.86%2C-1.22%2C36.90%2C-1.18&layer=mapnik&marker=-1.20%2C36.88"
                 className="h-56 w-full border-0"
                 loading="lazy"
               />
@@ -132,7 +132,7 @@ export default function Contact() {
 
           {/* Form */}
           <Reveal delay={0.1} className="lg:col-span-3">
-            <div className="rounded-[2rem] border border-navy/10 bg-white p-8 shadow-[0_30px_80px_-30px_rgba(11,31,58,0.4)] sm:p-10">
+            <div className="rounded-[2rem] border border-navy/10 bg-white p-8 shadow-[0_30px_80px_-30px_rgba(30,90,168,0.4)] sm:p-10">
               {sent ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -176,7 +176,7 @@ export default function Contact() {
                   <Field id="message" label="Your Message" textarea value={form.message} onChange={set("message")} error={errors.message} />
                   <button
                     type="submit"
-                    className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-7 py-4 font-button text-sm font-semibold text-navy transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(212,175,55,0.6)]"
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-7 py-4 font-button text-sm font-semibold text-navy transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(244,196,48,0.6)]"
                   >
                     Send Enquiry <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </button>

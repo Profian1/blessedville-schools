@@ -14,13 +14,13 @@ export default function Testimonials() {
     <section className="bg-mist py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Voices of Meridian"
-          title={<>Trusted by <span className="text-gold-gradient">families</span>.</>}
-          subtitle="The truest measure of a school is the trust of the people who know it best."
+          eyebrow="Voices of Blessedville"
+          title={<>Trusted by <span className="text-gold-gradient">parents</span>.</>}
+          subtitle="The truest measure of a school is the confidence parents feel when they drop off their child every morning."
         />
 
         <Reveal className="mt-14">
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-white bg-white p-8 shadow-[0_30px_80px_-30px_rgba(11,31,58,0.4)] sm:p-14">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-white bg-white p-8 shadow-[0_30px_80px_-30px_rgba(30,90,168,0.4)] sm:p-14">
             <Quote className="absolute right-8 top-8 h-20 w-20 text-gold/10" />
             <div className="flex items-center gap-1 text-gold">
               {Array.from({ length: t.rating }).map((_, i) => (

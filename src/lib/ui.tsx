@@ -1,5 +1,6 @@
 import { motion, useInView, useReducedMotion, type Transition } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 /** Premium easing curve shared across the site */
 export const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
@@ -92,7 +93,7 @@ type ButtonProps = {
 
 export function Button({
   children,
-  href = "#",
+  href = "/",
   variant = "gold",
   className = "",
   onClick,
@@ -101,21 +102,26 @@ export function Button({
   const base =
     "group relative inline-flex items-center justify-center gap-2 rounded-full font-button text-sm font-semibold tracking-wide px-7 py-3.5 transition-all duration-300 will-change-transform focus-visible:outline-none overflow-hidden";
   const variants: Record<string, string> = {
-    gold: "bg-gold text-navy hover:shadow-[0_14px_40px_-8px_rgba(212,175,55,0.6)] hover:-translate-y-0.5",
-    navy: "bg-navy text-white hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(11,31,58,0.55)]",
+    gold: "bg-gold text-navy hover:shadow-[0_14px_40px_-8px_rgba(244,196,48,0.6)] hover:-translate-y-0.5",
+    navy: "bg-navy text-white hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(30,90,168,0.55)]",
     outline: "border border-white/40 text-white hover:bg-white hover:text-navy",
     ghost: "border border-navy/20 text-navy hover:border-navy hover:bg-navy hover:text-white",
   };
 
+  const cls = `${base} ${variants[variant]} ${className}`;
+
+  if (href.startsWith("http") || href.startsWith("#") || href.startsWith("mailto") || href.startsWith("tel")) {
+    return (
+      <a href={href} onClick={onClick} aria-label={ariaLabel} className={cls}>
+        <span className="relative z-10 flex items-center gap-2">{children}</span>
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      onClick={onClick}
-      aria-label={ariaLabel}
-      className={`${base} ${variants[variant]} ${className}`}
-    >
+    <Link to={href} onClick={onClick} aria-label={ariaLabel} className={cls}>
       <span className="relative z-10 flex items-center gap-2">{children}</span>
-    </a>
+    </Link>
   );
 }
 
