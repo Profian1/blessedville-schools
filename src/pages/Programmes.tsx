@@ -1,5 +1,5 @@
-import Academics from "../components/Academics";
+import { Navigate } from "react-router-dom";
 
 export default function Programmes() {
-  return <Academics />;
+  return <Navigate to="/programmes/daycare" replace />;
 }

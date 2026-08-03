@@ -1,4 +1,6 @@
 import Hero from "../components/Hero";
+import WelcomeSection from "../components/WelcomeSection";
+import ProgramsPreviewSection from "../components/ProgramsPreviewSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Stats from "../components/Stats";
 import Badges from "../components/Badges";
@@ -8,6 +10,8 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WelcomeSection />
+      <ProgramsPreviewSection />
       <WhyChooseUs />
       <Stats />
       <Badges />

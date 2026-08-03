@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative flex min-h-[100svh] items-center overflow-hidden">
+    <section id="home" className="relative flex h-screen items-center overflow-hidden">
       {/* Background crossfade */}
       {HERO_IMAGES.map((src, i) => (
         <div
@@ -49,11 +49,11 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-28 pb-24 sm:px-8 lg:px-10"
+        className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-44 pb-36 sm:px-8 lg:px-10"
       >
         <motion.h1
           variants={item}
-          className="max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+          className="max-w-4xl font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl lg:text-6xl"
         >
           Where Little Minds
           <span className="block text-gold-gradient">Sparkle and Grow.</span>
@@ -61,7 +61,7 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mt-7 max-w-xl text-lg leading-relaxed text-white/80"
+          className="mt-5 max-w-xl text-base leading-relaxed text-white/80"
         >
           At Blessedville Schools, we nurture confident, curious learners through the Competency-Based Curriculum, caring teachers, and strong Christian values.
         </motion.p>

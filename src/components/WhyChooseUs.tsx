@@ -7,7 +7,6 @@ import {
   Sparkles,
   Shield,
   Handshake,
-  MapPin,
   Heart,
   type LucideIcon,
 } from "lucide-react";
@@ -22,7 +21,6 @@ const ICONS: Record<string, LucideIcon> = {
   Sparkles,
   Shield,
   Handshake,
-  MapPin,
   Heart,
 };
 
@@ -37,7 +35,7 @@ export default function WhyChooseUs() {
           subtitle="Every detail is built around your child — from our caring teachers to our safe, stimulating environment."
         />
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {WHY.map((w, i) => {
             const Icon = ICONS[w.icon] ?? Sparkles;
             return (

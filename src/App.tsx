@@ -5,6 +5,9 @@ import MobileExperience from "./components/MobileExperience";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Programmes from "./pages/Programmes";
+import Daycare from "./pages/programs/Daycare";
+import Playgroup from "./pages/programs/Playgroup";
+import LowerPrimary from "./pages/programs/LowerPrimary";
 import Admissions from "./pages/Admissions";
 import Activities from "./pages/Activities";
 import Gallery from "./pages/Gallery";
@@ -22,6 +25,9 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/programmes" element={<Programmes />} />
+            <Route path="/programmes/daycare" element={<Daycare />} />
+            <Route path="/programmes/playgroup" element={<Playgroup />} />
+            <Route path="/programmes/lower-primary" element={<LowerPrimary />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/gallery" element={<Gallery />} />

@@ -15,6 +15,18 @@ export const SCHOOL = {
   founded: 2015,
 };
 
+export const WELCOME = {
+  badge: "Welcome",
+  heading: "Welcome to Blessedville Schools",
+  subheading: "Building Bright Futures Through Quality Education and Christian Values",
+  p1: "At Blessedville Schools, we provide a safe, caring, and inspiring environment where every child is encouraged to learn, grow, and reach their full potential. Guided by the Competency-Based Curriculum (CBC), our experienced teachers nurture academic excellence alongside strong Christian values.",
+  p2: "We believe education goes beyond the classroom by developing confident, responsible, and compassionate learners through engaging academics, co-curricular activities, and personalized support for every child.",
+  cta: "Learn More About Us",
+  ctaLink: "/about",
+  image: "/school.jpg",
+  imageAlt: "Blessedville Schools campus building",
+};
+
 export const SOCIALS = [
   { name: "Facebook", url: "https://www.facebook.com/people/blessedville-schools/61553840668941/" },
   { name: "Instagram", url: "#" },
@@ -124,10 +136,29 @@ export const WHY = [
     title: "Strong Parent Partnership",
     text: "We keep parents involved with regular feedback, open communication, and a shared commitment to your child's growth.",
   },
+];
+
+export const PROGRAMS_PREVIEW = [
   {
-    icon: "MapPin",
-    title: "Convenient Location",
-    text: "Located along the Northern Bypass in Kahawa West, with easy access for families across Nairobi and Kiambu.",
+    title: "Kindergarten & Daycare",
+    description:
+      "A warm and caring introduction to learning where children grow through play, creativity, early literacy, numeracy, and social development.",
+    image: "/kid.jpg",
+    link: "/programmes/daycare",
+  },
+  {
+    title: "Preschool / Playgroup",
+    description:
+      "Structured yet playful experiences that build confidence, communication, creativity, and school readiness in a fun environment.",
+    image: "/kid1.jpg",
+    link: "/programmes/playgroup",
+  },
+  {
+    title: "Lower Primary (Grade 1–4)",
+    description:
+      "A strong academic foundation that combines quality teaching, practical learning, and Christian values to prepare learners for future success.",
+    image: "/class2.jpg",
+    link: "/programmes/lower-primary",
   },
 ];
 
