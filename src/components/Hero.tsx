@@ -1,10 +1,8 @@
 ﻿import { useEffect, useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import { GraduationCap, Star, Heart, Globe, PlayCircle } from "lucide-react";
-import { BADGES, HERO_IMAGES, SCHOOL } from "../data";
+import { PlayCircle } from "lucide-react";
+import { HERO_IMAGES } from "../data";
 import { Button, EASE } from "../lib/ui";
-
-const ICONS: Record<string, React.ElementType> = { GraduationCap, Star, Heart, Globe };
 
 const container: Variants = {
   hidden: {},
@@ -29,9 +27,8 @@ export default function Hero() {
       {HERO_IMAGES.map((src, i) => (
         <div
           key={src}
-          className={`absolute inset-0 transition-opacity duration-[1600ms] ease-out ${
-            i === active ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-[1600ms] ease-out ${i === active ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={src}
@@ -43,9 +40,9 @@ export default function Hero() {
       ))}
 
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/65 to-navy/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,184,19,0.16),transparent_55%)]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/40 to-navy/15" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-navy/20" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,184,19,0.10),transparent_55%)]" />
 
       {/* Content */}
       <motion.div
@@ -54,11 +51,6 @@ export default function Hero() {
         animate="show"
         className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-28 pb-24 sm:px-8 lg:px-10"
       >
-        <motion.div variants={item} className="mb-6 inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold-light">
-          <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-          Est. {SCHOOL.founded} · "{SCHOOL.motto}"
-        </motion.div>
-
         <motion.h1
           variants={item}
           className="max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
@@ -71,10 +63,7 @@ export default function Hero() {
           variants={item}
           className="mt-7 max-w-xl text-lg leading-relaxed text-white/80"
         >
-          At Blessedville Schools, we provide a safe, nurturing environment where every child
-          thrives. Guided by the Competency Based Curriculum, our qualified teachers inspire
-          confidence, creativity, and Christian values — giving each child the foundation
-          to grow academically, socially, and spiritually.
+          At Blessedville Schools, we nurture confident, curious learners through the Competency-Based Curriculum, caring teachers, and strong Christian values.
         </motion.p>
 
         <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
@@ -85,24 +74,6 @@ export default function Hero() {
             <PlayCircle className="h-4 w-4" />
             Enroll Today
           </Button>
-        </motion.div>
-
-        {/* Floating achievement badges */}
-        <motion.div variants={item} className="mt-14 flex flex-wrap gap-3">
-          {BADGES.map((b) => {
-            const Icon = ICONS[b.icon] ?? Trophy;
-            return (
-              <div
-                key={b.text}
-                className="floaty inline-flex items-center gap-3 rounded-2xl glass-dark px-4 py-3"
-              >
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold/20 text-gold">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <span className="text-sm font-medium text-white/90">{b.text}</span>
-              </div>
-            );
-          })}
         </motion.div>
       </motion.div>
 

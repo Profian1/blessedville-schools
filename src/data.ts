@@ -136,7 +136,7 @@ export const ACADEMICS = [
     name: "Daycare",
     age: "Ages 1–2",
     image:
-      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80",
+      "/kid.jpg",
     overview:
       "A warm, loving environment where our youngest children feel safe and cherished. Gentle routines, sensory play, and lots of cuddles help babies and toddlers feel at home while building early motor and social skills.",
     subjects: ["Sensory Play", "Gentle Routines", "Early Motor Skills", "Social Bonding"],
@@ -146,7 +146,7 @@ export const ACADEMICS = [
     name: "Playgroup",
     age: "Ages 2–3",
     image:
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80",
+      "/kid1.jpg",
     overview:
       "Through guided play, songs, and simple activities, toddlers begin to explore the world around them. Language blossoms, friendships form, and independence takes root — all in a cheerful, stimulating setting.",
     subjects: ["Language & Stories", "Music & Movement", "Simple Art", "Outdoor Play"],
@@ -156,7 +156,7 @@ export const ACADEMICS = [
     name: "Kindergarten",
     age: "Ages 3–4",
     image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+      "/students.jpg",
     overview:
       "A joyful introduction to structured learning. Children build early literacy and numeracy skills through hands-on activities, creative arts, and cooperative play — preparing them for the school years ahead.",
     subjects: ["Early Literacy", "Basic Numeracy", "Creative Arts", "Social Skills"],
@@ -166,7 +166,7 @@ export const ACADEMICS = [
     name: "Preschool",
     age: "Ages 4–5",
     image:
-      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80",
+      "/class.jpg",
     overview:
       "Children grow in confidence and readiness as they master pre-reading, number sense, and problem-solving. Our preschool programme sparks curiosity and builds the foundation for a smooth transition into primary school.",
     subjects: ["Reading Readiness", "Number Work", "Science Discovery", "Art & Music"],
@@ -176,7 +176,7 @@ export const ACADEMICS = [
     name: "Lower Primary",
     age: "Grades 1–4",
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
+      "/class2.jpg",
     overview:
       "A comprehensive CBC programme that develops strong academic foundations while nurturing each child's unique talents. Mathematics, languages, science, and social studies come alive through projects, discussions, and real-world connections.",
     subjects: ["English & Kiswahili", "Mathematics", "Science & Environment", "Creative Arts & Sports"],
@@ -189,49 +189,49 @@ export const FACILITIES = [
     icon: "Waves",
     title: "Swimming",
     text: "Our splash pool and qualified instructors make swimming lessons safe, fun, and confidence-building. Children learn water safety and basic strokes in small, supervised groups.",
-    image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80",
+    image: "/swing.jpg",
   },
   {
     icon: "Disc",
     title: "Skating",
     text: "Roller skating develops balance, coordination, and persistence. Our supervised skating sessions fill the playground with laughter and determined little learners on wheels.",
-    image: "https://images.unsplash.com/photo-1475506632779-4d4ff9af7524?auto=format&fit=crop&w=800&q=80",
+    image: "/swing2.jpg",
   },
   {
     icon: "Music",
     title: "Ballet & Dance",
     text: "From first pliés to joyful routines, ballet and dance build grace, discipline, and self-expression. Children gain body awareness and confidence while having pure fun.",
-    image: "https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?auto=format&fit=crop&w=800&q=80",
+    image: "/drawing.jpg",
   },
   {
     icon: "Sparkles",
     title: "Dance & Fitness",
     text: "Energetic sessions that keep children active and healthy. Modern dance, aerobics, and fitness games teach teamwork while building strength, stamina, and a love for movement.",
-    image: "https://images.unsplash.com/photo-1523450001312-faa4e2f24dd6?auto=format&fit=crop&w=800&q=80",
+    image: "/playing.jpg",
   },
   {
     icon: "Trophy",
     title: "Gymnastics",
     text: "Tumbling, balancing, and stretching — gymnastics helps children develop flexibility, strength, and body awareness in a safe, padded environment with patient coaching.",
-    image: "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?auto=format&fit=crop&w=800&q=80",
+    image: "/parade.jpg",
   },
   {
     icon: "TreeDeciduous",
     title: "Outdoor Learning",
     text: "Our outdoor spaces are living classrooms. Gardening, nature walks, and open-air discovery sessions connect children with the natural world and build environmental awareness.",
-    image: "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=800&q=80",
+    image: "/group.jpg",
   },
   {
     icon: "Music",
     title: "Music",
     text: "Singing, drumming, and simple instruments introduce children to the joy of music. Rhythms and melodies build listening skills, memory, and a lifelong appreciation for the arts.",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    image: "/artclass1.jpg",
   },
   {
     icon: "Palette",
     title: "Creative Arts",
     text: "Painting, drawing, crafts, and clay work let imaginations run wild. Art sessions build fine motor skills and give children a joyful outlet for expressing their inner world.",
-    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80",
+    image: "/art.jpg",
   },
 ];
 
@@ -250,7 +250,7 @@ export const TESTIMONIALS = [
     role: "Parent of Preschooler",
     quote:
       "Blessedville has been a blessing to our family. My daughter wakes up every morning excited to go to school. The teachers are warm, patient, and they genuinely care about each child. I cannot imagine a better start for her.",
-    avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80",
+    avatar: "/teacher.jpg",
     rating: 5,
   },
   {
@@ -258,7 +258,7 @@ export const TESTIMONIALS = [
     role: "Parent of Grade 2 Learner",
     quote:
       "We moved our son to Blessedville last year and the transformation has been remarkable. His confidence has soared, he is reading well above his level, and the small class sizes mean he gets the attention he needs. A truly wonderful school.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+    avatar: "/teachers.jpg",
     rating: 5,
   },
   {
@@ -266,7 +266,7 @@ export const TESTIMONIALS = [
     role: "Parent of Two Learners",
     quote:
       "Both my children attend Blessedville — one in daycare and one in lower primary. I love that they are in one school where the Christian values I teach at home are reinforced every day. The location along Northern Bypass is so convenient too.",
-    avatar: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80",
+    avatar: "/teachers2.jpg",
     rating: 5,
   },
   {
@@ -274,7 +274,7 @@ export const TESTIMONIALS = [
     role: "Parent of Kindergarten Learner",
     quote:
       "What sets Blessedville apart is how well they know each child. Every teacher greets my daughter by name, they tell me about her day in detail, and she is learning so much through play. I recommend this school to every parent I meet.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
+    avatar: "/scouts.jpg",
     rating: 5,
   },
 ];
@@ -297,24 +297,24 @@ export const ADMISSIONS = [
 ];
 
 export const FACULTY = [
-  { name: "Mrs. Grace Mwangi", role: "Head Teacher", dept: "Leadership", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mr. Peter Ndung'u", role: "Deputy Head", dept: "Academics", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" },
-  { name: "Ms. Aisha Juma", role: "Kindergarten Lead", dept: "Early Years", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mr. David Ochieng", role: "Activities Coordinator", dept: "Co-curricular", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mrs. Faith Wambui", role: "Daycare Supervisor", dept: "Early Years", image: "https://images.unsplash.com/photo-159855800ABCD-9fd8a47d146a?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mrs. Naomi Chebet", role: "Pastoral Lead", dept: "Student Welfare", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mrs. Grace Mwangi", role: "Head Teacher", dept: "Leadership", image: "/teacher.jpg" },
+  { name: "Mr. Peter Ndung'u", role: "Deputy Head", dept: "Academics", image: "/teachers.jpg" },
+  { name: "Ms. Aisha Juma", role: "Kindergarten Lead", dept: "Early Years", image: "/teachers2.jpg" },
+  { name: "Mr. David Ochieng", role: "Activities Coordinator", dept: "Co-curricular", image: "/students.jpg" },
+  { name: "Mrs. Faith Wambui", role: "Daycare Supervisor", dept: "Early Years", image: "/kid1.jpg" },
+  { name: "Mrs. Naomi Chebet", role: "Pastoral Lead", dept: "Student Welfare", image: "/students1.jpg" },
 ];
 
 export const GALLERY = [
-  { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80", category: "Learning", title: "Learning Through Play" },
-  { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80", category: "Learning", title: "CBC Classroom" },
-  { src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80", category: "Sports", title: "Swimming Lessons" },
-  { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80", category: "Events", title: "School Concert" },
-  { src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80", category: "Activities", title: "Creative Arts" },
-  { src: "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=800&q=80", category: "Activities", title: "Outdoor Activities" },
-  { src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80", category: "Events", title: "Family Fun Day" },
-  { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80", category: "Learning", title: "Classroom Learning" },
-  { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80", category: "Events", title: "School Events" },
+  { src: "/playing.jpg", category: "Learning", title: "Learning Through Play" },
+  { src: "/class.jpg", category: "Learning", title: "CBC Classroom" },
+  { src: "/swing.jpg", category: "Sports", title: "Swimming Lessons" },
+  { src: "/artclass1.jpg", category: "Events", title: "School Concert" },
+  { src: "/art.jpg", category: "Activities", title: "Creative Arts" },
+  { src: "/group.jpg", category: "Activities", title: "Outdoor Activities" },
+  { src: "/parade.jpg", category: "Events", title: "Family Fun Day" },
+  { src: "/class2.jpg", category: "Learning", title: "Classroom Learning" },
+  { src: "/students2.jpg", category: "Events", title: "School Events" },
 ];
 
 export const CAMPUS_HOTSPOTS = [
@@ -324,12 +324,11 @@ export const CAMPUS_HOTSPOTS = [
   { top: "22%", left: "74%", label: "Creative Arts Room" },
 ];
 
-export const HERO_VIDEO_POSTER =
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80";
+export const HERO_VIDEO_POSTER = "/school.jpg";
 
 export const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1920&q=80",
+  "/home.jpg",
+  "/school.jpg",
+  "/students3.jpg",
+  "/transport.jpg",
 ];

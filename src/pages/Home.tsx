@@ -1,14 +1,16 @@
 import Hero from "../components/Hero";
-import Stats from "../components/Stats";
 import WhyChooseUs from "../components/WhyChooseUs";
+import Stats from "../components/Stats";
+import Badges from "../components/Badges";
 import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Stats />
       <WhyChooseUs />
+      <Stats />
+      <Badges />
       <Testimonials />
     </>
   );
