@@ -14,7 +14,7 @@ export default function About() {
           <Reveal className="relative">
             <div className="relative overflow-hidden rounded-[2rem] shadow-[0_30px_80px_-30px_rgba(8,8,8,0.45)]">
               <img
-                src="/students.jpg"
+                src="/schoolin1.jpeg"
                 alt="Happy children learning through play at Blessedville Schools"
                 className="aspect-[4/5] w-full object-cover"
                 loading="lazy"

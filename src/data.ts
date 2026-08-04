@@ -23,13 +23,13 @@ export const WELCOME = {
   p2: "We believe education goes beyond the classroom by developing confident, responsible, and compassionate learners through engaging academics, co-curricular activities, and personalized support for every child.",
   cta: "Learn More About Us",
   ctaLink: "/about",
-  image: "/school.jpg",
+  image: "/schoolin.jpeg",
   imageAlt: "Blessedville Schools campus building",
 };
 
 export const SOCIALS = [
   { name: "Facebook", url: "https://www.facebook.com/people/blessedville-schools/61553840668941/" },
-  { name: "Instagram", url: "#" },
+  { name: "Instagram", url: "https://www.instagram.com/blessedville_schools/" },
   { name: "Youtube", url: "#" },
   { name: "X", url: "#" },
 ];
@@ -143,36 +143,22 @@ export const PROGRAMS_PREVIEW = [
     title: "Kindergarten & Daycare",
     description:
       "A warm and caring introduction to learning where children grow through play, creativity, early literacy, numeracy, and social development.",
-    image: "/kid.jpg",
+    image: "/sleeping.jpeg",
     link: "/programmes/daycare",
   },
   {
     title: "Preschool / Playgroup",
     description:
       "Structured yet playful experiences that build confidence, communication, creativity, and school readiness in a fun environment.",
-    image: "/kid1.jpg",
+    image: "/playgroup.jpeg",
     link: "/programmes/playgroup",
   },
   {
     title: "Lower Primary (Grade 1–4)",
     description:
       "A strong academic foundation that combines quality teaching, practical learning, and Christian values to prepare learners for future success.",
-    image: "/class2.jpg",
+    image: "/academic.jpeg",
     link: "/programmes/lower-primary",
-  },
-  {
-    title: "Co-curricular Activities",
-    description:
-      "Discover sports, creative arts, fitness, and outdoor learning experiences that build skills, confidence, and teamwork.",
-    image: "/art.jpg",
-    link: "/activities/co-curricular",
-  },
-  {
-    title: "Clubs & Social Activities",
-    description:
-      "Explore clubs that develop leadership, communication, creativity, and social skills in a fun, supportive environment.",
-    image: "/scouts.jpg",
-    link: "/activities/clubs",
   },
 ];
 
@@ -181,7 +167,7 @@ export const ACADEMICS = [
     name: "Daycare",
     age: "Ages 1–2",
     image:
-      "/kid.jpg",
+      "/sleeping.jpeg",
     overview:
       "A warm, loving environment where our youngest children feel safe and cherished. Gentle routines, sensory play, and lots of cuddles help babies and toddlers feel at home while building early motor and social skills.",
     subjects: ["Sensory Play", "Gentle Routines", "Early Motor Skills", "Social Bonding"],
@@ -191,7 +177,7 @@ export const ACADEMICS = [
     name: "Playgroup",
     age: "Ages 2–3",
     image:
-      "/kid1.jpg",
+      "/playgroup.jpeg",
     overview:
       "Through guided play, songs, and simple activities, toddlers begin to explore the world around them. Language blossoms, friendships form, and independence takes root — all in a cheerful, stimulating setting.",
     subjects: ["Language & Stories", "Music & Movement", "Simple Art", "Outdoor Play"],
@@ -201,7 +187,7 @@ export const ACADEMICS = [
     name: "Kindergarten",
     age: "Ages 3–4",
     image:
-      "/students.jpg",
+      "/learning.jpeg",
     overview:
       "A joyful introduction to structured learning. Children build early literacy and numeracy skills through hands-on activities, creative arts, and cooperative play — preparing them for the school years ahead.",
     subjects: ["Early Literacy", "Basic Numeracy", "Creative Arts", "Social Skills"],
@@ -211,7 +197,7 @@ export const ACADEMICS = [
     name: "Preschool",
     age: "Ages 4–5",
     image:
-      "/class.jpg",
+      "/class.jpeg",
     overview:
       "Children grow in confidence and readiness as they master pre-reading, number sense, and problem-solving. Our preschool programme sparks curiosity and builds the foundation for a smooth transition into primary school.",
     subjects: ["Reading Readiness", "Number Work", "Science Discovery", "Art & Music"],
@@ -221,7 +207,7 @@ export const ACADEMICS = [
     name: "Lower Primary",
     age: "Grades 1–4",
     image:
-      "/class2.jpg",
+      "/academic.jpeg",
     overview:
       "A comprehensive CBC programme that develops strong academic foundations while nurturing each child's unique talents. Mathematics, languages, science, and social studies come alive through projects, discussions, and real-world connections.",
     subjects: ["English & Kiswahili", "Mathematics", "Science & Environment", "Creative Arts & Sports"],
@@ -252,19 +238,19 @@ export const FACILITIES = [
     icon: "Sparkles",
     title: "Dance & Fitness",
     text: "Energetic sessions that keep children active and healthy. Modern dance, aerobics, and fitness games teach teamwork while building strength, stamina, and a love for movement.",
-    image: "/playing.jpg",
+    image: "/playing.jpeg",
   },
   {
     icon: "Trophy",
     title: "Gymnastics",
     text: "Tumbling, balancing, and stretching — gymnastics helps children develop flexibility, strength, and body awareness in a safe, padded environment with patient coaching.",
-    image: "/parade.jpg",
+    image: "/stance.jpeg",
   },
   {
     icon: "TreeDeciduous",
     title: "Outdoor Learning",
     text: "Our outdoor spaces are living classrooms. Gardening, nature walks, and open-air discovery sessions connect children with the natural world and build environmental awareness.",
-    image: "/group.jpg",
+    image: "/outdoorlaerning.jpeg",
   },
   {
     icon: "Music",
@@ -295,7 +281,7 @@ export const TESTIMONIALS = [
     role: "Parent of Preschooler",
     quote:
       "Blessedville has been a blessing to our family. My daughter wakes up every morning excited to go to school. The teachers are warm, patient, and they genuinely care about each child. I cannot imagine a better start for her.",
-    avatar: "/teacher.jpg",
+    avatar: "/cheer1.jpeg",
     rating: 5,
   },
   {
@@ -303,7 +289,7 @@ export const TESTIMONIALS = [
     role: "Parent of Grade 2 Learner",
     quote:
       "We moved our son to Blessedville last year and the transformation has been remarkable. His confidence has soared, he is reading well above his level, and the small class sizes mean he gets the attention he needs. A truly wonderful school.",
-    avatar: "/teachers.jpg",
+    avatar: "/cheer2.jpeg",
     rating: 5,
   },
   {
@@ -311,7 +297,7 @@ export const TESTIMONIALS = [
     role: "Parent of Two Learners",
     quote:
       "Both my children attend Blessedville — one in daycare and one in lower primary. I love that they are in one school where the Christian values I teach at home are reinforced every day. The location along Northern Bypass is so convenient too.",
-    avatar: "/teachers2.jpg",
+    avatar: "/yey.jpeg",
     rating: 5,
   },
   {
@@ -319,7 +305,7 @@ export const TESTIMONIALS = [
     role: "Parent of Kindergarten Learner",
     quote:
       "What sets Blessedville apart is how well they know each child. Every teacher greets my daughter by name, they tell me about her day in detail, and she is learning so much through play. I recommend this school to every parent I meet.",
-    avatar: "/scouts.jpg",
+    avatar: "/yey1.jpeg",
     rating: 5,
   },
 ];
@@ -346,20 +332,20 @@ export const FACULTY = [
   { name: "Mr. Peter Ndung'u", role: "Deputy Head", dept: "Academics", image: "/teachers.jpg" },
   { name: "Ms. Aisha Juma", role: "Kindergarten Lead", dept: "Early Years", image: "/teachers2.jpg" },
   { name: "Mr. David Ochieng", role: "Activities Coordinator", dept: "Co-curricular", image: "/students.jpg" },
-  { name: "Mrs. Faith Wambui", role: "Daycare Supervisor", dept: "Early Years", image: "/kid1.jpg" },
-  { name: "Mrs. Naomi Chebet", role: "Pastoral Lead", dept: "Student Welfare", image: "/students1.jpg" },
+  { name: "Mrs. Faith Wambui", role: "Daycare Supervisor", dept: "Early Years", image: "/sleeping.jpeg" },
+  { name: "Mrs. Naomi Chebet", role: "Pastoral Lead", dept: "Student Welfare", image: "/cheer1.jpeg" },
 ];
 
 export const GALLERY = [
-  { src: "/playing.jpg", category: "Learning", title: "Learning Through Play" },
-  { src: "/class.jpg", category: "Learning", title: "CBC Classroom" },
+  { src: "/playing.jpeg", category: "Learning", title: "Learning Through Play" },
+  { src: "/class.jpeg", category: "Learning", title: "CBC Classroom" },
   { src: "/swing.jpg", category: "Sports", title: "Swimming Lessons" },
-  { src: "/artclass1.jpg", category: "Events", title: "School Concert" },
+  { src: "/eating.jpeg", category: "Events", title: "School Meals" },
   { src: "/art.jpg", category: "Activities", title: "Creative Arts" },
-  { src: "/group.jpg", category: "Activities", title: "Outdoor Activities" },
-  { src: "/parade.jpg", category: "Events", title: "Family Fun Day" },
-  { src: "/class2.jpg", category: "Learning", title: "Classroom Learning" },
-  { src: "/students2.jpg", category: "Events", title: "School Events" },
+  { src: "/outdoorlaerning1.jpeg", category: "Activities", title: "Outdoor Activities" },
+  { src: "/gradday.jpeg", category: "Events", title: "Graduation Day" },
+  { src: "/academic.jpeg", category: "Learning", title: "Classroom Learning" },
+  { src: "/football.jpeg", category: "Events", title: "Sports Events" },
 ];
 
 export const CAMPUS_HOTSPOTS = [
@@ -372,8 +358,8 @@ export const CAMPUS_HOTSPOTS = [
 export const HERO_VIDEO_POSTER = "/school.jpg";
 
 export const HERO_IMAGES = [
-  "/home.jpg",
-  "/school.jpg",
-  "/students3.jpg",
-  "/transport.jpg",
+  "/cheers.jpeg",
+  "/schoolin1.jpeg",
+  "/gradday.jpeg",
+  "/happy.jpeg",
 ];

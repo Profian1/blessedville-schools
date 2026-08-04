@@ -16,6 +16,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { SCHOOL } from "../data";
+import ProgramHero from "../components/ProgramHero";
 import FAQSection from "../components/FAQSection";
 import { Container, Reveal, SectionHeading, EASE, Button } from "../lib/ui";
 
@@ -68,7 +69,6 @@ const FAQ = [
 function ContactFormSection() {
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [msg, setMsg] = useState("");
-  const [copied, setCopied] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -168,7 +168,7 @@ function ContactFormSection() {
                 <button
                   type="button"
                   onClick={() => {
-                    document.getElementById("contact-form")?.reset();
+                    (document.getElementById("contact-form") as HTMLFormElement)?.reset();
                     setState("idle");
                     setMsg("");
                   }}
@@ -288,41 +288,12 @@ export default function Contact() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative flex min-h-[55vh] items-center overflow-hidden bg-navy sm:min-h-[60vh]">
-        <img src="/school.jpg" alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/88 via-navy/65 to-navy/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-navy/25" />
-
-        <Container className="relative z-10 py-24 sm:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE }}
-            className="max-w-3xl"
-          >
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              Contact Us
-            </span>
-            <h1 className="font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-              We'd Love to Hear From You
-            </h1>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/75">
-              Whether you're looking to enroll your child, book a school tour, or simply learn more about Blessedville Schools, our team is here to help.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button href="/contact" variant="gold">
-                Book a School Tour
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
-              <Button href="/admissions" variant="outline">
-                Apply Now
-              </Button>
-            </div>
-          </motion.div>
-        </Container>
-      </section>
+      <ProgramHero
+        badge="Contact Us"
+        title="We'd Love to Hear From You"
+        image="/schoolin1.jpeg"
+        crumbs={[{ label: "Contact" }]}
+      />
 
       {/* Contact Cards */}
       <section className="bg-white py-16 sm:py-20">

@@ -24,7 +24,7 @@ export const ACTIVITIES_NAV: ActivityMeta[] = [
     heroTitle: "Learning Beyond the Classroom",
     heroSubtitle:
       "Our co-curricular activities encourage learners to explore their interests, stay active, build confidence, and develop lifelong skills in a fun and supportive environment.",
-    heroImage: "/art.jpg",
+    heroImage: "/football.jpeg",
     heroBadge: "Co-curricular",
   },
   {

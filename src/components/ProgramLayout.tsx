@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Container, Reveal, SectionHeading, EASE } from "../lib/ui";
+import { Container, SectionHeading, EASE } from "../lib/ui";
 
 export function ProgramSection({ title, subtitle, children }: { title: string; subtitle?: string; children: React.ReactNode }) {
   return (

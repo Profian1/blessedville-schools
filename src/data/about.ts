@@ -8,19 +8,19 @@ export const ABOUT = {
     heading: "Shaping Bright Futures Through Faith, Learning, and Care",
     description:
       "Discover who we are, what we believe, and how we create a safe, inspiring, and nurturing environment where every child can grow academically, socially, emotionally, and spiritually.",
-    image: "/school.jpg",
+    image: "/cheers.jpeg",
   },
   welcome: {
     heading: "Welcome to Blessedville Schools",
     p1: "Blessedville Schools is a thriving early childhood and primary school located along the Northern Bypass in Kahawa West, Nairobi. Since 2015, we have been a trusted name in quality education — providing a safe, loving, and stimulating environment where children from Daycare through to Lower Primary can learn, grow, and thrive.",
     p2: "Guided by the Competency-Based Curriculum (CBC) and rooted in Christian values, our dedicated teachers nurture each child holistically — academically, socially, emotionally, and spiritually. We believe that every step counts in a child's journey, and we are here to walk alongside them, every step of the way.",
-    image: "/students.jpg",
+    image: "/cheers.jpeg",
   },
   story: {
     heading: "Our Story",
     p1: "Blessedville Schools was born from a simple yet powerful belief — that every child deserves a warm, nurturing start to their educational journey. Founded in 2015 in the heart of Kahawa West, we began with a handful of children and a big dream: to create a school where children are known by name, loved unconditionally, and challenged to reach their God-given potential.",
     p2: "At Blessedville Schools, we are committed to inspiring a lifelong love for learning while nurturing every child's gifts, character, and confidence.",
-    image: "/group.jpg",
+    image: "/grads.jpeg",
   },
   missionVision: {
     heading: "What Guides Us",
@@ -57,7 +57,7 @@ export const ABOUT = {
     heading: "A Place Where Children Thrive",
     p1: "Our classrooms are bright, colourful, and designed to spark curiosity. Every learning space is equipped with age-appropriate materials, learning charts, and interactive tools that make lessons come alive. Safe play areas, clean facilities, and a warm atmosphere ensure that children feel at home from the moment they arrive.",
     p2: "We believe the physical environment shapes a child's learning experience. That is why we invest in clean, well-maintained facilities, secure outdoor play spaces, and learning resources that inspire discovery and creativity.",
-    image: "/class.jpg",
+    image: "/class.jpeg",
   },
   community: {
     heading: "Our Team & School Community",
@@ -75,7 +75,7 @@ export const ABOUT = {
       ],
       facilities: [
         { src: "/swing.jpg", caption: "Outdoor Play Area" },
-        { src: "/school.jpg", caption: "School Building" },
+        { src: "/schoolin.jpeg", caption: "School Building" },
         { src: "/transport.jpg", caption: "School Transport" },
       ],
     },
@@ -89,13 +89,13 @@ export const ABOUT = {
   galleryPreview: {
     heading: "Life at Blessedville",
     images: [
-      { src: "/students.jpg", alt: "Students learning" },
-      { src: "/playing.jpg", alt: "Outdoor play" },
+      { src: "/cheers.jpeg", alt: "Students learning" },
+      { src: "/playing.jpeg", alt: "Outdoor play" },
       { src: "/art.jpg", alt: "Creative arts" },
       { src: "/swing.jpg", alt: "Playground" },
-      { src: "/class.jpg", alt: "Classroom" },
-      { src: "/parade.jpg", alt: "School events" },
-      { src: "/group.jpg", alt: "Group activities" },
+      { src: "/class.jpeg", alt: "Classroom" },
+      { src: "/gradday.jpeg", alt: "School events" },
+      { src: "/outdoorlaerning1.jpeg", alt: "Group activities" },
       { src: "/scouts.jpg", alt: "Student clubs" },
     ],
   },

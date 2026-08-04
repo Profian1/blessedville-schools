@@ -21,7 +21,7 @@ export default function CampusTour() {
         <Reveal delay={0.1} className="mt-14">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)]">
             <img
-              src="/home.jpg"
+              src="/schoolin1.jpeg"
               alt="Aerial view of the Blessedville Schools campus"
               className="h-[28rem] w-full object-cover sm:h-[34rem]"
               loading="lazy"

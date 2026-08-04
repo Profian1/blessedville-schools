@@ -1,7 +1,6 @@
 import { getProgram } from "../../data/programs";
-import Breadcrumbs from "../../components/Breadcrumbs";
 import ProgramHero from "../../components/ProgramHero";
-import ProgramSidebar from "../../components/ProgramSidebar";
+import ProgramNav from "../../components/ProgramNav";
 import FAQSection from "../../components/FAQSection";
 import ProgramCTA from "../../components/ProgramCTA";
 import { ProgramSection, FeatureGrid, GalleryGrid } from "../../components/ProgramLayout";
@@ -18,68 +17,68 @@ const FAQ = [
 ];
 
 const gallery = [
-  { src: "/kid.jpg", alt: "Happy child in daycare" },
-  { src: "/playing.jpg", alt: "Children playing" },
+  { src: "/sleeping.jpeg", alt: "Happy child in daycare" },
+  { src: "/eating.jpeg", alt: "Children eating" },
   { src: "/swing.jpg", alt: "Outdoor play area" },
-  { src: "/group.jpg", alt: "Group activities" },
+  { src: "/eating1.jpeg", alt: "Group activities" },
 ];
 
 export default function Daycare() {
   return (
     <>
-      <Breadcrumbs crumbs={[{ label: "Programs", href: "/programmes" }, { label: "Daycare" }]} />
-      <ProgramHero badge={program.heroBadge} title={program.heroTitle} subtitle={program.heroSubtitle} image={program.heroImage} />
+      <ProgramHero
+        badge={program.heroBadge}
+        title={program.heroTitle}
+        image={program.heroImage}
+        crumbs={[{ label: "Programmes", href: "/programmes" }, { label: "Daycare" }]}
+      />
+      <ProgramNav />
 
       <section className="bg-white py-16 sm:py-20">
         <Container>
-          <div className="gap-14 lg:grid lg:grid-cols-[1fr_260px]">
-            <div>
-              <ProgramSection title="Introduction">
-                <p className="text-base leading-relaxed text-ink/65">
-                  Our daycare programme provides a warm, loving environment where our youngest children feel safe and cherished. From the moment your child arrives, they are welcomed into a space designed for comfort — soft colours, cosy corners, and toys that spark curiosity while building essential early skills.
-                </p>
-              </ProgramSection>
+          <ProgramSection title="Introduction">
+            <p className="text-base leading-relaxed text-ink/65">
+              Our daycare programme provides a warm, loving environment where our youngest children feel safe and cherished. From the moment your child arrives, they are welcomed into a space designed for comfort — soft colours, cosy corners, and toys that spark curiosity while building essential early skills.
+            </p>
+          </ProgramSection>
 
-              <ProgramSection title="Why Choose Our Daycare" subtitle="A home away from home where your child is loved, nurtured, and encouraged to explore.">
-                <FeatureGrid items={[
-                  { title: "Trained Caregivers", desc: "Every staff member is trained in early childhood care, first aid, and child development." },
-                  { title: "Low Ratios", desc: "Small caregiver-to-child ratios ensure every child gets the individual attention and cuddles they need." },
-                  { title: "Safe Environment", desc: "Secure, child-proofed spaces with age-appropriate furniture, toys, and outdoor play areas." },
-                  { title: "Parent Communication", desc: "Daily updates on feeding, naps, and milestones keep you connected to your child's day." },
-                ]} columns={2} />
-              </ProgramSection>
+          <ProgramSection title="Why Choose Our Daycare" subtitle="A home away from home where your child is loved, nurtured, and encouraged to explore.">
+            <FeatureGrid items={[
+              { title: "Trained Caregivers", desc: "Every staff member is trained in early childhood care, first aid, and child development." },
+              { title: "Low Ratios", desc: "Small caregiver-to-child ratios ensure every child gets the individual attention and cuddles they need." },
+              { title: "Safe Environment", desc: "Secure, child-proofed spaces with age-appropriate furniture, toys, and outdoor play areas." },
+              { title: "Parent Communication", desc: "Daily updates on feeding, naps, and milestones keep you connected to your child's day." },
+            ]} columns={2} />
+          </ProgramSection>
 
-              <ProgramSection title="Daily Activities">
-                <FeatureGrid items={[
-                  { title: "Sensory Play", desc: "Textures, sounds, and colours that stimulate developing senses and encourage exploration." },
-                  { title: "Gentle Routines", desc: "Predictable daily patterns for feeding, napping, and play that help children feel secure." },
-                  { title: "Music & Movement", desc: "Songs, rhymes, and gentle movement activities that build language and motor coordination." },
-                  { title: "Outdoor Discovery", desc: "Supervised time in our safe outdoor area exploring nature, fresh air, and sunshine." },
-                ]} columns={2} />
-              </ProgramSection>
+          <ProgramSection title="Daily Activities">
+            <FeatureGrid items={[
+              { title: "Sensory Play", desc: "Textures, sounds, and colours that stimulate developing senses and encourage exploration." },
+              { title: "Gentle Routines", desc: "Predictable daily patterns for feeding, napping, and play that help children feel secure." },
+              { title: "Music & Movement", desc: "Songs, rhymes, and gentle movement activities that build language and motor coordination." },
+              { title: "Outdoor Discovery", desc: "Supervised time in our safe outdoor area exploring nature, fresh air, and sunshine." },
+            ]} columns={2} />
+          </ProgramSection>
 
-              <ProgramSection title="Learning Through Play">
-                <p className="text-base leading-relaxed text-ink/65">
-                  At this stage, play is the most powerful form of learning. Our caregivers guide children through activities that build early motor skills, social bonding, and language development — all through playful, joyful interaction. Every stack of blocks, every song sung together, and every cuddle builds your child's confidence and sense of security.
-                </p>
-              </ProgramSection>
+          <ProgramSection title="Learning Through Play">
+            <p className="text-base leading-relaxed text-ink/65">
+              At this stage, play is the most powerful form of learning. Our caregivers guide children through activities that build early motor skills, social bonding, and language development — all through playful, joyful interaction. Every stack of blocks, every song sung together, and every cuddle builds your child's confidence and sense of security.
+            </p>
+          </ProgramSection>
 
-              <ProgramSection title="Safe & Caring Environment">
-                <p className="text-base leading-relaxed text-ink/65">
-                  Safety is our highest priority. Our daycare rooms are bright, clean, and designed with your child's wellbeing in mind. We maintain secure entry systems, regular sanitisation routines, and child-friendly furniture. Every caregiver is background-checked and trained in paediatric first aid, giving you complete peace of mind while you are at work.
-                </p>
-              </ProgramSection>
+          <ProgramSection title="Safe & Caring Environment">
+            <p className="text-base leading-relaxed text-ink/65">
+              Safety is our highest priority. Our daycare rooms are bright, clean, and designed with your child's wellbeing in mind. We maintain secure entry systems, regular sanitisation routines, and child-friendly furniture. Every caregiver is background-checked and trained in paediatric first aid, giving you complete peace of mind while you are at work.
+            </p>
+          </ProgramSection>
 
-              <ProgramSection title="Gallery">
-                <GalleryGrid images={gallery} />
-              </ProgramSection>
+          <ProgramSection title="Gallery">
+            <GalleryGrid images={gallery} />
+          </ProgramSection>
 
-              <ProgramSection title="Frequently Asked Questions">
-                <FAQSection items={FAQ} />
-              </ProgramSection>
-            </div>
-            <ProgramSidebar currentSlug="daycare" />
-          </div>
+          <ProgramSection title="Frequently Asked Questions">
+            <FAQSection items={FAQ} />
+          </ProgramSection>
         </Container>
       </section>
 

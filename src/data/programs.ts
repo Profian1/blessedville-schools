@@ -24,7 +24,7 @@ export const PROGRAMS_NAV: ProgramMeta[] = [
     heroTitle: "Daycare",
     heroSubtitle:
       "A warm, loving environment where our youngest children feel safe and cherished — gentle routines, sensory play, and lots of cuddles.",
-    heroImage: "/kid.jpg",
+    heroImage: "/sleeping.jpeg",
     heroBadge: "Early Years",
   },
   {
@@ -35,7 +35,7 @@ export const PROGRAMS_NAV: ProgramMeta[] = [
     heroTitle: "Playgroup & Preschool",
     heroSubtitle:
       "Through guided play, songs, and simple activities, toddlers begin to explore the world around them.",
-    heroImage: "/kid1.jpg",
+    heroImage: "/playgroup.jpeg",
     heroBadge: "Early Years",
   },
   {
@@ -46,7 +46,7 @@ export const PROGRAMS_NAV: ProgramMeta[] = [
     heroTitle: "Lower Primary",
     heroSubtitle:
       "A comprehensive CBC programme that develops strong academic foundations while nurturing each child's unique talents.",
-    heroImage: "/class2.jpg",
+    heroImage: "/academic.jpeg",
     heroBadge: "Grades 1–4",
   },
 ];

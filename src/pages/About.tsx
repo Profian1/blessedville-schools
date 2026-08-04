@@ -13,9 +13,9 @@ import {
   Sparkles,
   BookOpen,
   Award,
-  Phone,
 } from "lucide-react";
 import { ABOUT } from "../data/about";
+import ProgramHero from "../components/ProgramHero";
 import { Container, Reveal, SectionHeading, EASE, Button } from "../lib/ui";
 
 const ICONS: Record<string, React.ElementType> = {
@@ -33,47 +33,7 @@ const ICONS: Record<string, React.ElementType> = {
 };
 
 /* ------------------------------------------------------------------ */
-/* 1. Hero                                                             */
-/* ------------------------------------------------------------------ */
-function Hero() {
-  return (
-    <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-navy sm:min-h-[80vh]">
-      <img src={ABOUT.hero.image} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/88 via-navy/65 to-navy/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-navy/25" />
-
-      <Container className="relative z-6 pt-8 sm:pt-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: EASE }}
-          className="max-w-3xl"
-        >
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.1em] text-gold-light">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            {ABOUT.hero.badge}
-          </span>
-          <h1 className="font-display text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl">
-            {ABOUT.hero.heading}
-          </h1>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Button href="/contact" variant="gold">
-              Book a School Tour
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Button>
-            <Button href="/contact" variant="outline">
-              <Phone className="h-4 w-4" />
-              Contact Us
-            </Button>
-          </div>
-        </motion.div>
-      </Container>
-    </section>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/* 2. Welcome                                                          */
+/* 1. Welcome                                                          */
 /* ------------------------------------------------------------------ */
 function Welcome() {
   return (
@@ -221,7 +181,7 @@ function MissionVisionValues() {
         <Reveal className="mt-12">
           <div className="relative overflow-hidden rounded-2xl p-8 sm:p-10">
             <img
-              src="/school.jpg"
+              src="/schoolin1.jpeg"
               alt=""
               aria-hidden
               className="absolute inset-0 h-full w-full object-cover"
@@ -437,7 +397,12 @@ function SchoolStats() {
 export default function About() {
   return (
     <>
-      <Hero />
+      <ProgramHero
+        badge={ABOUT.hero.badge}
+        title={ABOUT.hero.heading}
+        image={ABOUT.hero.image}
+        crumbs={[{ label: "About" }]}
+      />
       <Welcome />
       <Story />
       <MissionVisionValues />
