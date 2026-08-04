@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Send, ArrowUp } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { NAV, SCHOOL } from "../data";
 
 const LINK_GROUPS = [
@@ -27,39 +27,6 @@ const LINK_GROUPS = [
 export default function Footer() {
   return (
     <footer className="bg-navy text-white">
-      {/* Newsletter */}
-      <div className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:items-center lg:px-10">
-          <div>
-            <h3 className="font-display text-3xl font-semibold">Stay connected with Blessed Ville.</h3>
-            <p className="mt-3 max-w-md text-white/60">
-              Receive stories, open-day invitations, and admissions insights — a few times a term, never more.
-            </p>
-          </div>
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="flex flex-col gap-3 sm:flex-row"
-          >
-            <div className="relative flex-1">
-              <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/40" />
-              <input
-                type="email"
-                required
-                placeholder="Your email address"
-                aria-label="Email for newsletter"
-                className="w-full rounded-full border border-white/15 bg-white/5 py-4 pl-12 pr-4 text-white outline-none transition-colors placeholder:text-white/40 focus:border-gold"
-              />
-            </div>
-            <button
-              type="submit"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-4 font-button text-sm font-semibold text-navy transition-all hover:-translate-y-0.5"
-            >
-              Subscribe <Send className="h-4 w-4" />
-            </button>
-          </form>
-        </div>
-      </div>
-
       {/* Main */}
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.4fr_repeat(3,1fr)] lg:px-10">
         <div>

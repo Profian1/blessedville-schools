@@ -10,6 +10,8 @@ import Playgroup from "./pages/programs/Playgroup";
 import LowerPrimary from "./pages/programs/LowerPrimary";
 import Admissions from "./pages/Admissions";
 import Activities from "./pages/Activities";
+import CoCurricularActivities from "./pages/activities/CoCurricularActivities";
+import Clubs from "./pages/activities/Clubs";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./lib/ScrollToTop";
@@ -30,6 +32,8 @@ export default function App() {
             <Route path="/programmes/lower-primary" element={<LowerPrimary />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/activities" element={<Activities />} />
+            <Route path="/activities/co-curricular" element={<CoCurricularActivities />} />
+            <Route path="/activities/clubs" element={<Clubs />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

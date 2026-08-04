@@ -87,8 +87,10 @@ type ButtonProps = {
   href?: string;
   variant?: "gold" | "navy" | "outline" | "ghost";
   className?: string;
-  onClick?: () => void;
+  onClick?: ((e: any) => void);
   ariaLabel?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 };
 
 export function Button({
@@ -98,6 +100,8 @@ export function Button({
   className = "",
   onClick,
   ariaLabel,
+  type = "button",
+  disabled,
 }: ButtonProps) {
   const base =
     "group relative inline-flex items-center justify-center gap-2 rounded-full font-button text-sm font-semibold tracking-wide px-7 py-3.5 transition-all duration-300 will-change-transform focus-visible:outline-none overflow-hidden";
@@ -109,6 +113,15 @@ export function Button({
   };
 
   const cls = `${base} ${variants[variant]} ${className}`;
+
+  // If href is "#" and we have an onClick or type=submit, render a real button
+  if (href === "#" || type !== "button") {
+    return (
+      <button type={type} onClick={onClick} aria-label={ariaLabel} disabled={disabled} className={cls}>
+        <span className="relative z-10 flex items-center gap-2">{children}</span>
+      </button>
+    );
+  }
 
   if (href.startsWith("http") || href.startsWith("#") || href.startsWith("mailto") || href.startsWith("tel")) {
     return (

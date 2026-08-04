@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative flex h-screen items-center overflow-hidden">
+    <section id="home" className="relative flex h-[130vh] items-center overflow-hidden">
       {/* Background crossfade */}
       {HERO_IMAGES.map((src, i) => (
         <div
@@ -49,7 +49,7 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-44 pb-36 sm:px-8 lg:px-10"
+        className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-52 pb-44 sm:px-8 lg:px-10"
       >
         <motion.h1
           variants={item}

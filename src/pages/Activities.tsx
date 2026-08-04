@@ -1,5 +1,5 @@
-import Facilities from "../components/Facilities";
+import { Navigate } from "react-router-dom";
 
 export default function Activities() {
-  return <Facilities />;
+  return <Navigate to="/activities/co-curricular" replace />;
 }

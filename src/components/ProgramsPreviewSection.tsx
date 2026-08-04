@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, GraduationCap } from "lucide-react";
 import { PROGRAMS_PREVIEW } from "../data";
-import { Button, Container, Reveal, SectionHeading, EASE } from "../lib/ui";
+import { Button, Container, SectionHeading, EASE } from "../lib/ui";
 
 export default function ProgramsPreviewSection() {
   return (
@@ -11,7 +11,6 @@ export default function ProgramsPreviewSection() {
           eyebrow="Our Learning Journey"
           title={<>Our <span className="text-gold-gradient">Programs</span></>}
         />
-
 
         {/* Cards Grid */}
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -51,17 +50,6 @@ export default function ProgramsPreviewSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Footer CTA */}
-        <Reveal className="mt-12 text-center">
-          <p className="mb-5 text-base text-ink/55">
-            Explore our complete learning programs and discover the right path for your child.
-          </p>
-          <Button href="/programmes/daycare" variant="navy">
-            View All Programs
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
-        </Reveal>
       </Container>
     </section>
   );

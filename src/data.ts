@@ -37,9 +37,9 @@ export const SOCIALS = [
 export const NAV = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Programmes", href: "/programmes" },
+  { label: "Programmes", href: "/programmes", dropdown: "programmes" },
   { label: "Admissions", href: "/admissions" },
-  { label: "Activities", href: "/activities" },
+  { label: "Activities", href: "/activities", dropdown: "activities" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
@@ -159,6 +159,20 @@ export const PROGRAMS_PREVIEW = [
       "A strong academic foundation that combines quality teaching, practical learning, and Christian values to prepare learners for future success.",
     image: "/class2.jpg",
     link: "/programmes/lower-primary",
+  },
+  {
+    title: "Co-curricular Activities",
+    description:
+      "Discover sports, creative arts, fitness, and outdoor learning experiences that build skills, confidence, and teamwork.",
+    image: "/art.jpg",
+    link: "/activities/co-curricular",
+  },
+  {
+    title: "Clubs & Social Activities",
+    description:
+      "Explore clubs that develop leadership, communication, creativity, and social skills in a fun, supportive environment.",
+    image: "/scouts.jpg",
+    link: "/activities/clubs",
   },
 ];
 
