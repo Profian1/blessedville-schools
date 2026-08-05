@@ -22,8 +22,8 @@ export default function ProgramHero({ badge, title, subtitle, image, crumbs }: P
         aria-hidden
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/65 to-navy/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-navy/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/40 to-navy/15" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-navy/10" />
 
       <div className="relative z-10 w-full">
         {/* Breadcrumbs */}

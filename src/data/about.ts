@@ -8,7 +8,7 @@ export const ABOUT = {
     heading: "Shaping Bright Futures Through Faith, Learning, and Care",
     description:
       "Discover who we are, what we believe, and how we create a safe, inspiring, and nurturing environment where every child can grow academically, socially, emotionally, and spiritually.",
-    image: "/cheers.jpeg",
+    image: "/outdoor2.jpeg",
   },
   welcome: {
     heading: "Welcome to Blessedville Schools",

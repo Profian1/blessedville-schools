@@ -291,7 +291,7 @@ export default function Contact() {
       <ProgramHero
         badge="Contact Us"
         title="We'd Love to Hear From You"
-        image="/schoolin1.jpeg"
+        image="/compound3.jpeg"
         crumbs={[{ label: "Contact" }]}
       />
 

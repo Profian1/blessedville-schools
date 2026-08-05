@@ -40,8 +40,8 @@ export default function Hero() {
       ))}
 
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/40 to-navy/15" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-navy/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/45 via-navy/25 to-navy/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-navy/10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,184,19,0.10),transparent_55%)]" />
 
       {/* Content */}

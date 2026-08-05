@@ -18,10 +18,10 @@ const FAQ = [
 ];
 
 const gallery = [
-  { src: "/students.jpg", alt: "Primary classroom" },
-  { src: "/lowerprimary/yey.jpeg", alt: "Celebration" },
-  { src: "/lowerprimary/outdoorlaerning1.jpeg", alt: "Outdoor activities" },
-  { src: "/drive.jpg", alt: "Lower primary students" },
+  { src: "/lowerprimary/cheers.jpeg", alt: "Happy learners" },
+  { src: "/lowerprimary/compound.jpeg", alt: "School compound" },
+  { src: "/lowerprimary/grad1.jpeg", alt: "Graduation" },
+  { src: "/lowerprimary/happy.jpeg", alt: "Happy students" },
 ];
 
 export default function LowerPrimary() {
@@ -52,8 +52,8 @@ export default function LowerPrimary() {
             className="mt-10 overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
           >
             <img
-              src="/lowerprimary/happy.jpeg"
-              alt="Happy learners"
+              src="/lowerprimary/class upper.jpeg"
+              alt="Lower primary classroom"
               className="aspect-[16/9] w-full object-cover"
               loading="lazy"
             />
@@ -104,7 +104,7 @@ export default function LowerPrimary() {
               className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
             >
               <img
-                src="/lowerprimary/class2.jpg"
+                src="/lowerprimary/upperclass.jpeg"
                 alt="Learning resources"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
@@ -126,7 +126,7 @@ export default function LowerPrimary() {
               className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
             >
               <img
-                src="/lowerprimary/class.jpeg"
+                src="/lowerprimary/class2.jpg"
                 alt="Character development"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"

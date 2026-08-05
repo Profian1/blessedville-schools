@@ -15,7 +15,7 @@ const clubs = [
     title: "Scouting",
     icon: Compass,
     desc: "Develop leadership, teamwork, responsibility, outdoor survival skills, and community service values through hands-on scouting activities and camps.",
-    image: "/clubs/scouts.jpg",
+    image: "/clubs/scouts team.png",
   },
   {
     title: "Games & Sports",
@@ -60,6 +60,7 @@ const gallery = [
   { src: "/clubs/art5.jpg", alt: "Club activities" },
   { src: "/clubs/art7.jpg", alt: "Student creativity" },
   { src: "/clubs/artclass1.jpg", alt: "Arts class" },
+  { src: "/clubs/scouts.jpg", alt: "Scouting activities" },
 ];
 
 export default function Clubs() {

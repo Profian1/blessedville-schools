@@ -18,10 +18,10 @@ const FAQ = [
 ];
 
 const gallery = [
-  { src: "/playgroup/playgroup1.jpeg", alt: "Children playing" },
+  { src: "/playgroup/outdoor (2).jpeg", alt: "Outdoor play" },
   { src: "/playgroup/eating1.jpeg", alt: "Snack time" },
-  { src: "/playgroup/kids5.jpeg", alt: "Little learners" },
-  { src: "/playgroup/playing (2).jpeg", alt: "Active play" },
+  { src: "/playgroup/parade.jpeg", alt: "School parade" },
+  { src: "/playgroup/playing2 (2).jpeg", alt: "Active play" },
 ];
 
 export default function Playgroup() {
@@ -102,8 +102,8 @@ export default function Playgroup() {
               className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
             >
               <img
-                src="/playgroup/class.jpg"
-                alt="Playgroup classroom"
+                src="/playgroup/classroom activites.jpeg"
+                alt="Classroom activities"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
               />
@@ -124,8 +124,8 @@ export default function Playgroup() {
               className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
             >
               <img
-                src="/playgroup/outdoor (2).jpeg"
-                alt="Outdoor activities"
+                src="/playgroup/class.jpg"
+                alt="Preparing for primary school"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
               />
