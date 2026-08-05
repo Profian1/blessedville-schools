@@ -9,7 +9,7 @@ export default function Badges() {
   return (
     <section className="relative -mt-1 overflow-hidden py-20 sm:py-28">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-fixed bg-cover bg-center"
         style={{ backgroundImage: "url(/home/outdoor2.jpeg)" }}
       />
       <div className="absolute inset-0 bg-navy/80" />

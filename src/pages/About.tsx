@@ -193,7 +193,7 @@ function MissionVisionValues() {
         <Reveal className="mt-12">
           <div className="relative overflow-hidden rounded-2xl p-8 sm:p-10">
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-fixed bg-cover bg-center"
               style={{ backgroundImage: "url(/about/corevalues.jpeg)" }}
             />
             <div className="absolute inset-0 bg-navy/80" />

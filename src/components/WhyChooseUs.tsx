@@ -46,19 +46,14 @@ export default function WhyChooseUs() {
                 transition={{ duration: 0.7, ease: EASE, delay: i * 0.07 }}
               >
                 <div className="group relative h-full overflow-hidden rounded-3xl border border-white bg-white p-7 shadow-[0_14px_40px_-22px_rgba(8,8,8,0.35)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-24px_rgba(8,8,8,0.5)]">
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-navy/0 via-navy/0 to-gold/0 transition-all duration-500 group-hover:from-navy/5 group-hover:to-gold/10" />
-                  <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold transition-all duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:text-navy">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold transition-all duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:text-navy">
                     <Icon className="h-7 w-7" />
                   </span>
-                  <h3 className="relative mt-6 font-display text-xl font-semibold text-navy">
+                  <h3 className="mt-6 font-display text-xl font-semibold text-navy">
                     {w.title}
                   </h3>
-                  <p className="relative mt-3 max-h-0 overflow-hidden text-sm leading-relaxed text-ink/60 opacity-0 transition-all duration-500 group-hover:max-h-32 group-hover:opacity-100">
+                  <p className="mt-3 text-sm leading-relaxed text-ink/60">
                     {w.text}
-                  </p>
-                  {/* Visible summary for no-hover devices */}
-                  <p className="relative mt-3 text-sm leading-relaxed text-ink/60 transition-opacity duration-300 group-hover:hidden">
-                    {w.text.slice(0, 48)}…
                   </p>
                 </div>
               </motion.div>
