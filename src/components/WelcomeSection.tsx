@@ -18,13 +18,13 @@ export default function WelcomeSection() {
     <section className="bg-white py-12 sm:py-16 lg:py-20">
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-[45fr_55fr] lg:gap-16">
-          {/* Image */}
+          {/* Image — below text on mobile */}
           <motion.div
             variants={imageVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="order-1 lg:order-1"
+            className="order-2 lg:order-1"
           >
             <div className="relative overflow-hidden rounded-2xl shadow-[0_24px_60px_-20px_rgba(8,8,8,0.35)]">
               <img
@@ -45,7 +45,7 @@ export default function WelcomeSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="order-2 lg:order-2 lg:text-left text-center"
+            className="order-1 lg:order-2 lg:text-left text-center"
           >
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-navy/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-navy">
               <BookOpen className="h-3.5 w-3.5 text-gold" />

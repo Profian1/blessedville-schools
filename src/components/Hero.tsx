@@ -49,7 +49,7 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-52 pb-44 sm:px-8 lg:px-10"
+        className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-36 pb-36 sm:pt-52 sm:pb-44 lg:px-10"
       >
         <motion.h1
           variants={item}

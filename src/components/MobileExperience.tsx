@@ -16,9 +16,9 @@ export default function MobileExperience() {
       {/* Floating Apply */}
       <Link
         to="/admissions"
-        className="fixed bottom-24 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 rounded-full bg-gold px-6 py-3.5 font-button text-sm font-semibold text-navy shadow-[0_14px_40px_-8px_rgba(245,184,19,0.7)] transition-transform active:scale-95 lg:hidden"
+        className="fixed bottom-24 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-gold px-4 py-2.5 font-button text-xs font-semibold text-navy shadow-[0_14px_40px_-8px_rgba(245,184,19,0.7)] transition-transform active:scale-95 lg:hidden"
       >
-        Apply Now <ArrowRight className="h-4 w-4" />
+        Apply Now <ArrowRight className="h-3.5 w-3.5" />
       </Link>
 
       {/* Floating WhatsApp */}

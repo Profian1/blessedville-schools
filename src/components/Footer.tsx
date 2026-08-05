@@ -68,9 +68,22 @@ export default function Footer() {
       {/* Bottom */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-5 py-7 sm:flex-row sm:justify-between sm:px-8 lg:px-10">
-          <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} {SCHOOL.name}. All rights reserved.
-          </p>
+          <div className="text-center">
+            <p className="text-sm text-white/50">
+              © {new Date().getFullYear()} {SCHOOL.name}. All rights reserved.
+            </p>
+            <p className="mt-1 text-xs text-white/40">
+              Web developed by{" "}
+              <a
+                href="https://inactechnologies.co.ke"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline transition-colors hover:text-gold"
+              >
+                INac Technologies
+              </a>
+            </p>
+          </div>
           <button
             aria-label="Back to top"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

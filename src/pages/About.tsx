@@ -39,7 +39,7 @@ function Welcome() {
     <section className="bg-white py-20 sm:py-28">
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <Reveal>
+          <Reveal className="order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_24px_60px_-20px_rgba(8,8,8,0.35)]">
               <img
                 src={ABOUT.welcome.image}
@@ -51,7 +51,7 @@ function Welcome() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="order-1 lg:order-2">
             <span className="inline-flex items-center gap-2 rounded-full bg-navy/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-navy">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               About Us

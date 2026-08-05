@@ -91,7 +91,7 @@ export const ABOUT = {
     images: [
       { src: "/about/classroom.jpg", alt: "Classroom" },
       { src: "/playing.jpeg", alt: "Outdoor play" },
-      { src: "/co-curricular/arts.jpg", alt: "Creative arts" },
+      { src: "/co-curricular/arts.png", alt: "Creative arts" },
       { src: "/co-curricular/swimming.jpeg", alt: "Swimming" },
       { src: "/about/compound1.jpeg", alt: "School grounds" },
       { src: "/gradday.jpeg", alt: "School events" },

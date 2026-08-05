@@ -14,9 +14,9 @@ const activities = [
   { title: "Swimming", image: "/co-curricular/swimming1.jpeg", desc: "Develop water confidence, coordination, safety awareness, and physical fitness." },
   { title: "Ball Games", image: "/co-curricular/football.jpeg", desc: "Build teamwork, coordination, and a love for sports through football and other games." },
   { title: "Dance & Fitness", image: "/co-curricular/dance1.jpg", desc: "Encourage creativity, teamwork, healthy lifestyles, and self-expression through movement." },
-  { title: "Outdoor Learning", image: "/outdoor1.jpeg", desc: "Hands-on experiences that inspire curiosity, teamwork, environmental awareness, and problem-solving." },
-  { title: "Music", image: "/co-curricular/music.jpeg", desc: "Singing, drumming, and simple instruments that build listening skills, memory, and musical appreciation." },
-  { title: "Creative Arts", image: "/co-curricular/arts.jpg", desc: "Nurture creativity and self-expression through music, drawing, painting, crafts, and performance." },
+  { title: "Outdoor Learning", image: "/co-curricular/outdoor.jpg", desc: "Hands-on experiences that inspire curiosity, teamwork, environmental awareness, and problem-solving." },
+  { title: "Music", image: "/co-curricular/music.jpg", desc: "Singing, drumming, and simple instruments that build listening skills, memory, and musical appreciation." },
+  { title: "Creative Arts", image: "/co-curricular/arts.png", desc: "Nurture creativity and self-expression through music, drawing, painting, crafts, and performance." },
 ];
 
 const parentFeatures = [

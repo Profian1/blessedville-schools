@@ -195,7 +195,7 @@ function ContactFormSection() {
           {/* Side info */}
           <Reveal delay={0.1} className="space-y-8">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.25)]">
-              <img src="/school.jpg" alt="Blessedville Schools" className="aspect-[4/3] w-full object-cover" loading="lazy" />
+              <img src="/contact/school.jpg" alt="Blessedville Schools" className="aspect-[4/3] w-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
             </div>
             <div className="rounded-2xl border border-navy/10 bg-mist p-6">
@@ -291,7 +291,7 @@ export default function Contact() {
       <ProgramHero
         badge="Contact Us"
         title="We'd Love to Hear From You"
-        image="/compound3.jpeg"
+        image="/contact/conthero.jpg"
         crumbs={[{ label: "Contact" }]}
       />
 
