@@ -11,14 +11,12 @@ import { EASE } from "../../lib/ui";
 const program = getActivity("co-curricular")!;
 
 const activities = [
-  { title: "Swimming", image: "/swing.jpg", desc: "Develop water confidence, coordination, safety awareness, and physical fitness." },
-  { title: "Skating", image: "/swing2.jpg", desc: "Improve balance, coordination, confidence, and perseverance while having fun." },
-  { title: "Ball Games", image: "/football.jpeg", desc: "Build teamwork, coordination, and a love for sports through football and other games." },
-  { title: "Dance & Fitness", image: "/stance.jpeg", desc: "Encourage creativity, teamwork, healthy lifestyles, and self-expression through movement." },
-  { title: "Gymnastics", image: "/tracksuit.jpeg", desc: "Develop strength, flexibility, balance, coordination, and determination." },
+  { title: "Swimming", image: "/co-curricular/swimming1.jpeg", desc: "Develop water confidence, coordination, safety awareness, and physical fitness." },
+  { title: "Ball Games", image: "/co-curricular/football.jpeg", desc: "Build teamwork, coordination, and a love for sports through football and other games." },
+  { title: "Dance & Fitness", image: "/co-curricular/dance1.jpg", desc: "Encourage creativity, teamwork, healthy lifestyles, and self-expression through movement." },
   { title: "Outdoor Learning", image: "/outdoorlaerning.jpeg", desc: "Hands-on experiences that inspire curiosity, teamwork, environmental awareness, and problem-solving." },
-  { title: "Music", image: "/artclass1.jpg", desc: "Singing, drumming, and simple instruments that build listening skills, memory, and musical appreciation." },
-  { title: "Creative Arts", image: "/art.jpg", desc: "Nurture creativity and self-expression through music, drawing, painting, crafts, and performance." },
+  { title: "Music", image: "/co-curricular/music.jpeg", desc: "Singing, drumming, and simple instruments that build listening skills, memory, and musical appreciation." },
+  { title: "Creative Arts", image: "/co-curricular/arts.jpg", desc: "Nurture creativity and self-expression through music, drawing, painting, crafts, and performance." },
 ];
 
 const parentFeatures = [
@@ -36,12 +34,10 @@ const FAQ = [
 ];
 
 const gallery = [
-  { src: "/art.jpg", alt: "Creative arts" },
-  { src: "/art2.jpg", alt: "Art activities" },
-  { src: "/swing.jpg", alt: "Swimming" },
-  { src: "/football.jpeg", alt: "Play and fitness" },
-  { src: "/outdoorlaerning1.jpeg", alt: "Group activities" },
-  { src: "/artclass1.jpg", alt: "Art class" },
+  { src: "/co-curricular/dance.jpg", alt: "Dance activities" },
+  { src: "/co-curricular/fut.jpeg", alt: "Football" },
+  { src: "/co-curricular/playingfacility.jpeg", alt: "Play facilities" },
+  { src: "/co-curricular/swimming.jpeg", alt: "Swimming" },
 ];
 
 export default function CoCurricularActivities() {
@@ -55,15 +51,35 @@ export default function CoCurricularActivities() {
       />
       <ActivityNav />
 
+      {/* Introduction — centered heading, paragraph, image below */}
       <section className="bg-white py-16 sm:py-20">
         <Container>
-          <ProgramSection title="Introduction">
-            <p className="text-base leading-relaxed text-ink/65">
+          <div className="text-center">
+            <h2 className="font-display text-3xl font-semibold text-navy sm:text-4xl">Introduction</h2>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/65">
               Our co-curricular programme is an essential part of every child's education at Blessedville. Beyond the classroom, children discover new interests, develop important life skills, and build confidence through a rich variety of sports, arts, and outdoor activities — all guided by caring instructors in a safe environment.
             </p>
-          </ProgramSection>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: EASE }}
+            className="mt-10 overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
+          >
+            <img
+              src="/co-curricular/play.jpeg"
+              alt="Children playing"
+              className="aspect-[16/9] w-full object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+        </Container>
+      </section>
 
-          {/* Activities Grid */}
+      {/* Activities Grid */}
+      <section className="bg-white pb-16 sm:pb-20">
+        <Container>
           <ProgramSection title="Our Activities">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {activities.map((a, i) => (
@@ -92,20 +108,20 @@ export default function CoCurricularActivities() {
               ))}
             </div>
           </ProgramSection>
-
-          <ProgramSection title="Why Parents Love Our Activities">
-            <FeatureGrid items={parentFeatures} columns={2} />
-          </ProgramSection>
-
-          <ProgramSection title="Gallery">
-            <GalleryGrid images={gallery} />
-          </ProgramSection>
-
-          <ProgramSection title="Frequently Asked Questions">
-            <FAQSection items={FAQ} />
-          </ProgramSection>
         </Container>
       </section>
+
+      <ProgramSection title="Why Parents Love Our Activities">
+        <FeatureGrid items={parentFeatures} columns={2} />
+      </ProgramSection>
+
+      <ProgramSection title="Gallery">
+        <GalleryGrid images={gallery} />
+      </ProgramSection>
+
+      <ProgramSection title="Frequently Asked Questions">
+        <FAQSection items={FAQ} />
+      </ProgramSection>
 
       <ProgramCTA
         heading="Help Your Child Discover Their Talents"

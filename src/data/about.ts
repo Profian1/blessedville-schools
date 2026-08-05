@@ -57,7 +57,7 @@ export const ABOUT = {
     heading: "A Place Where Children Thrive",
     p1: "Our classrooms are bright, colourful, and designed to spark curiosity. Every learning space is equipped with age-appropriate materials, learning charts, and interactive tools that make lessons come alive. Safe play areas, clean facilities, and a warm atmosphere ensure that children feel at home from the moment they arrive.",
     p2: "We believe the physical environment shapes a child's learning experience. That is why we invest in clean, well-maintained facilities, secure outdoor play spaces, and learning resources that inspire discovery and creativity.",
-    image: "/class.jpeg",
+    image: "/lowerprimary/class.jpeg",
   },
   community: {
     heading: "Our Team & School Community",
@@ -69,9 +69,9 @@ export const ABOUT = {
         { src: "/teachers2.jpg", caption: "Supportive Staff" },
       ],
       spaces: [
-        { src: "/class2.jpg", caption: "Early Years Classroom" },
-        { src: "/drawing.jpg", caption: "Learning Resources" },
-        { src: "/artclass1.jpg", caption: "Creative Arts Area" },
+        { src: "/lowerprimary/class2.jpg", caption: "Early Years Classroom" },
+        { src: "/clubs/drawing.jpg", caption: "Learning Resources" },
+        { src: "/clubs/artclass1.jpg", caption: "Creative Arts Area" },
       ],
       facilities: [
         { src: "/swing.jpg", caption: "Outdoor Play Area" },
@@ -91,12 +91,12 @@ export const ABOUT = {
     images: [
       { src: "/cheers.jpeg", alt: "Students learning" },
       { src: "/playing.jpeg", alt: "Outdoor play" },
-      { src: "/art.jpg", alt: "Creative arts" },
+      { src: "/co-curricular/art.jpg", alt: "Creative arts" },
       { src: "/swing.jpg", alt: "Playground" },
-      { src: "/class.jpeg", alt: "Classroom" },
+      { src: "/lowerprimary/class.jpeg", alt: "Classroom" },
       { src: "/gradday.jpeg", alt: "School events" },
-      { src: "/outdoorlaerning1.jpeg", alt: "Group activities" },
-      { src: "/scouts.jpg", alt: "Student clubs" },
+      { src: "/lowerprimary/outdoorlaerning1.jpeg", alt: "Group activities" },
+      { src: "/clubs/scouts.jpg", alt: "Student clubs" },
     ],
   },
   faq: [

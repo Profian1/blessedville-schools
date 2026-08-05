@@ -1,13 +1,13 @@
 ﻿import { Link } from "react-router-dom";
-import { Home, Info, BookOpen, GraduationCap, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Home, Info, BookOpen, Image, Activity, MessageCircle, ArrowRight } from "lucide-react";
 import { SCHOOL } from "../data";
 
 const ITEMS = [
   { icon: Home, label: "Home", href: "/" },
   { icon: Info, label: "About", href: "/about" },
   { icon: BookOpen, label: "Programmes", href: "/programmes" },
-  { icon: GraduationCap, label: "Apply", href: "/admissions" },
-  { icon: Phone, label: "Contact", href: "/contact" },
+  { icon: Image, label: "Gallery", href: "/gallery" },
+  { icon: Activity, label: "Activities", href: "/activities" },
 ];
 
 export default function MobileExperience() {

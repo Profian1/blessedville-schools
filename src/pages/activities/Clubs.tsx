@@ -15,28 +15,28 @@ const clubs = [
     title: "Scouting",
     icon: Compass,
     desc: "Develop leadership, teamwork, responsibility, outdoor survival skills, and community service values through hands-on scouting activities and camps.",
-    color: "bg-green-500",
+    image: "/clubs/scouts.jpg",
   },
   {
     title: "Games & Sports",
     icon: Gamepad2,
     desc: "Promote teamwork, discipline, physical fitness, resilience, and sportsmanship through football, netball, and a variety of indoor and outdoor games.",
     activities: ["Football", "Netball"],
-    color: "bg-blue-500",
-  },
-  {
-    title: "Literacy Club",
-    icon: BookOpen,
-    desc: "Strengthen communication, confidence, critical thinking, creativity, and presentation skills through poetry, public speaking, and debate.",
-    activities: ["Poetry", "Public Speaking", "Debate"],
-    color: "bg-amber-500",
+    image: "/clubs/games and sports.jpg",
   },
   {
     title: "Arts Club",
     icon: Palette,
     desc: "Encourage imagination, artistic expression, creativity, confidence, and performance skills through fine arts and performing arts.",
     activities: ["Fine Arts", "Performing Arts"],
-    color: "bg-rose-500",
+    image: "/clubs/arts club.jpg",
+  },
+  {
+    title: "Literacy Club",
+    icon: BookOpen,
+    desc: "Strengthen communication, confidence, critical thinking, creativity, and presentation skills through poetry, public speaking, and debate.",
+    activities: ["Poetry", "Public Speaking", "Debate"],
+    image: "/clubs/art6.jpg",
   },
 ];
 
@@ -57,12 +57,9 @@ const FAQ = [
 ];
 
 const gallery = [
-  { src: "/scouts.jpg", alt: "Scouting activities" },
-  { src: "/group.jpg", alt: "Club activities" },
-  { src: "/cheers.jpeg", alt: "Student clubs" },
-  { src: "/fut.jpeg", alt: "Group work" },
-  { src: "/gradday.jpeg", alt: "School events" },
-  { src: "/artclass1.jpg", alt: "Club activities" },
+  { src: "/clubs/art5.jpg", alt: "Club activities" },
+  { src: "/clubs/art7.jpg", alt: "Student creativity" },
+  { src: "/clubs/artclass1.jpg", alt: "Arts class" },
 ];
 
 export default function Clubs() {
@@ -76,21 +73,41 @@ export default function Clubs() {
       />
       <ActivityNav />
 
+      {/* Introduction — centered heading, paragraph, image below */}
       <section className="bg-white py-16 sm:py-20">
         <Container>
-          <ProgramSection title="Introduction">
-            <p className="text-base leading-relaxed text-ink/65">
+          <div className="text-center">
+            <h2 className="font-display text-3xl font-semibold text-navy sm:text-4xl">Introduction</h2>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/65">
               Our clubs programme gives every learner at Blessedville the opportunity to explore their passions beyond the classroom. From scouting adventures to creative arts, literacy debates to sports teams — there is something for every child. And the best part? Every club is part of school life with no additional costs for families.
             </p>
-          </ProgramSection>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: EASE }}
+            className="mt-10 overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
+          >
+            <img
+              src="/clubs/social.jpg"
+              alt="Social activities at Blessedville"
+              className="aspect-[16/9] w-full object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+        </Container>
+      </section>
 
-          {/* Free banner */}
+      {/* Free banner */}
+      <section className="bg-white pb-8">
+        <Container>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="mb-10 flex items-start gap-4 rounded-2xl border border-gold/30 bg-gold/5 p-5"
+            className="flex items-start gap-4 rounded-2xl border border-gold/30 bg-gold/5 p-5"
           >
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/20 text-gold">
               <Info className="h-5 w-5" />
@@ -99,53 +116,72 @@ export default function Clubs() {
               All student clubs are included in school life and are offered at no extra cost.
             </p>
           </motion.div>
+        </Container>
+      </section>
 
-          {/* Clubs Grid */}
-          <div className="grid gap-6 sm:grid-cols-2">
-            {clubs.map((c, i) => (
-              <motion.div
-                key={c.title}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.6, ease: EASE, delay: i * 0.1 }}
-                className="group flex flex-col overflow-hidden rounded-2xl bg-mist shadow-[0_10px_30px_-16px_rgba(8,8,8,0.25)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-20px_rgba(8,8,8,0.4)]"
-              >
-                <div className="flex items-center gap-4 p-6 pb-3">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy text-gold transition-all duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:text-navy">
-                    <c.icon className="h-6 w-6" />
-                  </span>
-                  <h3 className="font-display text-lg font-semibold text-navy">{c.title}</h3>
-                </div>
-                <div className="px-6 pb-2">
-                  <p className="text-sm leading-relaxed text-ink/60">{c.desc}</p>
-                  {c.activities && (
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {c.activities.map((a) => (
-                        <span key={a} className="rounded-full border border-navy/15 bg-white px-2.5 py-0.5 text-xs font-medium text-navy">
+      {/* Individual Club Sections */}
+      {clubs.map((club, index) => {
+        const isEven = index % 2 === 0;
+        return (
+          <section key={club.title} className={isEven ? "bg-white py-16 sm:py-20" : "bg-mist py-16 sm:py-20"}>
+            <Container>
+              <div className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${isEven ? "" : "lg:[direction:rtl]"}`}>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, ease: EASE }}
+                  className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
+                  dir="ltr"
+                >
+                  <img
+                    src={club.image}
+                    alt={club.title}
+                    className="aspect-[4/3] w-full object-cover"
+                    loading="lazy"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, ease: EASE }}
+                  dir="ltr"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy text-gold">
+                      <club.icon className="h-6 w-6" />
+                    </span>
+                    <h3 className="font-display text-2xl font-semibold text-navy sm:text-3xl">{club.title}</h3>
+                  </div>
+                  <p className="mt-4 text-base leading-relaxed text-ink/65">{club.desc}</p>
+                  {club.activities && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {club.activities.map((a) => (
+                        <span key={a} className="rounded-full border border-navy/15 bg-white px-3 py-1 text-sm font-medium text-navy">
                           {a}
                         </span>
                       ))}
                     </div>
                   )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                </motion.div>
+              </div>
+            </Container>
+          </section>
+        );
+      })}
 
-          <ProgramSection title="Benefits of Joining Clubs" subtitle="Our clubs help children develop skills that last a lifetime.">
-            <FeatureGrid items={benefits} columns={3} />
-          </ProgramSection>
+      <ProgramSection title="Benefits of Joining Clubs" subtitle="Our clubs help children develop skills that last a lifetime.">
+        <FeatureGrid items={benefits} columns={3} />
+      </ProgramSection>
 
-          <ProgramSection title="Gallery">
-            <GalleryGrid images={gallery} />
-          </ProgramSection>
+      <ProgramSection title="Gallery">
+        <GalleryGrid images={gallery} />
+      </ProgramSection>
 
-          <ProgramSection title="Frequently Asked Questions">
-            <FAQSection items={FAQ} />
-          </ProgramSection>
-        </Container>
-      </section>
+      <ProgramSection title="Frequently Asked Questions">
+        <FAQSection items={FAQ} />
+      </ProgramSection>
 
       <ProgramCTA
         heading="Every Child Has a Talent Waiting to Shine"

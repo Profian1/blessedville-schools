@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
 import { getProgram } from "../../data/programs";
 import ProgramHero from "../../components/ProgramHero";
 import ProgramNav from "../../components/ProgramNav";
 import FAQSection from "../../components/FAQSection";
 import ProgramCTA from "../../components/ProgramCTA";
 import { ProgramSection, FeatureGrid, GalleryGrid } from "../../components/ProgramLayout";
-import { Container } from "../../lib/ui";
+import { Container, EASE } from "../../lib/ui";
 
 const program = getProgram("lower-primary")!;
 
@@ -17,9 +18,9 @@ const FAQ = [
 ];
 
 const gallery = [
-  { src: "/academic.jpeg", alt: "Primary classroom" },
-  { src: "/learning.jpeg", alt: "Students learning" },
-  { src: "/class.jpeg", alt: "Student activities" },
+  { src: "/students.jpg", alt: "Primary classroom" },
+  { src: "/lowerprimary/yey.jpeg", alt: "Celebration" },
+  { src: "/lowerprimary/outdoorlaerning1.jpeg", alt: "Outdoor activities" },
   { src: "/drive.jpg", alt: "Lower primary students" },
 ];
 
@@ -34,55 +35,125 @@ export default function LowerPrimary() {
       />
       <ProgramNav />
 
+      {/* Introduction — centered heading, paragraph, image below */}
       <section className="bg-white py-16 sm:py-20">
         <Container>
-          <ProgramSection title="Introduction">
-            <p className="text-base leading-relaxed text-ink/65">
+          <div className="text-center">
+            <h2 className="font-display text-3xl font-semibold text-navy sm:text-4xl">Introduction</h2>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/65">
               Our Lower Primary programme (Grades 1–4) builds on the strong foundation laid in our early years. Following Kenya's Competency-Based Curriculum, we deliver an engaging, well-rounded education that develops not just academic knowledge but also character, creativity, and critical thinking — preparing children for success in upper primary and beyond.
             </p>
-          </ProgramSection>
-
-          <ProgramSection title="CBC Learning Approach" subtitle="Putting every child at the centre of their own learning journey.">
-            <FeatureGrid items={[
-              { title: "Competency-Based", desc: "Children master skills at their own pace, moving forward when they demonstrate understanding — not when the calendar says so." },
-              { title: "Project-Driven", desc: "Hands-on projects that connect learning across subjects, making education relevant, engaging, and memorable." },
-              { title: "Continuous Assessment", desc: "Regular observation and feedback instead of high-pressure exams, giving a true picture of each child's progress." },
-              { title: "Parent Partnership", desc: "Detailed termly reports and regular parent-teacher meetings keep families actively involved in their child's learning." },
-            ]} columns={2} />
-          </ProgramSection>
-
-          <ProgramSection title="Subjects Offered">
-            <FeatureGrid items={[
-              { title: "English", desc: "Reading, writing, grammar, and oral communication skills developed through literature, creative writing, and discussion." },
-              { title: "Kiswahili", desc: "Building fluency in Kenya's national language through songs, stories, conversations, and written expression." },
-              { title: "Mathematics", desc: "Number sense, operations, measurement, geometry, and problem-solving using concrete materials and real-life contexts." },
-              { title: "Science & Environment", desc: "Hands-on exploration of living things, materials, energy, and the environment — sparking curiosity about the natural world." },
-              { title: "Social Studies", desc: "Understanding our community, country, and continent through maps, stories, and projects that build citizenship." },
-              { title: "Creative Arts & Sports", desc: "Drawing, painting, music, drama, and physical education that nurture creativity, teamwork, and healthy living." },
-            ]} />
-          </ProgramSection>
-
-          <ProgramSection title="Learning Resources">
-            <p className="text-base leading-relaxed text-ink/65">
-              Our classrooms are equipped with age-appropriate textbooks, learning charts, and hands-on materials. We integrate digital tools — including educational tablets and interactive whiteboards — to enhance lessons and give children early exposure to technology in a guided, purposeful way. Our well-stocked classroom libraries encourage a love of reading from an early age.
-            </p>
-          </ProgramSection>
-
-          <ProgramSection title="Character Development">
-            <p className="text-base leading-relaxed text-ink/65">
-              Academic excellence alone is not enough. Our Christian values programme weaves kindness, honesty, responsibility, and respect into daily school life. Morning devotion, values lessons, and our student leadership programme help children grow into compassionate, confident, and principled young people who care about others and their community.
-            </p>
-          </ProgramSection>
-
-          <ProgramSection title="Gallery">
-            <GalleryGrid images={gallery} />
-          </ProgramSection>
-
-          <ProgramSection title="Frequently Asked Questions">
-            <FAQSection items={FAQ} />
-          </ProgramSection>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: EASE }}
+            className="mt-10 overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
+          >
+            <img
+              src="/lowerprimary/happy.jpeg"
+              alt="Happy learners"
+              className="aspect-[16/9] w-full object-cover"
+              loading="lazy"
+            />
+          </motion.div>
         </Container>
       </section>
+
+      <ProgramSection title="CBC Learning Approach" subtitle="Putting every child at the centre of their own learning journey.">
+        <FeatureGrid items={[
+          { title: "Competency-Based", desc: "Children master skills at their own pace, moving forward when they demonstrate understanding — not when the calendar says so." },
+          { title: "Project-Driven", desc: "Hands-on projects that connect learning across subjects, making education relevant, engaging, and memorable." },
+          { title: "Continuous Assessment", desc: "Regular observation and feedback instead of high-pressure exams, giving a true picture of each child's progress." },
+          { title: "Parent Partnership", desc: "Detailed termly reports and regular parent-teacher meetings keep families actively involved in their child's learning." },
+        ]} columns={2} />
+      </ProgramSection>
+
+      <ProgramSection title="Subjects Offered">
+        <FeatureGrid items={[
+          { title: "English", desc: "Reading, writing, grammar, and oral communication skills developed through literature, creative writing, and discussion." },
+          { title: "Kiswahili", desc: "Building fluency in Kenya's national language through songs, stories, conversations, and written expression." },
+          { title: "Mathematics", desc: "Number sense, operations, measurement, geometry, and problem-solving using concrete materials and real-life contexts." },
+          { title: "Science & Environment", desc: "Hands-on exploration of living things, materials, energy, and the environment — sparking curiosity about the natural world." },
+          { title: "Social Studies", desc: "Understanding our community, country, and continent through maps, stories, and projects that build citizenship." },
+          { title: "Creative Arts & Sports", desc: "Drawing, painting, music, drama, and physical education that nurture creativity, teamwork, and healthy living." },
+        ]} />
+      </ProgramSection>
+
+      {/* Learning Resources — text left, image right */}
+      <section className="bg-white py-16 sm:py-20">
+        <Container>
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: EASE }}
+            >
+              <h2 className="font-display text-3xl font-semibold text-navy sm:text-4xl text-center">Learning Resources</h2>
+              <p className="mt-5 text-base leading-relaxed text-ink/65">
+                Our classrooms are equipped with age-appropriate textbooks, learning charts, and hands-on materials. We integrate digital tools — including educational tablets and interactive whiteboards — to enhance lessons and give children early exposure to technology in a guided, purposeful way. Our well-stocked classroom libraries encourage a love of reading from an early age.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: EASE }}
+              className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
+            >
+              <img
+                src="/lowerprimary/class2.jpg"
+                alt="Learning resources"
+                className="aspect-[4/3] w-full object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Character Development — image left, text right */}
+      <section className="bg-mist py-16 sm:py-20">
+        <Container>
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: EASE }}
+              className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-18px_rgba(8,8,8,0.3)]"
+            >
+              <img
+                src="/lowerprimary/class.jpeg"
+                alt="Character development"
+                className="aspect-[4/3] w-full object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: EASE }}
+            >
+              <h2 className="font-display text-3xl font-semibold text-navy sm:text-4xl text-center">Character Development</h2>
+              <p className="mt-5 text-base leading-relaxed text-ink/65">
+                Academic excellence alone is not enough. Our Christian values programme weaves kindness, honesty, responsibility, and respect into daily school life. Morning devotion, values lessons, and our student leadership programme help children grow into compassionate, confident, and principled young people who care about others and their community.
+              </p>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+      <ProgramSection title="Gallery">
+        <GalleryGrid images={gallery} />
+      </ProgramSection>
+
+      <ProgramSection title="Frequently Asked Questions">
+        <FAQSection items={FAQ} />
+      </ProgramSection>
 
       <ProgramCTA
         heading="Give Your Child a Strong Academic Foundation"

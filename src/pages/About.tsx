@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   Target,
   Lightbulb,
   Heart,
@@ -16,7 +15,7 @@ import {
 } from "lucide-react";
 import { ABOUT } from "../data/about";
 import ProgramHero from "../components/ProgramHero";
-import { Container, Reveal, SectionHeading, EASE, Button } from "../lib/ui";
+import { Container, Reveal, SectionHeading, EASE } from "../lib/ui";
 
 const ICONS: Record<string, React.ElementType> = {
   Target,
@@ -62,12 +61,6 @@ function Welcome() {
             </h2>
             <p className="mt-5 text-base leading-relaxed text-ink/65">{ABOUT.welcome.p1}</p>
             <p className="mt-4 text-base leading-relaxed text-ink/65">{ABOUT.welcome.p2}</p>
-            <div className="mt-7">
-              <Button href="/admissions" variant="gold">
-                Learn More
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
-            </div>
           </Reveal>
         </div>
       </Container>

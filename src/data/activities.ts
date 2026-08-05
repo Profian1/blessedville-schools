@@ -24,7 +24,7 @@ export const ACTIVITIES_NAV: ActivityMeta[] = [
     heroTitle: "Learning Beyond the Classroom",
     heroSubtitle:
       "Our co-curricular activities encourage learners to explore their interests, stay active, build confidence, and develop lifelong skills in a fun and supportive environment.",
-    heroImage: "/football.jpeg",
+    heroImage: "/co-curricular/heroplaying.jpg",
     heroBadge: "Co-curricular",
   },
   {
@@ -35,7 +35,7 @@ export const ACTIVITIES_NAV: ActivityMeta[] = [
     heroTitle: "Clubs & Social Activities",
     heroSubtitle:
       "Our clubs give learners opportunities to develop leadership, teamwork, communication, creativity, and social skills while exploring their passions.",
-    heroImage: "/scouts.jpg",
+    heroImage: "/clubs/clubs hero.jpg",
     heroBadge: "Student Clubs",
   },
 ];
