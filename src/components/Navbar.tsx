@@ -2,7 +2,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MapPin, Phone, ChevronDown } from "lucide-react";
-import { NAV, SCHOOL } from "../data";
+import { NAV, SCHOOL, SOCIALS } from "../data";
 import { PROGRAMS_NAV } from "../data/programs";
 import { ACTIVITIES_NAV } from "../data/activities";
 import { Button, EASE } from "../lib/ui";
@@ -165,6 +165,19 @@ export default function Navbar() {
               <Phone className="h-3 w-3 text-gold/80" />
               {SCHOOL.phone}
             </span>
+          </div>
+          <div className="flex items-center gap-3">
+            {SOCIALS.map((s) => (
+              <a
+                key={s.name}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-medium text-white/70 transition-colors hover:text-gold"
+              >
+                {s.name}
+              </a>
+            ))}
           </div>
         </div>
       </div>

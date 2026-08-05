@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
-import { NAV, SCHOOL } from "../data";
+import { NAV, SCHOOL, SOCIALS } from "../data";
 
 const LINK_GROUPS = [
   {
@@ -44,6 +44,19 @@ export default function Footer() {
             <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold" /> {SCHOOL.address}</p>
             <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> {SCHOOL.email}</p>
             <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> {SCHOOL.phone}</p>
+          </div>
+          <div className="mt-5 flex gap-3">
+            {SOCIALS.map((s) => (
+              <a
+                key={s.name}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-medium text-white/50 transition-colors hover:text-gold"
+              >
+                {s.name}
+              </a>
+            ))}
           </div>
         </div>
 

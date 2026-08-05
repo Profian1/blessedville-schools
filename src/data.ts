@@ -29,9 +29,9 @@ export const WELCOME = {
 
 export const SOCIALS = [
   { name: "Facebook", url: "https://www.facebook.com/people/blessedville-schools/61553840668941/" },
+  { name: "TikTok", url: "#" },
   { name: "Instagram", url: "https://www.instagram.com/blessedville_schools/" },
-  { name: "Youtube", url: "#" },
-  { name: "X", url: "#" },
+  { name: "YouTube", url: "#" },
 ];
 
 export const NAV = [

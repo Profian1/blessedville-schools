@@ -15,7 +15,7 @@ import {
   Check,
   Sparkles,
 } from "lucide-react";
-import { SCHOOL } from "../data";
+import { SCHOOL, SOCIALS } from "../data";
 import ProgramHero from "../components/ProgramHero";
 import FAQSection from "../components/FAQSection";
 import { Container, Reveal, SectionHeading, EASE, Button } from "../lib/ui";
@@ -209,6 +209,24 @@ function ContactFormSection() {
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-gold" /> Personalized school tours</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-gold" /> Expert guidance on admissions</li>
               </ul>
+            </div>
+            <div className="rounded-2xl border border-navy/10 bg-mist p-6">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold text-navy">
+                Follow Us
+              </h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {SOCIALS.map((s) => (
+                  <a
+                    key={s.name}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-medium text-navy transition-all hover:bg-navy hover:text-white"
+                  >
+                    {s.name}
+                  </a>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>
