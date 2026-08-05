@@ -21,7 +21,7 @@ const gallery = [
   { src: "/lowerprimary/cheers.jpeg", alt: "Happy learners" },
   { src: "/lowerprimary/compound.jpeg", alt: "School compound" },
   { src: "/lowerprimary/grad1.jpeg", alt: "Graduation" },
-  { src: "/lowerprimary/happy.jpeg", alt: "Happy students" },
+  { src: "/lowerprimary/celebrating.jpeg", alt: "Celebration" },
 ];
 
 export default function LowerPrimary() {

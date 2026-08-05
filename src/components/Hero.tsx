@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative flex h-[130vh] items-center overflow-hidden">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden sm:h-[130vh] sm:min-h-0">
       {/* Background crossfade */}
       {HERO_IMAGES.map((src, i) => (
         <div
@@ -34,7 +34,7 @@ export default function Hero() {
             src={src}
             alt=""
             aria-hidden
-            className={`h-full w-full object-cover ${i === active ? "kenburns" : ""}`}
+            className={`h-full w-full object-cover object-center ${i === active ? "kenburns" : ""}`}
           />
         </div>
       ))}

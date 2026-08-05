@@ -32,7 +32,6 @@ export default function WhyChooseUs() {
         <SectionHeading
           eyebrow="Why Blessedville"
           title={<>An education designed to <span className="text-gold-gradient">matter</span>.</>}
-          subtitle="Every detail is built around your child — from our caring teachers to our safe, stimulating environment."
         />
 
         <div className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">

@@ -1,6 +1,6 @@
 ﻿import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, Quote, ChevronLeft, ChevronRight, PlayCircle } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { TESTIMONIALS } from "../data";
 import { Container, Reveal, SectionHeading, EASE } from "../lib/ui";
 
@@ -39,17 +39,9 @@ export default function Testimonials() {
                 <blockquote className="mt-5 font-display text-2xl font-medium leading-snug text-navy sm:text-3xl">
                   “{t.quote}”
                 </blockquote>
-                <div className="mt-8 flex items-center gap-4">
-                  <img
-                    src={t.avatar}
-                    alt={t.name}
-                    loading="lazy"
-                    className="h-14 w-14 rounded-full object-cover ring-2 ring-gold/40"
-                  />
-                  <div>
-                    <p className="font-semibold text-navy">{t.name}</p>
-                    <p className="text-sm text-ink/55">{t.role}</p>
-                  </div>
+                <div className="mt-8">
+                  <p className="font-semibold text-navy">{t.name}</p>
+                  <p className="text-sm text-ink/55">{t.role}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -85,15 +77,6 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="mt-6 text-center">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-navy/70 transition-colors hover:text-navy"
-            >
-              <PlayCircle className="h-5 w-5 text-gold" />
-              Watch video stories from our community
-            </a>
-          </div>
         </Reveal>
       </Container>
     </section>

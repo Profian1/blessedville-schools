@@ -44,7 +44,7 @@ function Welcome() {
               <img
                 src={ABOUT.welcome.image}
                 alt="Welcome to Blessedville Schools"
-                className="aspect-[4/5] w-full object-cover lg:aspect-[5/4]"
+                className="aspect-[4/5] w-full object-cover object-[center_20%] lg:aspect-[5/4]"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/25 via-transparent to-transparent" />
@@ -170,23 +170,41 @@ function MissionVisionValues() {
           ))}
         </div>
 
+        {/* Our Promise — centered */}
+        <div className="mt-6 flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
+            className="group max-w-xl rounded-2xl border border-navy/10 bg-mist p-8 text-center transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-18px_rgba(8,8,8,0.35)]"
+          >
+            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold transition-all duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:text-navy">
+              <Heart className="h-7 w-7" />
+            </span>
+            <h3 className="mt-5 font-display text-2xl font-semibold text-navy">Our Promise</h3>
+            <p className="mt-3 text-base leading-relaxed text-ink/65">
+              At Blessedville Schools, we are committed to inspiring a lifelong love for learning while nurturing every child's gifts, character, and confidence.
+            </p>
+          </motion.div>
+        </div>
+
         {/* Core Values */}
         <Reveal className="mt-12">
           <div className="relative overflow-hidden rounded-2xl p-8 sm:p-10">
-            <img
-              src="/schoolin1.jpeg"
-              alt=""
-              aria-hidden
-              className="absolute inset-0 h-full w-full object-cover"
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: "url(/about/corevalues.jpeg)" }}
             />
-            <div className="absolute inset-0 bg-navy/85" />
+            <div className="absolute inset-0 bg-navy/80" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(245,184,19,0.10),transparent_45%)]" />
             <div className="relative z-10">
-              <h3 className="font-display text-2xl font-semibold text-white">Our Core Values</h3>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <h3 className="text-center font-display text-2xl font-semibold text-white">Our Core Values</h3>
+              <div className="mt-6 flex flex-wrap justify-center gap-4">
                 {missionVision.values.map((v) => (
                   <div
                     key={v.label}
-                    className="rounded-xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10"
+                    className="w-full rounded-xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]"
                   >
                     <h4 className="font-semibold text-gold-light">{v.label}</h4>
                     <p className="mt-1.5 text-sm leading-relaxed text-white/60">{v.desc}</p>
