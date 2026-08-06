@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import { PlayCircle } from "lucide-react";
-import { HERO_IMAGES } from "../data";
+import { MessageCircle } from "lucide-react";
+import { HERO_IMAGES, SCHOOL } from "../data";
 import { Button, EASE } from "../lib/ui";
 
 const container: Variants = {
@@ -70,10 +70,17 @@ export default function Hero() {
           <Button href="/contact" variant="gold">
             Book a School Tour
           </Button>
-          <Button href="/admissions" variant="outline">
-            <PlayCircle className="h-4 w-4" />
-            Enroll Today
-          </Button>
+          <a
+            href={`https://wa.me/${SCHOOL.whatsapp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center gap-2 rounded-full font-button text-sm font-semibold tracking-wide px-7 py-3.5 transition-all duration-300 will-change-transform focus-visible:outline-none overflow-hidden border border-white/40 text-white hover:bg-white hover:text-navy"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              <MessageCircle className="h-4 w-4" />
+              Enroll Today
+            </span>
+          </a>
         </motion.div>
       </motion.div>
 
