@@ -250,7 +250,7 @@ function MapSection() {
           <Reveal>
             <div className="overflow-hidden rounded-2xl shadow-[0_14px_40px_-20px_rgba(8,8,8,0.3)]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9!2d36.88!3d-1.20!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTEnMDkuNyJTIDM2wrA1Mic0OC4wIkU!5e0!3m2!1sen!2ske!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.987718370513!2d36.91710227341275!3d-1.1691361355060532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f20c66ba8af%3A0xd3bbcd467e1ba673!2sBLESSEDVILLE%20SCHOOLS!5e0!3m2!1sen!2ske!4v1786000929766!5m2!1sen!2ske"
                 width="100%"
                 height="350"
                 style={{ border: 0 }}

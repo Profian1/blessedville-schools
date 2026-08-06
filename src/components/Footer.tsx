@@ -80,7 +80,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-5 py-7 sm:flex-row sm:justify-between sm:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-5 py-7 sm:px-8 lg:px-10">
           <div className="text-center">
             <p className="text-sm text-white/50">
               © {new Date().getFullYear()} {SCHOOL.name}. All rights reserved.

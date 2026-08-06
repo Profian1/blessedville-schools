@@ -2,6 +2,8 @@
 /*  Blessedville Schools — central content store                       */
 /* ------------------------------------------------------------------ */
 
+import { email } from "zod";
+
 export const SCHOOL = {
   name: "Blessedville Schools",
   short: "Blessedville",
@@ -29,9 +31,9 @@ export const WELCOME = {
 
 export const SOCIALS = [
   { name: "Facebook", url: "https://www.facebook.com/people/blessedville-schools/61553840668941/" },
-  { name: "TikTok", url: "#" },
+  { name: "TikTok", url: "https://www.tiktok.com/@blessedville_schools?is_from_webapp=1&sender_device=pc" },
   { name: "Instagram", url: "https://www.instagram.com/blessedville_schools/" },
-  { name: "YouTube", url: "#" },
+  { name: "YouTube", url: "https://www.youtube.com/@blessedville_schools" },
 ];
 
 export const NAV = [

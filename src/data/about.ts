@@ -24,6 +24,11 @@ export const ABOUT = {
   },
   missionVision: {
     heading: "What Guides Us",
+    motto: {
+      icon: "Footprints",
+      title: "Our Motto",
+      text: "Every Step Counts",
+    },
     mission: {
       icon: "Target",
       title: "Our Mission",
@@ -33,6 +38,11 @@ export const ABOUT = {
       icon: "Lightbulb",
       title: "Our Vision",
       text: "To raise a generation of confident, innovative, and morally upright learners who positively impact their communities and the world.",
+    },
+    promise: {
+      icon: "Heart",
+      title: "Our Promise",
+      text: "At Blessedville Schools, we are committed to inspiring a lifelong love for learning while nurturing every child's gifts, character, and confidence.",
     },
     values: [
       { label: "Excellence", desc: "Striving for the highest standards in teaching and learning." },

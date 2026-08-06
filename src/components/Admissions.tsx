@@ -1,5 +1,5 @@
 ﻿import { motion } from "framer-motion";
-import { Mail, MapPin, FileText, MessageCircle, PartyPopper, ArrowRight, Download } from "lucide-react";
+import { Mail, MapPin, FileText, MessageCircle, PartyPopper, ArrowRight } from "lucide-react";
 import { ADMISSIONS } from "../data";
 import { Container, Reveal, SectionHeading, EASE, Button } from "../lib/ui";
 
@@ -58,10 +58,6 @@ export default function Admissions() {
         <Reveal delay={0.2} className="mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button href="/contact" variant="gold">
             Apply Now <ArrowRight className="h-4 w-4" />
-          </Button>
-          <Button href="#" variant="outline">
-            <Download className="h-4 w-4" />
-            Download Prospectus
           </Button>
         </Reveal>
       </Container>

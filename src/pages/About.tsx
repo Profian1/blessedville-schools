@@ -4,6 +4,7 @@ import {
   Target,
   Lightbulb,
   Heart,
+  Footprints,
   PlayCircle,
   GraduationCap,
   Users,
@@ -21,6 +22,7 @@ const ICONS: Record<string, React.ElementType> = {
   Target,
   Lightbulb,
   Heart,
+  Footprints,
   GraduationCap,
   Users,
   Shield,
@@ -147,11 +149,13 @@ function MissionVisionValues() {
           title={<>Built on <span className="text-gold-gradient">purpose</span> and principles.</>}
         />
 
-        {/* Mission & Vision cards */}
+        {/* Motto, Mission, Vision & Promise cards */}
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {[
+            { ...missionVision.motto, Icon: ICONS[missionVision.motto.icon] ?? Footprints },
             { ...missionVision.mission, Icon: ICONS[missionVision.mission.icon] ?? Target },
             { ...missionVision.vision, Icon: ICONS[missionVision.vision.icon] ?? Lightbulb },
+            { ...missionVision.promise, Icon: ICONS[missionVision.promise.icon] ?? Heart },
           ].map((m, i) => (
             <motion.div
               key={m.title}
@@ -168,25 +172,6 @@ function MissionVisionValues() {
               <p className="mt-3 text-base leading-relaxed text-ink/65">{m.text}</p>
             </motion.div>
           ))}
-        </div>
-
-        {/* Our Promise — centered */}
-        <div className="mt-6 flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
-            className="group max-w-xl rounded-2xl border border-navy/10 bg-mist p-8 text-center transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-18px_rgba(8,8,8,0.35)]"
-          >
-            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold transition-all duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:text-navy">
-              <Heart className="h-7 w-7" />
-            </span>
-            <h3 className="mt-5 font-display text-2xl font-semibold text-navy">Our Promise</h3>
-            <p className="mt-3 text-base leading-relaxed text-ink/65">
-              At Blessedville Schools, we are committed to inspiring a lifelong love for learning while nurturing every child's gifts, character, and confidence.
-            </p>
-          </motion.div>
         </div>
 
         {/* Core Values */}
