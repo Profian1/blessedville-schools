@@ -9,7 +9,7 @@ export const SCHOOL = {
   short: "Blessedville",
   motto: "Every Step Counts",
   tagline: "Nurturing Every Child, Every Step of the Way",
-  email: "blessedville@gmail.com",
+  email: "blessedville22@gmail.com / info@blessedvilleschools.co.ke",
   phone: "+254 791 480427",
   whatsapp: "+254791480427",
   address: "Kiwanja, Northern Bypass, Next to Maple Inn Hotel, Kahawa West, Nairobi",
@@ -20,8 +20,8 @@ export const SCHOOL = {
 export const WELCOME = {
   badge: "Welcome",
   heading: "Welcome to Blessedville Schools",
-  subheading: "Building Bright Futures Through Quality Education and Christian Values",
-  p1: "At Blessedville Schools, we provide a safe, caring, and inspiring environment where every child is encouraged to learn, grow, and reach their full potential. Guided by the Competency-Based Curriculum (CBC), our experienced teachers nurture academic excellence alongside strong Christian values.",
+  subheading: "Building Bright Futures Through Quality Education and Strong Values",
+  p1: "At Blessedville Schools, we provide a safe, caring, and inspiring environment where every child is encouraged to learn, grow, and reach their full potential. Guided by the Competency-Based Curriculum (CBC), our experienced teachers nurture academic excellence alongside strong character, integrity, and respect.",
   p2: "We believe education goes beyond the classroom by developing confident, responsible, and compassionate learners through engaging academics, co-curricular activities, and personalized support for every child.",
   cta: "Learn More About Us",
   ctaLink: "/about",
@@ -58,7 +58,7 @@ export const BADGES = [
   { icon: "GraduationCap", text: "Qualified & Caring Teachers" },
   { icon: "Star", text: "Competency Based Curriculum" },
   { icon: "Heart", text: "Safe Child-Friendly Environment" },
-  { icon: "Globe", text: "Christian Values & Character" },
+  { icon: "Globe", text: "Values & Character Development" },
 ];
 
 export const VALUES = [
@@ -125,8 +125,8 @@ export const WHY = [
   },
   {
     icon: "Heart",
-    title: "Christian Values",
-    text: "Faith-based guidance woven gently into daily routines — teaching kindness, gratitude, and respect for all people.",
+    title: "Values & Character",
+    text: "Our values programme weaves kindness, gratitude, honesty, and respect into daily routines — building strong character and a caring community that welcomes every child.",
   },
   {
     icon: "Sparkles",
@@ -158,7 +158,7 @@ export const PROGRAMS_PREVIEW = [
   {
     title: "Lower Primary (Grade 1–4)",
     description:
-      "A strong academic foundation that combines quality teaching, practical learning, and Christian values to prepare learners for future success.",
+      "A strong academic foundation that combines quality teaching, practical learning, and strong values to prepare learners for future success.",
     image: "/home/lowerprimary.jpg",
     link: "/programmes/lower-primary",
   },
@@ -293,7 +293,7 @@ export const TESTIMONIALS = [
     name: "Mrs. Akinyi O.",
     role: "Parent of Two Learners",
     quote:
-      "Both my children attend Blessedville — one in daycare and one in lower primary. I love that they are in one school where the Christian values I teach at home are reinforced every day. The location along Northern Bypass is so convenient too.",
+      "Both my children attend Blessedville — one in daycare and one in lower primary. I love that they are in one school where the values I teach at home — kindness, honesty, and respect — are reinforced every day. The location along Northern Bypass is so convenient too.",
     avatar: "/lowerprimary/celebrating.jpeg",
     rating: 5,
   },

@@ -140,7 +140,7 @@ export default function LowerPrimary() {
             >
               <h2 className="font-display text-3xl font-semibold text-navy sm:text-4xl text-center">Character Development</h2>
               <p className="mt-5 text-base leading-relaxed text-ink/65">
-                Academic excellence alone is not enough. Our Christian values programme weaves kindness, honesty, responsibility, and respect into daily school life. Morning devotion, values lessons, and our student leadership programme help children grow into compassionate, confident, and principled young people who care about others and their community.
+                Academic excellence alone is not enough. Our values programme weaves kindness, honesty, responsibility, and respect into daily school life. Values lessons, morning assemblies, and our student leadership programme help children grow into compassionate, confident, and principled young people who care about others and their community.
               </p>
             </motion.div>
           </div>

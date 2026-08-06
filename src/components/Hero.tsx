@@ -63,7 +63,7 @@ export default function Hero() {
           variants={item}
           className="mt-5 max-w-xl text-base leading-relaxed text-white/80"
         >
-          At Blessedville Schools, we nurture confident, curious learners through the Competency-Based Curriculum, caring teachers, and strong Christian values.
+          At Blessedville Schools, we nurture confident, curious learners through the Competency-Based Curriculum, caring teachers, and strong values that build character and integrity.
         </motion.p>
 
         <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">

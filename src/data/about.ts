@@ -5,20 +5,20 @@
 export const ABOUT = {
   hero: {
     badge: "About Blessedville Schools",
-    heading: "Shaping Bright Futures Through Faith, Learning, and Care",
+    heading: "Shaping Bright Futures Through Values, Learning, and Care",
     description:
-      "Discover who we are, what we believe, and how we create a safe, inspiring, and nurturing environment where every child can grow academically, socially, emotionally, and spiritually.",
+      "Discover who we are, what we believe, and how we create a safe, inspiring, and nurturing environment where every child can grow academically, socially, emotionally, and ethically.",
     image: "/about/abouthero.jpeg",
   },
   welcome: {
     heading: "Welcome to Blessedville Schools",
     p1: "Blessedville Schools is a thriving early childhood and primary school located along the Northern Bypass in Kahawa West, Nairobi. Since 2015, we have been a trusted name in quality education — providing a safe, loving, and stimulating environment where children from Daycare through to Lower Primary can learn, grow, and thrive.",
-    p2: "Guided by the Competency-Based Curriculum (CBC) and rooted in Christian values, our dedicated teachers nurture each child holistically — academically, socially, emotionally, and spiritually. We believe that every step counts in a child's journey, and we are here to walk alongside them, every step of the way.",
+    p2: "Guided by the Competency-Based Curriculum (CBC) and rooted in strong values, our dedicated teachers nurture each child holistically — academically, socially, emotionally, and ethically. We believe that every step counts in a child's journey, and we are here to walk alongside them, every step of the way.",
     image: "/about/aboutus.jpeg",
   },
   story: {
     heading: "Our Story",
-    p1: "Blessedville Schools was born from a simple yet powerful belief — that every child deserves a warm, nurturing start to their educational journey. Founded in 2015 in the heart of Kahawa West, we began with a handful of children and a big dream: to create a school where children are known by name, loved unconditionally, and challenged to reach their God-given potential.",
+    p1: "Blessedville Schools was born from a simple yet powerful belief — that every child deserves a warm, nurturing start to their educational journey. Founded in 2015 in the heart of Kahawa West, we began with a handful of children and a big dream: to create a school where children are known by name, loved unconditionally, and challenged to reach their full potential.",
     p2: "At Blessedville Schools, we are committed to inspiring a lifelong love for learning while nurturing every child's gifts, character, and confidence.",
     image: "/about/ourstory.jpeg",
   },
@@ -57,10 +57,10 @@ export const ABOUT = {
     items: [
       { icon: "GraduationCap", title: "Qualified Teachers", desc: "Every teacher is trained, passionate, and committed to bringing out the best in your child." },
       { icon: "Shield", title: "Safe Environment", desc: "Secure, supervised spaces where children feel protected and loved at all times." },
-      { icon: "Heart", title: "Christian Foundation", desc: "Faith-based guidance woven gently into daily routines and character development." },
+      { icon: "Heart", title: "Values-Based Education", desc: "Kindness, integrity, and respect woven gently into daily routines, character development, and every interaction." },
       { icon: "MonitorSmartphone", title: "Modern Resources", desc: "Age-appropriate learning materials and interactive tools that bring lessons to life." },
       { icon: "Users", title: "Small Class Sizes", desc: "Individual attention ensures every child builds confidence and never gets lost." },
-      { icon: "Sparkles", title: "Holistic Development", desc: "We nurture the whole child — academically, socially, emotionally, and spiritually." },
+      { icon: "Sparkles", title: "Holistic Development", desc: "We nurture the whole child — academically, socially, emotionally, and ethically." },
     ],
   },
   learningEnv: {
@@ -115,7 +115,7 @@ export const ABOUT = {
     { q: "Do you offer co-curricular activities?", a: "Yes! We offer swimming, skating, ballet, music, creative arts, outdoor learning, and a variety of clubs including scouting, sports, literacy, and arts." },
     { q: "How can I arrange a school tour?", a: "Simply visit our Contact page or call us directly. We would love to welcome you to Blessedville, show you around, and answer any questions you may have." },
     { q: "What are your school hours?", a: "Our school operates Monday through Friday, 7:00 AM to 5:00 PM, with flexible drop-off and pick-up windows for working parents." },
-    { q: "Is Blessedville a faith-based school?", a: "Yes, we are a Christian school that integrates faith and values into daily school life — teaching kindness, respect, gratitude, and responsibility while respecting children from all backgrounds." },
+    { q: "Is Blessedville a values-based school?", a: "Yes, our school is grounded in strong values and character development — teaching kindness, respect, gratitude, honesty, and responsibility. We welcome children from all religious and cultural backgrounds and celebrate the diversity they bring to our community." },
   ],
   cta: {
     heading: "Give Your Child the Best Start",

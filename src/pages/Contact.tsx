@@ -43,7 +43,7 @@ const CONTACT_CARDS = [
   {
     icon: Mail,
     title: "Email Us",
-    lines: [SCHOOL.email, "blessedville@gmail.com"],
+    lines: [SCHOOL.email],
     btnLabel: "Send Email",
     btnHref: `mailto:${SCHOOL.email}`,
     btnSecondary: { label: "Copy Email", action: "copy" as const, icon: Copy },
@@ -87,7 +87,7 @@ function ContactFormSection() {
     };
 
     try {
-      const res = await fetch("http://localhost:3001/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -103,7 +103,7 @@ function ContactFormSection() {
       }
     } catch {
       setState("error");
-      setMsg("Unable to send. Please email us directly at blessedville@gmail.com or call +254 791 480427.");
+      setMsg("Unable to send. Please email us directly at blessedville22@gmail.com or call +254 791 480427.");
     }
   };
 

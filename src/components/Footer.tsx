@@ -37,7 +37,7 @@ export default function Footer() {
             <span className="font-display text-xl font-semibold">{SCHOOL.short}</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
-            {SCHOOL.motto} — a premium international education shaping tomorrow's leaders with
+            {SCHOOL.motto} — a premium education shaping tomorrow's leaders with
             excellence, innovation, and character.
           </p>
           <div className="mt-5 space-y-2 text-sm text-white/60">

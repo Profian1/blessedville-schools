@@ -44,7 +44,7 @@ export default function About() {
 
             <Reveal delay={0.1} className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                { t: "Mission", d: "To provide a holistic, learner-centred education rooted in Christian values, empowering every child to discover their God-given potential through the Competency Based Curriculum." },
+                { t: "Mission", d: "To provide a holistic, learner-centred education rooted in strong values, empowering every child to discover their unique gifts and reach their full potential through the Competency Based Curriculum." },
                 { t: "Vision", d: "To be a leading early childhood and primary school in Kenya — nurturing confident, creative, and compassionate children who excel academically and grow in character." },
               ].map((m) => (
                 <div key={m.t} className="rounded-2xl border border-navy/10 bg-mist p-6">

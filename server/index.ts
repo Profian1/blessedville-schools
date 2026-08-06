@@ -8,7 +8,7 @@ const app = express();
 const PORT = Number(process.env.PORT) || 3001;
 
 app.use(express.json());
-app.use(cors({ origin: process.env.CORS_ORIGIN || "http://localhost:5173" }));
+app.use(cors({ origin: process.env.CORS_ORIGIN || true }));
 
 // Rate limiting store (in-memory, resets on restart)
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
