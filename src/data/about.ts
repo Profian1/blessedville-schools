@@ -2,6 +2,12 @@
 /*  About page — central content                                       */
 /* ------------------------------------------------------------------ */
 
+export const ABOUT_SEO = {
+  title: "About Us | Blessedville Schools",
+  description:
+    "Blessedville Schools is a CBC early childhood and primary school in Kahawa West, Nairobi — nurturing confident, curious learners since 2015 with strong values and caring teachers.",
+};
+
 export const ABOUT = {
   hero: {
     badge: "About Blessedville Schools",
@@ -100,11 +106,11 @@ export const ABOUT = {
     heading: "Life at Blessedville",
     images: [
       { src: "/about/classroom.jpg", alt: "Classroom" },
-      { src: "/playing.jpeg", alt: "Outdoor play" },
+      { src: "/gallery/playing.jpeg", alt: "Outdoor play" },
       { src: "/co-curricular/arts.png", alt: "Creative arts" },
       { src: "/co-curricular/swimming.jpeg", alt: "Swimming" },
       { src: "/about/compound1.jpeg", alt: "School grounds" },
-      { src: "/gradday.jpeg", alt: "School events" },
+      { src: "/gallery/group.jpg", alt: "School events" },
       { src: "/co-curricular/play.jpeg", alt: "Outdoor fun" },
       { src: "/clubs/scouts.jpg", alt: "Student clubs" },
     ],

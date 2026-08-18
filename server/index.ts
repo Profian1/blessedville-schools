@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import fs from "fs";
+import path from "path";
 import { z } from "zod";
 import { sendEmail, getEmailConfig } from "./mail/smtp";
 import { contactAdminEmail, contactConfirmationEmail } from "./mail/templates/contact";
@@ -448,6 +450,18 @@ app.patch("/api/admissions/admin/:reference", (req, res) => {
   }
   res.json({ success: true, application: record });
 });
+
+/* ------------------------------------------------------------------ */
+/* Static site — serves the production build (dist/) if present        */
+/* ------------------------------------------------------------------ */
+const DIST_DIR = path.join(process.cwd(), "dist");
+
+if (fs.existsSync(DIST_DIR)) {
+  app.use(express.static(DIST_DIR));
+  app.get(/^(?!\/api(?:\/|$)).*/, (req, res) => {
+    res.sendFile(path.join(DIST_DIR, "index.html"));
+  });
+}
 
 /* ------------------------------------------------------------------ */
 /* Listen                                                              */

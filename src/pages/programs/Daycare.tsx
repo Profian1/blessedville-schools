@@ -5,6 +5,7 @@ import ProgramNav from "../../components/ProgramNav";
 import FAQSection from "../../components/FAQSection";
 import ProgramCTA from "../../components/ProgramCTA";
 import { ProgramSection, FeatureGrid, GalleryGrid } from "../../components/ProgramLayout";
+import Seo from "../../lib/Seo";
 import { Container, EASE } from "../../lib/ui";
 
 const program = getProgram("daycare")!;
@@ -27,6 +28,7 @@ const gallery = [
 export default function Daycare() {
   return (
     <>
+      <Seo title={program.seo.title} description={program.seo.description} path={program.href} />
       <ProgramHero
         badge={program.heroBadge}
         title={program.heroTitle}

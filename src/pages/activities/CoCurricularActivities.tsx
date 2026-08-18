@@ -4,6 +4,7 @@ import ActivityNav from "../../components/ActivityNav";
 import FAQSection from "../../components/FAQSection";
 import ProgramCTA from "../../components/ProgramCTA";
 import { ProgramSection, FeatureGrid, GalleryGrid } from "../../components/ProgramLayout";
+import Seo from "../../lib/Seo";
 import { Container } from "../../lib/ui";
 import { motion } from "framer-motion";
 import { EASE } from "../../lib/ui";
@@ -43,6 +44,7 @@ const gallery = [
 export default function CoCurricularActivities() {
   return (
     <>
+      <Seo title={program.seo.title} description={program.seo.description} path={program.href} />
       <ProgramHero
         badge={program.heroBadge}
         title={program.heroTitle}

@@ -6,6 +6,7 @@ import ActivityNav from "../../components/ActivityNav";
 import FAQSection from "../../components/FAQSection";
 import ProgramCTA from "../../components/ProgramCTA";
 import { ProgramSection, FeatureGrid, GalleryGrid } from "../../components/ProgramLayout";
+import Seo from "../../lib/Seo";
 import { Container, EASE } from "../../lib/ui";
 
 const program = getActivity("clubs")!;
@@ -66,6 +67,7 @@ const gallery = [
 export default function Clubs() {
   return (
     <>
+      <Seo title={program.seo.title} description={program.seo.description} path={program.href} />
       <ProgramHero
         badge={program.heroBadge}
         title={program.heroTitle}

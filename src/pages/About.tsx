@@ -14,8 +14,9 @@ import {
   BookOpen,
   Award,
 } from "lucide-react";
-import { ABOUT } from "../data/about";
+import { ABOUT, ABOUT_SEO } from "../data/about";
 import ProgramHero from "../components/ProgramHero";
+import Seo from "../lib/Seo";
 import { Container, Reveal, SectionHeading, EASE } from "../lib/ui";
 
 const ICONS: Record<string, React.ElementType> = {
@@ -393,6 +394,7 @@ function SchoolStats() {
 export default function About() {
   return (
     <>
+      <Seo title={ABOUT_SEO.title} description={ABOUT_SEO.description} path="/about" />
       <ProgramHero
         badge={ABOUT.hero.badge}
         title={ABOUT.hero.heading}

@@ -221,7 +221,7 @@ export const FACILITIES = [
     icon: "Disc",
     title: "Skating",
     text: "Roller skating develops balance, coordination, and persistence. Our supervised skating sessions fill the playground with laughter and determined little learners on wheels.",
-    image: "/skating.jpg",
+    image: "/gallery/skating.jpg",
   },
   {
     icon: "Music",
@@ -239,13 +239,13 @@ export const FACILITIES = [
     icon: "Trophy",
     title: "Gymnastics",
     text: "Tumbling, balancing, and stretching — gymnastics helps children develop flexibility, strength, and body awareness in a safe, padded environment with patient coaching.",
-    image: "/stance.jpeg",
+    image: "/gallery/playing6.jpeg",
   },
   {
     icon: "TreeDeciduous",
     title: "Outdoor Learning",
     text: "Our outdoor spaces are living classrooms. Gardening, nature walks, and open-air discovery sessions connect children with the natural world and build environmental awareness.",
-    image: "/outdoor1.jpeg",
+    image: "/gallery/outdoor1.jpeg",
   },
   {
     icon: "Music",
@@ -276,7 +276,7 @@ export const TESTIMONIALS = [
     role: "Parent of Preschooler",
     quote:
       "Blessedville has been a blessing to our family. My daughter wakes up every morning excited to go to school. The teachers are warm, patient, and they genuinely care about each child. I cannot imagine a better start for her.",
-    avatar: "/cheer1.jpeg",
+    avatar: "/gallery/kid.jpg",
     rating: 5,
   },
   {
@@ -284,7 +284,7 @@ export const TESTIMONIALS = [
     role: "Parent of Grade 2 Learner",
     quote:
       "We moved our son to Blessedville last year and the transformation has been remarkable. His confidence has soared, he is reading well above his level, and the small class sizes mean he gets the attention he needs. A truly wonderful school.",
-    avatar: "/cheer2.jpeg",
+    avatar: "/gallery/students2.jpg",
     rating: 5,
   },
   {
@@ -300,7 +300,7 @@ export const TESTIMONIALS = [
     role: "Parent of Kindergarten Learner",
     quote:
       "What sets Blessedville apart is how well they know each child. Every teacher greets my daughter by name, they tell me about her day in detail, and she is learning so much through play. I recommend this school to every parent I meet.",
-    avatar: "/yey1.jpeg",
+    avatar: "/gallery/students3.jpg",
     rating: 5,
   },
 ];
@@ -326,9 +326,9 @@ export const FACULTY = [
   { name: "Mrs. Grace Mwangi", role: "Head Teacher", dept: "Leadership", image: "/about/staff1.jpg" },
   { name: "Mr. Peter Ndung'u", role: "Deputy Head", dept: "Academics", image: "/about/staff2.jpg" },
   { name: "Ms. Aisha Juma", role: "Kindergarten Lead", dept: "Early Years", image: "/about/staff3.jpg" },
-  { name: "Mr. David Ochieng", role: "Activities Coordinator", dept: "Co-curricular", image: "/students.jpg" },
+  { name: "Mr. David Ochieng", role: "Activities Coordinator", dept: "Co-curricular", image: "/gallery/students.jpg" },
   { name: "Mrs. Faith Wambui", role: "Daycare Supervisor", dept: "Early Years", image: "/daycare/sleeping.jpeg" },
-  { name: "Mrs. Naomi Chebet", role: "Pastoral Lead", dept: "Student Welfare", image: "/cheer2.jpeg" },
+  { name: "Mrs. Naomi Chebet", role: "Pastoral Lead", dept: "Student Welfare", image: "/gallery/students2.jpg" },
 ];
 
 export const GALLERY = [
@@ -374,8 +374,6 @@ export const CAMPUS_HOTSPOTS = [
   { top: "64%", left: "38%", label: "Splash Pool" },
   { top: "22%", left: "74%", label: "Creative Arts Room" },
 ];
-
-export const HERO_VIDEO_POSTER = "/school.jpg";
 
 export const HERO_IMAGES = [
   "/home/hero/home1.png",
