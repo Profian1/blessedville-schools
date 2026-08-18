@@ -3,6 +3,14 @@
 /*  School staff can edit this file without touching components.       */
 /* ------------------------------------------------------------------ */
 
+import { SCHOOL } from "../data";
+
+/** Build a WhatsApp link with a pre-filled message. */
+export function whatsappHref(message: string): string {
+  const digits = SCHOOL.whatsapp.replace(/\D/g, "");
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+}
+
 /* ------------------------------------------------------------------ */
 /*  Navigation                                                         */
 /* ------------------------------------------------------------------ */
@@ -90,14 +98,21 @@ export const PROCESS_HEADER = {
 };
 
 /* ------------------------------------------------------------------ */
-/*  School tour booking section (inside the process page)              */
+/*  School tour booking — via WhatsApp                                 */
 /* ------------------------------------------------------------------ */
 export const TOUR_SECTION = {
   eyebrow: "Visit Us",
   title: "Book a School Tour",
   subtitle:
-    "See our learning environment, meet our teachers, and experience the warmth of the Blessedville community first-hand. Tell us when you'd like to visit and we'll confirm a time with you.",
+    "See our learning environment, meet our teachers, and experience the warmth of the Blessedville community first-hand. Message us on WhatsApp with your preferred date and we'll confirm a time with you.",
+  cta: "Book a School Tour on WhatsApp",
 };
+
+export const WHATSAPP_TOUR_MESSAGE =
+  "Hello Blessedville Schools! I would like to book a school tour for my child. Could you please share the available dates and times?";
+
+export const WHATSAPP_APPLY_MESSAGE =
+  "Hello Blessedville Schools! I would like to apply for admission but I need help with the online application form. Please contact me to guide me through the process.";
 
 /* ------------------------------------------------------------------ */
 /*  SEO                                                                */

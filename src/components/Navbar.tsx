@@ -10,6 +10,9 @@ import { Button, EASE } from "../lib/ui";
 
 type DropdownKey = "programmes" | "activities" | "admissions";
 
+/** Routes with a light background at the top — navbar must always be solid there. */
+const ALWAYS_SOLID_PATHS = ["/admissions/apply"];
+
 const DROPDOWN_ITEMS: Record<DropdownKey, { label: string; href: string; shortLabel?: string }[]> = {
   programmes: PROGRAMS_NAV,
   activities: ACTIVITIES_NAV,
@@ -23,6 +26,9 @@ export default function Navbar() {
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<DropdownKey | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+
+  const alwaysSolid = ALWAYS_SOLID_PATHS.some((p) => location.pathname.startsWith(p));
+  const solid = scrolled || alwaysSolid;
 
   const isProgramsActive = location.pathname.startsWith("/programmes");
   const isActivitiesActive = location.pathname.startsWith("/activities");
@@ -70,8 +76,8 @@ export default function Navbar() {
           onMouseLeave={() => setOpenDropdown(null)}
           className={`relative flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
             isActive
-              ? scrolled ? "text-gold" : "text-gold-light"
-              : scrolled ? "text-ink/70 hover:text-navy" : "text-white/85 hover:text-white"
+              ? solid ? "text-gold" : "text-gold-light"
+              : solid ? "text-ink/70 hover:text-navy" : "text-white/85 hover:text-white"
           }`}
         >
           {label}
@@ -159,7 +165,7 @@ export default function Navbar() {
     <>
       {/* Utility bar */}
       <div className={`fixed inset-x-0 z-[51] transition-all duration-500 ${
-        scrolled ? "-translate-y-full bg-navy/90" : "translate-y-0 bg-navy/40 backdrop-blur-sm"
+        solid ? "-translate-y-full bg-navy/90" : "translate-y-0 bg-navy/40 backdrop-blur-sm"
       }`}>
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
           <div className="flex items-center gap-4 text-[11px] font-medium text-white/70">
@@ -190,7 +196,7 @@ export default function Navbar() {
 
       <header
         className={`fixed inset-x-0 z-50 transition-all duration-500 ${
-          scrolled
+          solid
             ? "top-0 bg-white/90 shadow-[0_8px_30px_-12px_rgba(8,8,8,0.18)] backdrop-blur-md"
             : "top-9 bg-transparent"
         }`}
@@ -199,15 +205,15 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="group flex items-center gap-3" aria-label={`${SCHOOL.name} home`}>
             <span className={`flex h-11 w-11 items-center justify-center rounded-xl transition-all duration-300 ${
-              scrolled ? "bg-navy text-gold" : "bg-white/15 text-white glass"
+              solid ? "bg-navy text-gold" : "bg-white/15 text-white glass"
             }`}>
               <img src="/blessedville.svg" alt={`${SCHOOL.name} logo`} className="h-7 w-7" />
             </span>
             <span className="leading-tight">
-              <span className={`block font-display text-lg font-semibold tracking-wide ${scrolled ? "text-navy" : "text-white"}`}>
+              <span className={`block font-display text-lg font-semibold tracking-wide ${solid ? "text-navy" : "text-white"}`}>
                 {SCHOOL.short}
               </span>
-              <span className={`block text-[10px] font-medium uppercase tracking-[0.25em] ${scrolled ? "text-ink/50" : "text-white/60"}`}>
+              <span className={`block text-[10px] font-medium uppercase tracking-[0.25em] ${solid ? "text-ink/50" : "text-white/60"}`}>
                 Schools
               </span>
             </span>
@@ -226,8 +232,8 @@ export default function Navbar() {
                       className={({ isActive }) =>
                         `relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                           isActive
-                            ? scrolled ? "text-gold" : "text-gold-light"
-                            : scrolled ? "text-ink/70 hover:text-navy" : "text-white/85 hover:text-white"
+                            ? solid ? "text-gold" : "text-gold-light"
+                            : solid ? "text-ink/70 hover:text-navy" : "text-white/85 hover:text-white"
                         }`
                       }
                     >
@@ -241,7 +247,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden items-center gap-3 lg:flex">
-            <Button href="/admissions/apply" variant={scrolled ? "gold" : "outline"}>
+            <Button href="/admissions/apply" variant={solid ? "gold" : "outline"}>
               Apply Now
             </Button>
           </div>
@@ -249,7 +255,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(true)}
-            className={`flex h-11 w-11 items-center justify-center rounded-xl lg:hidden ${scrolled ? "bg-navy/5 text-navy" : "glass text-white"}`}
+            className={`flex h-11 w-11 items-center justify-center rounded-xl lg:hidden ${solid ? "bg-navy/5 text-navy" : "glass text-white"}`}
             aria-label="Open menu"
           >
             <Menu className="h-6 w-6" />

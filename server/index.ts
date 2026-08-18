@@ -6,7 +6,6 @@ import { contactAdminEmail, contactConfirmationEmail } from "./mail/templates/co
 import {
   admissionsAdminEmail,
   admissionsParentEmail,
-  tourRequestEmail,
 } from "./mail/templates/admissions";
 import {
   generateReference,
@@ -46,7 +45,6 @@ const rateLimit = new Map<string, { count: number; resetAt: number }>();
 const rateLimitBuckets = {
   contact: new Map<string, { count: number; resetAt: number }>(),
   admissions: new Map<string, { count: number; resetAt: number }>(),
-  tour: new Map<string, { count: number; resetAt: number }>(),
 } as const;
 
 type RateBucketKey = keyof typeof rateLimitBuckets;
@@ -319,73 +317,6 @@ app.post("/api/admissions", async (req, res) => {
     res.status(500).json({
       success: false,
       message: "We couldn't submit your application right now. Please try again shortly or contact our admissions team.",
-    });
-  }
-});
-
-/* ------------------------------------------------------------------ */
-/* School tour request                                                 */
-/* ------------------------------------------------------------------ */
-const tourSchema = z.object({
-  name: z.string().trim().min(2, "Please enter your full name").max(100),
-  email: z.string().trim().email("Valid email is required").max(200),
-  phone: z
-    .string()
-    .trim()
-    .min(1, "Phone number is required")
-    .max(30)
-    .refine(isValidPhone, "Invalid phone number"),
-  program: z.string().trim().max(50).default(""),
-  preferredDate: z
-    .string()
-    .regex(/^\d{4}-\d{2}-\d{2}$/, "Invalid date")
-    .refine((v) => {
-      const d = new Date(`${v}T00:00:00`);
-      return !Number.isNaN(d.getTime()) && d >= new Date(new Date().toDateString());
-    }, "Invalid date"),
-  preferredTime: z.string().trim().max(50).default(""),
-  message: z.string().trim().max(2000).default(""),
-  honeypot: z.string().max(0, "Bot detected"),
-});
-
-app.post("/api/tour", async (req, res) => {
-  try {
-    const ip = clientIp(req);
-    if (!checkRateLimit("tour", ip, 5, 60 * 60_000)) {
-      res.status(429).json({ success: false, message: "Too many requests. Please try again later." });
-      return;
-    }
-
-    const result = tourSchema.safeParse(req.body);
-    if (!result.success) {
-      res.status(400).json({ success: false, message: firstFriendlyError(result, "Please review your request and try again.") });
-      return;
-    }
-
-    const data = result.data;
-    const submittedAt = new Date().toISOString();
-    const submittedAtDisplay = new Date().toLocaleString("en-KE", { timeZone: "Africa/Nairobi" });
-
-    const { admissionsEmail } = getEmailConfig();
-    try {
-      await sendEmail({
-        to: admissionsEmail,
-        subject: "New School Tour Request — Blessedville Schools",
-        ...tourRequestEmail({ ...data, submittedAt: submittedAtDisplay }),
-      });
-    } catch (err) {
-      console.error("Tour request email failed:", err);
-    }
-
-    res.status(201).json({
-      success: true,
-      message: "Your tour request has been received. We'll confirm your visit shortly.",
-    });
-  } catch (err) {
-    console.error("Tour request error:", err);
-    res.status(500).json({
-      success: false,
-      message: "We couldn't submit your tour request right now. Please try again shortly.",
     });
   }
 });

@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, ChevronRight, Home, Loader2, Send, ShieldCheck, Trash2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight, Loader2, Send, ShieldCheck, Trash2 } from "lucide-react";
 import Seo from "../../lib/Seo";
 import ApplicationProgress from "../../components/application/ApplicationProgress";
 import ChildDetailsStep from "../../components/application/ChildDetailsStep";
@@ -130,59 +129,35 @@ export default function Apply() {
         noindex={APPLY_SEO.noindex}
       />
 
-      {/* Compact header — no hero image */}
-      <section className="relative overflow-hidden bg-navy pb-12 pt-32 sm:pt-36">
-        <div className="pointer-events-none absolute -right-32 -top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
-        <Container className="relative">
-          <motion.nav
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: EASE }}
-            className="flex items-center gap-1.5 text-sm"
-            aria-label="Breadcrumb"
-          >
-            <Link to="/" className="flex items-center gap-1 text-white/55 transition-colors hover:text-white">
-              <Home className="h-3.5 w-3.5" />
-              Home
-            </Link>
-            <span className="flex items-center gap-1.5">
-              <ChevronRight className="h-3.5 w-3.5 text-white/30" />
-              <Link to="/admissions" className="text-white/55 transition-colors hover:text-white">
-                Admissions
-              </Link>
-            </span>
-            <span className="flex items-center gap-1.5">
-              <ChevronRight className="h-3.5 w-3.5 text-white/30" />
-              <span className="font-medium text-gold-light">Apply Online</span>
-            </span>
-          </motion.nav>
+      <section className="relative overflow-hidden bg-white py-28 sm:py-32">
+        <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-40 bottom-10 h-96 w-96 rounded-full bg-navy/5 blur-3xl" />
 
+        <Container className="relative">
+          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.05 }}
-            className="mt-6 max-w-2xl"
+            transition={{ duration: 0.8, ease: EASE }}
+            className="mx-auto max-w-3xl text-center"
           >
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
+            <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-navy/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-navy">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               Apply Online
             </span>
-            <h1 className="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
+            <h1 className="font-display text-4xl font-semibold leading-tight text-navy sm:text-5xl">
               Apply to Blessedville Schools
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-white/75">
+            <p className="mt-5 text-lg leading-relaxed text-ink/65">
               Complete the application below and our admissions team will contact you regarding the next steps.
             </p>
           </motion.div>
-        </Container>
-      </section>
 
-      <section className="bg-white py-14 sm:py-20">
-        <Container className="max-w-3xl">
-          {submitted ? (
-            <ApplicationSuccess reference={submitted} />
-          ) : (
-            <div className="space-y-6">
+          <div className="mx-auto mt-14 max-w-3xl space-y-6">
+            {submitted ? (
+              <ApplicationSuccess reference={submitted} />
+            ) : (
+              <div className="space-y-6">
               <ApplicationProgress current={step} />
 
               <p className="flex items-start gap-2 rounded-xl border border-navy/10 bg-white px-4 py-3 text-xs leading-relaxed text-ink/55">
@@ -296,6 +271,7 @@ export default function Apply() {
               )}
             </div>
           )}
+          </div>
         </Container>
       </section>
     </>

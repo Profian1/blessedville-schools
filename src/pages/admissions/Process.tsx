@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ClipboardList, SearchCheck, School, CheckCircle2, CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays, ClipboardList, SearchCheck, School, CheckCircle2, MessageCircle } from "lucide-react";
 import Seo from "../../lib/Seo";
-import TourBookingForm from "../../components/admissions/TourBookingForm";
 import { Container, EASE, Button } from "../../lib/ui";
 import {
   PROCESS_SEO,
@@ -9,6 +8,9 @@ import {
   ADMISSIONS_STEPS,
   ADMISSIONS_ASSESSMENT_NOTE,
   TOUR_SECTION,
+  WHATSAPP_TOUR_MESSAGE,
+  WHATSAPP_APPLY_MESSAGE,
+  whatsappHref,
 } from "../../data/admissions";
 
 const ICONS: Record<string, React.ElementType> = {
@@ -62,6 +64,7 @@ export default function Process() {
           <div className="mx-auto mt-16 max-w-4xl space-y-6">
             {ADMISSIONS_STEPS.map((s, i) => {
               const Icon = ICONS[s.icon] ?? ClipboardList;
+              const isFirst = i === 0;
               return (
                 <motion.div
                   key={s.number}
@@ -78,11 +81,22 @@ export default function Process() {
                     <p className="font-button text-xs font-bold uppercase tracking-[0.2em] text-gold">Step {s.number}</p>
                     <h2 className="mt-1 font-display text-2xl font-semibold text-white">{s.title}</h2>
                     <p className="mt-2 leading-relaxed text-white/60">{s.description}</p>
-                    {s.cta && s.ctaHref && (
-                      <Button href={s.ctaHref} variant="gold" className="mt-5">
-                        {s.cta}
-                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </Button>
+                    {isFirst && (
+                      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <Button href={s.ctaHref ?? "/admissions/apply"} variant="gold">
+                          {s.cta ?? "Apply Online"}
+                          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Button>
+                        <a
+                          href={whatsappHref(WHATSAPP_APPLY_MESSAGE)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366] bg-[#25D366]/10 px-7 py-3.5 font-button text-sm font-semibold tracking-wide text-[#25D366] transition-all duration-300 hover:bg-[#25D366] hover:text-white"
+                        >
+                          <MessageCircle className="h-4 w-4" />
+                          Apply via WhatsApp
+                        </a>
+                      </div>
                     )}
                   </div>
                 </motion.div>
@@ -116,15 +130,15 @@ export default function Process() {
               </span>
               <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">{TOUR_SECTION.title}</h2>
               <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/65">{TOUR_SECTION.subtitle}</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-              className="mt-10"
-            >
-              <TourBookingForm />
+              <a
+                href={whatsappHref(WHATSAPP_TOUR_MESSAGE)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 font-button text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(37,211,102,0.6)]"
+              >
+                <MessageCircle className="h-4 w-4" />
+                {TOUR_SECTION.cta}
+              </a>
             </motion.div>
           </div>
         </Container>
