@@ -31,8 +31,18 @@ export type ApplicationRecord = {
     phone: string;
     alternativePhone: string;
     address: string;
+    hasSecondParent: boolean;
+    secondParentFirstName: string;
+    secondParentSurname: string;
+    secondParentRelationship: string;
+    secondParentEmail: string;
+    secondParentPhone: string;
+    secondParentAlternativePhone: string;
+    secondParentAddress: string;
   };
   preferences: {
+    healthConditions: boolean;
+    healthDetails: string;
     whyInterested: string;
     hearAbout: string;
     wantsTour: boolean;

@@ -1,6 +1,6 @@
 import { APPLICATION_PROGRAMS, GENDERS, ADMISSION_YEARS, ADMISSION_TERMS, getGradesForProgram, MAX_APPLICANT_AGE_YEARS } from "../../data/applicationOptions";
 import { type ApplicationForm, type FieldErrors } from "../../lib/applicationForm";
-import { TextField, SelectField, RadioGroup, FormSectionTitle } from "./formFields";
+import { TextField, SelectField, FormSectionTitle } from "./formFields";
 
 export default function ChildDetailsStep({
   form,
@@ -25,14 +25,14 @@ export default function ChildDetailsStep({
     <div className="space-y-8">
       <FormSectionTitle
         step="1"
-        title="Child Details"
-        subtitle="Tell us about the child you are applying for."
+        title="Student Details"
+        subtitle="Tell us about the student you are applying for."
       />
 
       <div className="grid gap-5 sm:grid-cols-2">
         <TextField
           id="childFirstName"
-          label="Child's First Name"
+          label="Student's First Name"
           required
           error={errors.childFirstName}
           value={form.childFirstName}
@@ -76,7 +76,7 @@ export default function ChildDetailsStep({
         />
       </div>
 
-      <RadioGroup
+      <SelectField
         id="gender"
         label="Gender"
         required

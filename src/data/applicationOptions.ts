@@ -82,7 +82,7 @@ export const APPLICATION_NOTICE =
   "Your information is securely submitted to Blessedville Schools and is used only for admissions purposes.";
 
 export const PRIVACY_NOTICE =
-  "Blessedville Schools collects the information you provide in this application solely to process and assess your child's application for admission, to contact you regarding the application, and where applicable, to arrange school tours and assessments. Your information is treated as confidential and is never sold or shared with third parties for marketing purposes.";
+  "Blessedville Schools collects the information you provide in this application solely to process and assess your student's application for admission, to contact you regarding the application, and where applicable, to arrange school tours and assessments. Your information is treated as confidential and is never sold or shared with third parties for marketing purposes.";
 
 export const CONSENT_LABEL =
   "I agree to the processing of my information for the purpose of handling this school application.";

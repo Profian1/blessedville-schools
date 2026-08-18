@@ -62,7 +62,7 @@ export default function ReviewStep({
       />
 
       <div className="space-y-5">
-        <SummaryBlock title="Child Details" onEdit={() => goToStep(0)}>
+        <SummaryBlock title="Student Details" onEdit={() => goToStep(0)}>
           <SummaryRow label="Full Name" value={[form.childFirstName, form.childMiddleName, form.childSurname].filter(Boolean).join(" ")} />
           <SummaryRow label="Date of Birth" value={form.dateOfBirth} />
           <SummaryRow label="Gender" value={form.gender} />
@@ -79,9 +79,32 @@ export default function ReviewStep({
           <SummaryRow label="Phone" value={form.phone} />
           <SummaryRow label="Alternative Phone" value={form.alternativePhone} />
           <SummaryRow label="Address" value={form.address} />
+          {form.hasSecondParent === "yes" && (
+            <>
+              <SummaryRow
+                label="Second Parent"
+                value={[form.secondParentFirstName, form.secondParentSurname].filter(Boolean).join(" ")}
+              />
+              <SummaryRow label="Second Relationship" value={form.secondParentRelationship} />
+              <SummaryRow label="Second Email" value={form.secondParentEmail} />
+              <SummaryRow label="Second Phone" value={form.secondParentPhone} />
+              <SummaryRow label="Second Alt Phone" value={form.secondParentAlternativePhone} />
+              <SummaryRow label="Second Address" value={form.secondParentAddress} />
+            </>
+          )}
         </SummaryBlock>
 
-        <SummaryBlock title="School Preferences" onEdit={() => goToStep(2)}>
+        <SummaryBlock title="Additional Information" onEdit={() => goToStep(2)}>
+          <SummaryRow
+            label="Health Conditions"
+            value={
+              form.healthConditions === "yes"
+                ? form.healthDetails || "Yes"
+                : form.healthConditions === "no"
+                  ? "No"
+                  : ""
+            }
+          />
           <SummaryRow label="Interest" value={form.whyInterested} />
           <SummaryRow label="How you heard" value={form.hearAbout} />
           <SummaryRow

@@ -20,9 +20,36 @@ export default function PreferencesStep({
     <div className="space-y-8">
       <FormSectionTitle
         step="3"
-        title="School Preferences & Additional Information"
+        title="Additional Information"
         subtitle="A few final questions to help our team understand your family's needs."
       />
+
+      <RadioGroup
+        id="healthConditions"
+        label="Does the student have any health problems, allergies, or special conditions?"
+        required
+        error={errors.healthConditions}
+        value={form.healthConditions}
+        onChange={(v) => update({ healthConditions: v === "yes" ? "yes" : "no" })}
+        options={[
+          { value: "no", label: "No" },
+          { value: "yes", label: "Yes" },
+        ]}
+      />
+
+      {form.healthConditions === "yes" && (
+        <TextAreaField
+          id="healthDetails"
+          label="Please describe the health problems, allergies, or special conditions"
+          required
+          rows={3}
+          error={errors.healthDetails}
+          value={form.healthDetails}
+          onChange={(v) => update({ healthDetails: v })}
+          placeholder="e.g. peanut allergy, asthma, medication taken daily..."
+          maxLength={1000}
+        />
+      )}
 
       <TextAreaField
         id="whyInterested"
@@ -32,7 +59,7 @@ export default function PreferencesStep({
         error={errors.whyInterested}
         value={form.whyInterested}
         onChange={(v) => update({ whyInterested: v })}
-        placeholder="Share what matters most for your child's education..."
+        placeholder="Share what matters most for your student's education..."
         maxLength={1000}
       />
 
@@ -89,7 +116,7 @@ export default function PreferencesStep({
 
       <TextAreaField
         id="additionalInfo"
-        label="Additional Information"
+        label="Anything Else We Should Know?"
         optional
         rows={3}
         error={errors.additionalInfo}

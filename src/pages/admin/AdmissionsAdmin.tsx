@@ -144,7 +144,7 @@ function DetailPanel({ detail, onUpdate }: { detail: Detail; onUpdate: (record: 
   useEffect(() => setStatus(detail.status), [detail.status]);
 
   const rows: [string, string][] = [
-    ["Child's Name", `${detail.child.firstName ?? ""} ${detail.child.middleName ?? ""} ${detail.child.surname ?? ""}`.replace(/\s+/g, " ").trim()],
+    ["Student's Name", `${detail.child.firstName ?? ""} ${detail.child.middleName ?? ""} ${detail.child.surname ?? ""}`.replace(/\s+/g, " ").trim()],
     ["Date of Birth", formatDate(detail.child.dateOfBirth)],
     ["Gender", detail.child.gender ?? ""],
     ["Current School", detail.child.currentSchool ?? "—"],
@@ -156,6 +156,14 @@ function DetailPanel({ detail, onUpdate }: { detail: Detail; onUpdate: (record: 
     ["Parent Phone", detail.parent.phone ?? ""],
     ["Alternative Phone", detail.parent.alternativePhone || "—"],
     ["Address", detail.parent.address || "—"],
+    ...(detail.parent.hasSecondParent === "true"
+      ? ([
+          ["Second Parent / Guardian", `${detail.parent.secondParentFirstName ?? ""} ${detail.parent.secondParentSurname ?? ""} (${detail.parent.secondParentRelationship ?? ""})`.replace(/\s+/g, " ").trim()],
+          ["Second Parent Phone", detail.parent.secondParentPhone ?? ""],
+          ["Second Parent Email", detail.parent.secondParentEmail || "—"],
+        ] as [string, string][])
+      : []),
+    ["Health Conditions", detail.preferences.healthConditions === true ? `Yes — ${String(detail.preferences.healthDetails ?? "")}` : "No"],
     ["Why Interested", String(detail.preferences.whyInterested ?? "") || "—"],
     ["How They Heard", String(detail.preferences.hearAbout ?? "") || "—"],
     ["School Tour", detail.preferences.wantsTour === true ? `Yes — ${String(detail.preferences.tourDate ?? "")}${detail.preferences.tourTime ? ` (${detail.preferences.tourTime})` : ""}` : "No"],
@@ -348,7 +356,7 @@ export default function AdmissionsAdmin() {
   };
 
   const exportCsv = () => {
-    const headers = ["Reference", "Status", "Submitted", "Child", "DOB", "Program", "Grade", "Year", "Term", "Parent", "Parent Email", "Parent Phone"];
+    const headers = ["Reference", "Status", "Submitted", "Student", "DOB", "Program", "Grade", "Year", "Term", "Parent", "Parent Email", "Parent Phone"];
     const lines = apps.map((a) =>
       [a.reference, a.status, a.submittedAt, a.childName, a.dateOfBirth, PROGRAM_LABELS[a.program] ?? a.program, a.grade, a.admissionYear, a.admissionTerm, a.parentName, a.parentEmail, a.parentPhone]
         .map((v) => `"${String(v).replace(/"/g, '""')}"`)

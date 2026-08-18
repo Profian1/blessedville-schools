@@ -188,9 +188,9 @@ app.post("/api/contact", async (req, res) => {
 /* ------------------------------------------------------------------ */
 const admissionsSchema = z.object({
   child: z.object({
-    firstName: z.string().trim().min(1, "Child's first name is required").max(100),
+    firstName: z.string().trim().min(1, "Student's first name is required").max(100),
     middleName: z.string().trim().max(100).default(""),
-    surname: z.string().trim().min(1, "Child's surname is required").max(100),
+    surname: z.string().trim().min(1, "Student's surname is required").max(100),
     dateOfBirth: z
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Invalid date of birth")
@@ -215,8 +215,18 @@ const admissionsSchema = z.object({
       .refine(isValidPhone, "Invalid phone number"),
     alternativePhone: z.string().trim().max(30).default("").refine((v) => !v || isValidPhone(v), "Invalid alternative phone"),
     address: z.string().trim().max(300).default(""),
+    hasSecondParent: z.boolean(),
+    secondParentFirstName: z.string().trim().max(100).default(""),
+    secondParentSurname: z.string().trim().max(100).default(""),
+    secondParentRelationship: z.string().trim().max(50).default(""),
+    secondParentEmail: z.string().trim().max(200).default(""),
+    secondParentPhone: z.string().trim().max(30).default(""),
+    secondParentAlternativePhone: z.string().trim().max(30).default(""),
+    secondParentAddress: z.string().trim().max(300).default(""),
   }),
   preferences: z.object({
+    healthConditions: z.boolean(),
+    healthDetails: z.string().trim().max(1000).default(""),
     whyInterested: z.string().trim().max(2000).default(""),
     hearAbout: z.enum(HEAR_ABOUT_OPTIONS as [string, ...string[]], { message: "Invalid option" }),
     wantsTour: z.boolean(),
@@ -232,6 +242,23 @@ const admissionsSchema = z.object({
   }
   if (data.preferences.wantsTour && !data.preferences.tourDate) {
     ctx.addIssue({ code: "custom", path: ["preferences", "tourDate"], message: "Preferred tour date is required" });
+  }
+  if (data.parent.hasSecondParent) {
+    if (!data.parent.secondParentFirstName) {
+      ctx.addIssue({ code: "custom", path: ["parent", "secondParentFirstName"], message: "Second parent's first name is required" });
+    }
+    if (!data.parent.secondParentSurname) {
+      ctx.addIssue({ code: "custom", path: ["parent", "secondParentSurname"], message: "Second parent's surname is required" });
+    }
+    if (!data.parent.secondParentRelationship) {
+      ctx.addIssue({ code: "custom", path: ["parent", "secondParentRelationship"], message: "Relationship is required" });
+    }
+    if (!data.parent.secondParentPhone) {
+      ctx.addIssue({ code: "custom", path: ["parent", "secondParentPhone"], message: "Second parent's phone number is required" });
+    }
+  }
+  if (data.preferences.healthConditions && !data.preferences.healthDetails) {
+    ctx.addIssue({ code: "custom", path: ["preferences", "healthDetails"], message: "Please describe the health conditions" });
   }
 });
 
@@ -258,7 +285,7 @@ app.post("/api/admissions", async (req, res) => {
       res.status(409).json({
         success: false,
         message:
-          "It looks like an application for this child has already been submitted. Our team will be in touch. If you have questions, please contact the admissions team.",
+          "It looks like an application for this student has already been submitted. Our team will be in touch. If you have questions, please contact the admissions team.",
       });
       return;
     }

@@ -3,9 +3,9 @@ import { EASE } from "../../lib/ui";
 import { motion } from "framer-motion";
 
 export const APPLICATION_STEPS = [
-  { label: "Child Details", short: "Child" },
+  { label: "Student Details", short: "Student" },
   { label: "Parent / Guardian", short: "Parent / Guardian" },
-  { label: "School Preferences", short: "Preferences" },
+  { label: "Additional Information", short: "Info" },
   { label: "Review & Submit", short: "Review & Submit" },
 ] as const;
 

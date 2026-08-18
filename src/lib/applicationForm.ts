@@ -22,6 +22,16 @@ export type ApplicationForm = {
   phone: string;
   alternativePhone: string;
   address: string;
+  hasSecondParent: "yes" | "no";
+  secondParentFirstName: string;
+  secondParentSurname: string;
+  secondParentRelationship: string;
+  secondParentEmail: string;
+  secondParentPhone: string;
+  secondParentAlternativePhone: string;
+  secondParentAddress: string;
+  healthConditions: "yes" | "no";
+  healthDetails: string;
   whyInterested: string;
   hearAbout: string;
   wantsTour: "yes" | "no";
@@ -49,6 +59,16 @@ export const emptyApplicationForm = (): ApplicationForm => ({
   phone: "",
   alternativePhone: "",
   address: "",
+  hasSecondParent: "no",
+  secondParentFirstName: "",
+  secondParentSurname: "",
+  secondParentRelationship: "",
+  secondParentEmail: "",
+  secondParentPhone: "",
+  secondParentAlternativePhone: "",
+  secondParentAddress: "",
+  healthConditions: "no",
+  healthDetails: "",
   whyInterested: "",
   hearAbout: "",
   wantsTour: "no",
@@ -87,14 +107,20 @@ export function isValidDateOfBirth(value: string): boolean {
 
 export function validateChildDetails(form: ApplicationForm): FieldErrors {
   const errors: FieldErrors = {};
-  if (!form.childFirstName.trim()) errors.childFirstName = "Please enter your child's first name.";
-  if (!form.childSurname.trim()) errors.childSurname = "Please enter your child's surname.";
+  const today = new Date().toISOString().split("T")[0];
+  const minDate = new Date();
+  minDate.setFullYear(minDate.getFullYear() - MAX_APPLICANT_AGE_YEARS);
+  const minDateStr = minDate.toISOString().split("T")[0];
+  if (!form.childFirstName.trim()) errors.childFirstName = "Please enter the student's first name.";
+  if (!form.childSurname.trim()) errors.childSurname = "Please enter the student's surname.";
   if (!form.dateOfBirth) {
-    errors.dateOfBirth = "Please enter your child's date of birth.";
-  } else if (!isValidDateOfBirth(form.dateOfBirth)) {
-    errors.dateOfBirth = "Please enter a valid date of birth. The date must be in the past.";
+    errors.dateOfBirth = "Please enter the student's date of birth.";
+  } else if (form.dateOfBirth > today) {
+    errors.dateOfBirth = "Date of birth cannot be in the future.";
+  } else if (form.dateOfBirth < minDateStr) {
+    errors.dateOfBirth = `The student's age must be within ${MAX_APPLICANT_AGE_YEARS} years at the time of application.`;
   }
-  if (!form.gender) errors.gender = "Please select your child's gender.";
+  if (!form.gender) errors.gender = "Please select the student's gender.";
   if (!form.program) errors.program = "Please select the program you are applying for.";
   if (!form.grade) errors.grade = "Please select the grade or class you are applying for.";
   if (!form.admissionYear) errors.admissionYear = "Please select the intended year of admission.";
@@ -106,7 +132,7 @@ export function validateGuardianDetails(form: ApplicationForm): FieldErrors {
   const errors: FieldErrors = {};
   if (!form.parentFirstName.trim()) errors.parentFirstName = "Please enter the parent or guardian's first name.";
   if (!form.parentSurname.trim()) errors.parentSurname = "Please enter the parent or guardian's surname.";
-  if (!form.relationship) errors.relationship = "Please select the relationship to the child.";
+  if (!form.relationship) errors.relationship = "Please select the relationship to the student.";
   if (!form.email.trim()) {
     errors.email = "Please enter an email address.";
   } else if (!EMAIL_RE.test(form.email.trim())) {
@@ -123,11 +149,31 @@ export function validateGuardianDetails(form: ApplicationForm): FieldErrors {
   if (REQUIRES_PHYSICAL_ADDRESS && !form.address.trim()) {
     errors.address = "Please enter your physical address.";
   }
+  if (form.hasSecondParent === "yes") {
+    if (!form.secondParentFirstName.trim()) errors.secondParentFirstName = "Please enter the second parent or guardian's first name.";
+    if (!form.secondParentSurname.trim()) errors.secondParentSurname = "Please enter the second parent or guardian's surname.";
+    if (!form.secondParentRelationship) errors.secondParentRelationship = "Please select the relationship to the student.";
+    if (!form.secondParentPhone.trim()) {
+      errors.secondParentPhone = "Please enter the second parent or guardian's phone number.";
+    } else if (!isValidPhone(form.secondParentPhone)) {
+      errors.secondParentPhone = "Please enter a valid phone number, for example +254 712 345 678.";
+    }
+    if (form.secondParentEmail.trim() && !EMAIL_RE.test(form.secondParentEmail.trim())) {
+      errors.secondParentEmail = "Please enter a valid email address.";
+    }
+    if (form.secondParentAlternativePhone.trim() && !isValidPhone(form.secondParentAlternativePhone)) {
+      errors.secondParentAlternativePhone = "Please enter a valid alternative phone number.";
+    }
+  }
   return errors;
 }
 
 export function validatePreferences(form: ApplicationForm): FieldErrors {
   const errors: FieldErrors = {};
+  if (!form.healthConditions) errors.healthConditions = "Please answer whether the student has any health conditions.";
+  if (form.healthConditions === "yes" && !form.healthDetails.trim()) {
+    errors.healthDetails = "Please describe the student's health problems, allergies, or special conditions.";
+  }
   if (!form.hearAbout) errors.hearAbout = "Please tell us how you heard about us.";
   if (form.wantsTour === "yes" && !form.tourDate) {
     errors.tourDate = "Please choose a preferred date for your school tour.";
@@ -174,8 +220,18 @@ export type ApplicationPayload = {
     phone: string;
     alternativePhone: string;
     address: string;
+    hasSecondParent: boolean;
+    secondParentFirstName: string;
+    secondParentSurname: string;
+    secondParentRelationship: string;
+    secondParentEmail: string;
+    secondParentPhone: string;
+    secondParentAlternativePhone: string;
+    secondParentAddress: string;
   };
   preferences: {
+    healthConditions: boolean;
+    healthDetails: string;
     whyInterested: string;
     hearAbout: string;
     wantsTour: boolean;
@@ -208,8 +264,18 @@ export function toPayload(form: ApplicationForm): ApplicationPayload {
       phone: form.phone.trim(),
       alternativePhone: form.alternativePhone.trim(),
       address: form.address.trim(),
+      hasSecondParent: form.hasSecondParent === "yes",
+      secondParentFirstName: form.secondParentFirstName.trim(),
+      secondParentSurname: form.secondParentSurname.trim(),
+      secondParentRelationship: form.secondParentRelationship,
+      secondParentEmail: form.secondParentEmail.trim(),
+      secondParentPhone: form.secondParentPhone.trim(),
+      secondParentAlternativePhone: form.secondParentAlternativePhone.trim(),
+      secondParentAddress: form.secondParentAddress.trim(),
     },
     preferences: {
+      healthConditions: form.healthConditions === "yes",
+      healthDetails: form.healthConditions === "yes" ? form.healthDetails.trim() : "",
       whyInterested: form.whyInterested.trim(),
       hearAbout: form.hearAbout,
       wantsTour: form.wantsTour === "yes",

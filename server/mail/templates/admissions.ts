@@ -1,7 +1,7 @@
 import { emailLayout } from "./layout";
 import { SCHOOL_MAIL } from "../schoolConfig";
 
-type ChildData = {
+type StudentData = {
   firstName: string;
   middleName: string;
   surname: string;
@@ -22,9 +22,19 @@ type ParentData = {
   phone: string;
   alternativePhone: string;
   address: string;
+  hasSecondParent: boolean;
+  secondParentFirstName: string;
+  secondParentSurname: string;
+  secondParentRelationship: string;
+  secondParentEmail: string;
+  secondParentPhone: string;
+  secondParentAlternativePhone: string;
+  secondParentAddress: string;
 };
 
 type PreferencesData = {
+  healthConditions: boolean;
+  healthDetails: string;
   whyInterested: string;
   hearAbout: string;
   wantsTour: boolean;
@@ -36,7 +46,7 @@ type PreferencesData = {
 export type AdmissionData = {
   reference: string;
   submittedAt: string;
-  child: ChildData;
+  child: StudentData;
   parent: ParentData;
   preferences: PreferencesData;
 };
@@ -75,7 +85,7 @@ export function admissionsAdminEmail(data: AdmissionData) {
     <p>A new online admission application was received through the Blessedville Schools website.</p>
     <div class="details">
       <strong>Application Reference</strong><span>${escapeHtml(data.reference)}</span>
-      <strong>Child's Name</strong><span>${escapeHtml([data.child.firstName, data.child.middleName, data.child.surname].filter(Boolean).join(" "))}</span>
+      <strong>Student's Name</strong><span>${escapeHtml([data.child.firstName, data.child.middleName, data.child.surname].filter(Boolean).join(" "))}</span>
       <strong>Date of Birth</strong><span>${escapeHtml(formatDate(data.child.dateOfBirth))}</span>
       <strong>Program</strong><span>${escapeHtml(programLabel(data.child.program))}</span>
       <strong>Grade / Class</strong><span>${escapeHtml(data.child.grade)}</span>
@@ -83,6 +93,14 @@ export function admissionsAdminEmail(data: AdmissionData) {
       <strong>Parent / Guardian</strong><span>${escapeHtml(data.parent.firstName + " " + data.parent.surname)} (${escapeHtml(data.parent.relationship)})</span>
       <strong>Parent Email</strong><span>${escapeHtml(data.parent.email)}</span>
       <strong>Parent Phone</strong><span>${escapeHtml(data.parent.phone)}</span>
+      ${
+        data.parent.hasSecondParent
+          ? `<strong>Second Parent / Guardian</strong><span>${escapeHtml([data.parent.secondParentFirstName, data.parent.secondParentSurname].filter(Boolean).join(" "))} (${escapeHtml(data.parent.secondParentRelationship)})</span>
+      <strong>Second Parent Phone</strong><span>${escapeHtml(data.parent.secondParentPhone)}</span>
+      <strong>Second Parent Email</strong><span>${escapeHtml(data.parent.secondParentEmail || "Not provided")}</span>`
+          : ""
+      }
+      <strong>Health Conditions</strong><span>${data.preferences.healthConditions ? `Yes — ${escapeHtml(data.preferences.healthDetails)}` : "No"}</span>
       <strong>School Tour Requested</strong><span>${data.preferences.wantsTour ? `Yes — ${escapeHtml(data.preferences.tourDate)}${data.preferences.tourTime ? " (" + escapeHtml(data.preferences.tourTime) + ")" : ""}` : "No"}</span>
       <strong>Submitted</strong><span>${escapeHtml(data.submittedAt)}</span>
     </div>
@@ -93,7 +111,7 @@ export function admissionsAdminEmail(data: AdmissionData) {
     "New Admission Application",
     "",
     `Application Reference: ${data.reference}`,
-    `Child's Name: ${[data.child.firstName, data.child.middleName, data.child.surname].filter(Boolean).join(" ")}`,
+    `Student's Name: ${[data.child.firstName, data.child.middleName, data.child.surname].filter(Boolean).join(" ")}`,
     `Date of Birth: ${formatDate(data.child.dateOfBirth)}`,
     `Program: ${programLabel(data.child.program)}`,
     `Grade / Class: ${data.child.grade}`,
@@ -101,6 +119,14 @@ export function admissionsAdminEmail(data: AdmissionData) {
     `Parent / Guardian: ${data.parent.firstName} ${data.parent.surname} (${data.parent.relationship})`,
     `Parent Email: ${data.parent.email}`,
     `Parent Phone: ${data.parent.phone}`,
+    ...(data.parent.hasSecondParent
+      ? [
+          `Second Parent / Guardian: ${[data.parent.secondParentFirstName, data.parent.secondParentSurname].filter(Boolean).join(" ")} (${data.parent.secondParentRelationship})`,
+          `Second Parent Phone: ${data.parent.secondParentPhone}`,
+          `Second Parent Email: ${data.parent.secondParentEmail || "Not provided"}`,
+        ]
+      : []),
+    `Health Conditions: ${data.preferences.healthConditions ? `Yes — ${data.preferences.healthDetails}` : "No"}`,
     `School Tour Requested: ${data.preferences.wantsTour ? "Yes" : "No"}`,
     `Submitted: ${data.submittedAt}`,
   ].join("\n");
