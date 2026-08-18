@@ -5,13 +5,15 @@ import { Menu, X, MapPin, Phone, ChevronDown } from "lucide-react";
 import { NAV, SCHOOL, SOCIALS } from "../data";
 import { PROGRAMS_NAV } from "../data/programs";
 import { ACTIVITIES_NAV } from "../data/activities";
+import { ADMISSIONS_NAV } from "../data/admissions";
 import { Button, EASE } from "../lib/ui";
 
-type DropdownKey = "programmes" | "activities";
+type DropdownKey = "programmes" | "activities" | "admissions";
 
 const DROPDOWN_ITEMS: Record<DropdownKey, { label: string; href: string; shortLabel?: string }[]> = {
   programmes: PROGRAMS_NAV,
   activities: ACTIVITIES_NAV,
+  admissions: ADMISSIONS_NAV,
 };
 
 export default function Navbar() {
@@ -24,9 +26,13 @@ export default function Navbar() {
 
   const isProgramsActive = location.pathname.startsWith("/programmes");
   const isActivitiesActive = location.pathname.startsWith("/activities");
+  const isAdmissionsActive = location.pathname.startsWith("/admissions");
 
-  const getActiveState = (dropdown: DropdownKey) =>
-    dropdown === "programmes" ? isProgramsActive : isActivitiesActive;
+  const getActiveState = (dropdown: DropdownKey) => {
+    if (dropdown === "programmes") return isProgramsActive;
+    if (dropdown === "activities") return isActivitiesActive;
+    return isAdmissionsActive;
+  };
 
   useEffect(() => {
     setOpen(false);
@@ -235,7 +241,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden items-center gap-3 lg:flex">
-            <Button href="/admissions" variant={scrolled ? "gold" : "outline"}>
+            <Button href="/admissions/apply" variant={scrolled ? "gold" : "outline"}>
               Apply Now
             </Button>
           </div>
@@ -298,7 +304,7 @@ export default function Navbar() {
                   );
                 })}
               </ul>
-              <Button href="/admissions" variant="gold" className="mt-auto w-full">
+              <Button href="/admissions/apply" variant="gold" className="mt-auto w-full">
                 Apply Now
               </Button>
             </motion.aside>

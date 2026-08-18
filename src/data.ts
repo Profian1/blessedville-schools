@@ -2,8 +2,6 @@
 /*  Blessedville Schools — central content store                       */
 /* ------------------------------------------------------------------ */
 
-import { email } from "zod";
-
 export const SCHOOL = {
   name: "Blessedville Schools",
   short: "Blessedville",
@@ -40,7 +38,7 @@ export const NAV = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Programmes", href: "/programmes", dropdown: "programmes" },
-  { label: "Admissions", href: "/admissions" },
+  { label: "Admissions", href: "/admissions", dropdown: "admissions" },
   { label: "Activities", href: "/activities", dropdown: "activities" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },

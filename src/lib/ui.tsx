@@ -104,7 +104,7 @@ export function Button({
   disabled,
 }: ButtonProps) {
   const base =
-    "group relative inline-flex items-center justify-center gap-2 rounded-full font-button text-sm font-semibold tracking-wide px-7 py-3.5 transition-all duration-300 will-change-transform focus-visible:outline-none overflow-hidden";
+    "group relative inline-flex items-center justify-center gap-2 rounded-full font-button text-sm font-semibold tracking-wide px-7 py-3.5 transition-all duration-300 will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-white overflow-hidden";
   const variants: Record<string, string> = {
     gold: "bg-gold text-navy hover:shadow-[0_14px_40px_-8px_rgba(245,184,19,0.6)] hover:-translate-y-0.5",
     navy: "bg-navy text-white hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(8,8,8,0.55)]",

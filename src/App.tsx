@@ -9,6 +9,11 @@ import Daycare from "./pages/programs/Daycare";
 import Playgroup from "./pages/programs/Playgroup";
 import LowerPrimary from "./pages/programs/LowerPrimary";
 import Admissions from "./pages/Admissions";
+import Apply from "./pages/admissions/Apply";
+import Process from "./pages/admissions/Process";
+import BookTour from "./pages/admissions/BookTour";
+import Faqs from "./pages/admissions/Faqs";
+import AdmissionsAdmin from "./pages/admin/AdmissionsAdmin";
 import Activities from "./pages/Activities";
 import CoCurricularActivities from "./pages/activities/CoCurricularActivities";
 import Clubs from "./pages/activities/Clubs";
@@ -31,6 +36,11 @@ export default function App() {
             <Route path="/programmes/playgroup" element={<Playgroup />} />
             <Route path="/programmes/lower-primary" element={<LowerPrimary />} />
             <Route path="/admissions" element={<Admissions />} />
+            <Route path="/admissions/apply" element={<Apply />} />
+            <Route path="/admissions/process" element={<Process />} />
+            <Route path="/admissions/book-tour" element={<BookTour />} />
+            <Route path="/admissions/faqs" element={<Faqs />} />
+            <Route path="/admin/admissions" element={<AdmissionsAdmin />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/activities/co-curricular" element={<CoCurricularActivities />} />
             <Route path="/activities/clubs" element={<Clubs />} />

@@ -1,11 +1,6 @@
-export const SCHOOL = {
-  name: "Blessedville Schools",
-  phone: "+254 791 480427",
-  email: "blessedville@gmail.com",
-  address: "Kiwanja, Northern Bypass, Kahawa West, Nairobi",
-  logoUrl: "https://blessedville.edu/blessedville.svg",
-  website: "https://blessedville.edu",
-};
+import { SCHOOL_MAIL } from "../schoolConfig";
+
+export const SCHOOL = SCHOOL_MAIL;
 
 export function emailLayout(content: string): string {
   return `<!DOCTYPE html>
