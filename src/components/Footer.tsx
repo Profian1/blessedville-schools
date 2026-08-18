@@ -10,11 +10,8 @@ const LINK_GROUPS = [
   {
     title: "Admissions",
     links: [
-      { label: "Admissions Overview", href: "/admissions" },
       { label: "Admissions Process", href: "/admissions/process" },
       { label: "Apply Online", href: "/admissions/apply" },
-      { label: "Book a School Tour", href: "/admissions/book-tour" },
-      { label: "FAQs", href: "/admissions/faqs" },
     ],
   },
   {

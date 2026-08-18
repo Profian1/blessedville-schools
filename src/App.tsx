@@ -11,8 +11,6 @@ import LowerPrimary from "./pages/programs/LowerPrimary";
 import Admissions from "./pages/Admissions";
 import Apply from "./pages/admissions/Apply";
 import Process from "./pages/admissions/Process";
-import BookTour from "./pages/admissions/BookTour";
-import Faqs from "./pages/admissions/Faqs";
 import AdmissionsAdmin from "./pages/admin/AdmissionsAdmin";
 import Activities from "./pages/Activities";
 import CoCurricularActivities from "./pages/activities/CoCurricularActivities";
@@ -38,8 +36,6 @@ export default function App() {
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/admissions/apply" element={<Apply />} />
             <Route path="/admissions/process" element={<Process />} />
-            <Route path="/admissions/book-tour" element={<BookTour />} />
-            <Route path="/admissions/faqs" element={<Faqs />} />
             <Route path="/admin/admissions" element={<AdmissionsAdmin />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/activities/co-curricular" element={<CoCurricularActivities />} />
