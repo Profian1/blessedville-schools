@@ -19,6 +19,7 @@ import { SCHOOL, SOCIALS } from "../data";
 import ProgramHero from "../components/ProgramHero";
 import FAQSection from "../components/FAQSection";
 import Seo from "../lib/Seo";
+import { faqSchema, breadcrumbSchema } from "../lib/schema";
 import { Container, Reveal, SectionHeading, EASE, Button } from "../lib/ui";
 
 /* ------------------------------------------------------------------ */
@@ -311,6 +312,7 @@ export default function Contact() {
         title="Contact Us | Blessedville Schools"
         description="Contact Blessedville Schools in Kahawa West, Nairobi — visit us along the Northern Bypass, call +254 791 480427, or send us a message."
         path="/contact"
+        structuredData={[faqSchema(FAQ), breadcrumbSchema([{ label: "Contact" }])]}
       />
       <ProgramHero
         badge="Contact Us"

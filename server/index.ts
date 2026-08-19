@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 import { z } from "zod";
@@ -22,15 +23,36 @@ import {
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
 
+/* Trust the first hop when behind a reverse proxy (Nginx, Caddy, Cloudflare).
+   Required so req.ip and req.secure reflect the real client over the proxy. */
+app.set("trust proxy", Number(process.env.TRUST_PROXY ?? 1));
+app.disable("x-powered-by");
+
 app.use(express.json({ limit: "100kb" }));
-app.use(cors({ origin: process.env.CORS_ORIGIN || true }));
 
 /* ------------------------------------------------------------------ */
-/* Origin check (lightweight CSRF protection for browser requests)     */
+/* Security headers                                                    */
+/* ------------------------------------------------------------------ */
+app.use((req, res, next) => {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "DENY");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()");
+  res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+  if (req.secure) {
+    res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+  }
+  next();
+});
+
+/* ------------------------------------------------------------------ */
+/* CORS — only allow known origins. Same-origin requests are unaffected.*/
 /* ------------------------------------------------------------------ */
 const allowedOrigins = [process.env.CORS_ORIGIN, "http://localhost:5173", "http://localhost:3001"].filter(
   (o): o is string => Boolean(o)
 );
+
+app.use(cors({ origin: allowedOrigins }));
 
 app.use((req, res, next) => {
   if (req.method !== "POST") return next();
@@ -43,10 +65,10 @@ app.use((req, res, next) => {
 /* ------------------------------------------------------------------ */
 /* Rate limiting (in-memory, resets on restart)                        */
 /* ------------------------------------------------------------------ */
-const rateLimit = new Map<string, { count: number; resetAt: number }>();
 const rateLimitBuckets = {
   contact: new Map<string, { count: number; resetAt: number }>(),
   admissions: new Map<string, { count: number; resetAt: number }>(),
+  admin: new Map<string, { count: number; resetAt: number }>(),
 } as const;
 
 type RateBucketKey = keyof typeof rateLimitBuckets;
@@ -355,10 +377,28 @@ app.post("/api/admissions", async (req, res) => {
 /* ------------------------------------------------------------------ */
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "";
 
+function timingSafeEqualString(a: string, b: string): boolean {
+  const aBuf = Buffer.from(a);
+  const bBuf = Buffer.from(b);
+  if (aBuf.length !== bBuf.length) return false;
+  return crypto.timingSafeEqual(aBuf, bBuf);
+}
+
 function isAuthorized(req: express.Request): boolean {
   if (!ADMIN_TOKEN) return false;
   const auth = req.headers.authorization || "";
-  return auth === `Bearer ${ADMIN_TOKEN}`;
+  const token = auth.startsWith("Bearer ") ? auth.slice(7) : "";
+  return timingSafeEqualString(token, ADMIN_TOKEN);
+}
+
+/** Protect admin endpoints from brute-force guessing of the access token. */
+function adminRateLimited(req: express.Request, res: express.Response): boolean {
+  const ip = clientIp(req);
+  if (!checkRateLimit("admin", ip, 30, 60_000)) {
+    res.status(429).json({ success: false, message: "Too many requests. Please try again shortly." });
+    return true;
+  }
+  return false;
 }
 
 function adminListSummary(record: Awaited<ReturnType<typeof listApplications>>[number]) {
@@ -379,6 +419,7 @@ function adminListSummary(record: Awaited<ReturnType<typeof listApplications>>[n
 }
 
 app.get("/api/admissions/admin", (req, res) => {
+  if (adminRateLimited(req, res)) return;
   if (!isAuthorized(req)) {
     res.status(401).json({ success: false, message: "Unauthorized." });
     return;
@@ -406,6 +447,7 @@ app.get("/api/admissions/admin", (req, res) => {
 });
 
 app.get("/api/admissions/admin/:reference", (req, res) => {
+  if (adminRateLimited(req, res)) return;
   if (!isAuthorized(req)) {
     res.status(401).json({ success: false, message: "Unauthorized." });
     return;
@@ -419,6 +461,7 @@ app.get("/api/admissions/admin/:reference", (req, res) => {
 });
 
 app.patch("/api/admissions/admin/:reference", (req, res) => {
+  if (adminRateLimited(req, res)) return;
   if (!isAuthorized(req)) {
     res.status(401).json({ success: false, message: "Unauthorized." });
     return;
@@ -462,6 +505,25 @@ if (fs.existsSync(DIST_DIR)) {
     res.sendFile(path.join(DIST_DIR, "index.html"));
   });
 }
+
+/* ------------------------------------------------------------------ */
+/* Error handling — never leak stack traces to clients                 */
+/* ------------------------------------------------------------------ */
+app.use(
+  (err: unknown, _req: express.Request, res: express.Response, next: express.NextFunction) => {
+    if (res.headersSent) {
+      next(err);
+      return;
+    }
+    const e = err as { type?: string; message?: string };
+    if (e?.type === "entity.parse.failed" || e instanceof SyntaxError) {
+      res.status(400).json({ success: false, message: "Invalid JSON payload." });
+      return;
+    }
+    console.error("Unhandled error:", err);
+    res.status(500).json({ success: false, message: "Something went wrong. Please try again shortly." });
+  }
+);
 
 /* ------------------------------------------------------------------ */
 /* Listen                                                              */

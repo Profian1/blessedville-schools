@@ -17,18 +17,47 @@ export default function Home() {
         structuredData={[
           {
             "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
+            "@type": "School",
             name: SCHOOL.name,
+            alternateName: "Blessedville Schools Kahawa West",
             url: "https://blessedville.edu",
             telephone: SCHOOL.phone,
-            email: SCHOOL.email,
+            email: "blessedville22@gmail.com",
+            foundingDate: "2015",
+            slogan: SCHOOL.motto,
+            description:
+              "Blessedville Schools is a CBC school in Kahawa West, Nairobi offering daycare, playgroup, kindergarten, preschool and lower primary education in a safe, nurturing and inclusive environment.",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "Kiwanja, Northern Bypass",
-              addressLocality: "Kahawa West, Nairobi",
+              streetAddress: "Kiwanja, Northern Bypass, Next to Maple Inn Hotel",
+              addressLocality: "Kahawa West",
+              addressRegion: "Nairobi",
+              postalCode: "00619",
               addressCountry: "KE",
             },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: -1.1963,
+              longitude: 36.9015,
+            },
+            hasMap: "https://www.google.com/maps/search/?api=1&query=Blessedville+Schools+Kahawa+West+Nairobi",
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                opens: "07:00",
+                closes: "17:00",
+              },
+            ],
+            areaServed: "Kahawa West, Nairobi, Kenya",
             sameAs: SOCIALS.map((s) => s.url),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: SCHOOL.name,
+            url: "https://blessedville.edu",
+            inLanguage: "en-KE",
           },
         ]}
       />

@@ -5,6 +5,7 @@ import FAQSection from "../../components/FAQSection";
 import ProgramCTA from "../../components/ProgramCTA";
 import { ProgramSection, FeatureGrid, GalleryGrid } from "../../components/ProgramLayout";
 import Seo from "../../lib/Seo";
+import { faqSchema, breadcrumbSchema } from "../../lib/schema";
 import { Container } from "../../lib/ui";
 import { motion } from "framer-motion";
 import { EASE } from "../../lib/ui";
@@ -44,7 +45,15 @@ const gallery = [
 export default function CoCurricularActivities() {
   return (
     <>
-      <Seo title={program.seo.title} description={program.seo.description} path={program.href} />
+      <Seo
+        title={program.seo.title}
+        description={program.seo.description}
+        path={program.href}
+        structuredData={[
+          faqSchema(FAQ),
+          breadcrumbSchema([{ label: "Activities", href: "/activities" }, { label: "Co-curricular Activities" }]),
+        ]}
+      />
       <ProgramHero
         badge={program.heroBadge}
         title={program.heroTitle}

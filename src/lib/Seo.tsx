@@ -27,6 +27,8 @@ export default function Seo({ title, description, path, noindex = false, structu
     upsertMeta("property", "og:title", title);
     upsertMeta("property", "og:description", description);
     upsertMeta("property", "og:url", `${SITE_URL}${path}`);
+    upsertMeta("name", "twitter:title", title);
+    upsertMeta("name", "twitter:description", description);
 
     let robots = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]');
     if (noindex) {

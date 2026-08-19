@@ -56,7 +56,7 @@ export default function Admissions() {
         </div>
 
         <Reveal delay={0.2} className="mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href="/contact" variant="gold">
+          <Button href="/admissions/process" variant="gold">
             Apply Now <ArrowRight className="h-4 w-4" />
           </Button>
           <a

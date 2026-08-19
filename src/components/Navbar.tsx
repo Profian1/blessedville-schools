@@ -247,7 +247,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden items-center gap-3 lg:flex">
-            <Button href="/admissions/apply" variant={solid ? "gold" : "outline"}>
+            <Button href="/admissions/process" variant={solid ? "gold" : "outline"}>
               Apply Now
             </Button>
           </div>
@@ -310,7 +310,7 @@ export default function Navbar() {
                   );
                 })}
               </ul>
-              <Button href="/admissions/apply" variant="gold" className="mt-auto w-full">
+              <Button href="/admissions/process" variant="gold" className="mt-auto w-full">
                 Apply Now
               </Button>
             </motion.aside>

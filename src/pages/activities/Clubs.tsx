@@ -7,6 +7,7 @@ import FAQSection from "../../components/FAQSection";
 import ProgramCTA from "../../components/ProgramCTA";
 import { ProgramSection, FeatureGrid, GalleryGrid } from "../../components/ProgramLayout";
 import Seo from "../../lib/Seo";
+import { faqSchema, breadcrumbSchema } from "../../lib/schema";
 import { Container, EASE } from "../../lib/ui";
 
 const program = getActivity("clubs")!;
@@ -67,7 +68,15 @@ const gallery = [
 export default function Clubs() {
   return (
     <>
-      <Seo title={program.seo.title} description={program.seo.description} path={program.href} />
+      <Seo
+        title={program.seo.title}
+        description={program.seo.description}
+        path={program.href}
+        structuredData={[
+          faqSchema(FAQ),
+          breadcrumbSchema([{ label: "Activities", href: "/activities" }, { label: "Clubs & Social Activities" }]),
+        ]}
+      />
       <ProgramHero
         badge={program.heroBadge}
         title={program.heroTitle}
