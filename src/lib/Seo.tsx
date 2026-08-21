@@ -8,7 +8,7 @@ type SeoProps = {
   structuredData?: Record<string, unknown>[];
 };
 
-const SITE_URL = "https://blessedville.edu";
+const SITE_URL = "https://blessedvilleschools.co.ke";
 
 function upsertMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);

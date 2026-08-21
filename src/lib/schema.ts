@@ -2,7 +2,7 @@
 /*  Shared JSON-LD builders — used by pages for AEO/GEO structured data */
 /* ------------------------------------------------------------------ */
 
-const SITE_URL = "https://blessedville.edu";
+const SITE_URL = "https://blessedvilleschools.co.ke";
 
 type FaqItem = { q: string; a: string };
 

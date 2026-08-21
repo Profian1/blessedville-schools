@@ -28,7 +28,7 @@ const STATUSES = [
 ];
 
 const TOKEN_KEY = "bvs-admin-token";
-const ADMIN_SITE_URL = "https://blessedville.edu/admin/admissions";
+const ADMIN_SITE_URL = "https://blessedvilleschools.co.ke/admin/admissions";
 
 type Summary = {
   reference: string;

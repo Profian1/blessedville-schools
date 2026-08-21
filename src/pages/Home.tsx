@@ -20,7 +20,7 @@ export default function Home() {
             "@type": "School",
             name: SCHOOL.name,
             alternateName: "Blessedville Schools Kahawa West",
-            url: "https://blessedville.edu",
+            url: "https://blessedvilleschools.co.ke",
             telephone: SCHOOL.phone,
             email: "blessedville22@gmail.com",
             foundingDate: "2015",
@@ -56,7 +56,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: SCHOOL.name,
-            url: "https://blessedville.edu",
+            url: "https://blessedvilleschools.co.ke",
             inLanguage: "en-KE",
           },
         ]}

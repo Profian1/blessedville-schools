@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://blessedville.edu/sitemap.xml
+Sitemap: https://blessedvilleschools.co.ke/sitemap.xml

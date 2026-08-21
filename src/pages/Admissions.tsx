@@ -104,7 +104,7 @@ export default function Admissions() {
             "@type": "WebPage",
             name: ADMISSIONS_SEO.title,
             description: ADMISSIONS_SEO.description,
-            url: `https://blessedville.edu${ADMISSIONS_SEO.path}`,
+            url: `https://blessedvilleschools.co.ke${ADMISSIONS_SEO.path}`,
           },
         ]}
       />

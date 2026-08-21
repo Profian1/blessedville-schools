@@ -10,6 +10,6 @@ export const SCHOOL_MAIL = {
   whatsapp: process.env.SCHOOL_WHATSAPP || "+254791480427",
   email: process.env.ADMISSIONS_EMAIL || "blessedville22@gmail.com",
   address: process.env.SCHOOL_ADDRESS || "Kiwanja, Northern Bypass, Kahawa West, Nairobi",
-  website: process.env.SCHOOL_WEBSITE || "https://blessedville.edu",
-  logoUrl: process.env.SCHOOL_LOGO_URL || "https://blessedville.edu/blessedville.svg",
+  website: process.env.SCHOOL_WEBSITE || "https://blessedvilleschools.co.ke",
+  logoUrl: process.env.SCHOOL_LOGO_URL || "https://blessedvilleschools.co.ke/blessedville.svg",
 };

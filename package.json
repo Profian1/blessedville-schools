@@ -22,6 +22,7 @@
     "react-dom": "19.2.6",
     "react-router-dom": "^7.18.1",
     "tailwind-merge": "3.4.0",
+    "tsx": "^4.23.5",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -35,7 +36,6 @@
     "@vitejs/plugin-react": "5.1.1",
     "sharp": "^0.35.3",
     "tailwindcss": "4.1.17",
-    "tsx": "^4.23.5",
     "typescript": "5.9.3",
     "vite": "7.3.2",
     "vite-plugin-singlefile": "2.3.0"

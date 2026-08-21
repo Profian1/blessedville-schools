@@ -33,7 +33,7 @@ export default function Process() {
             "@type": "WebPage",
             name: PROCESS_SEO.title,
             description: PROCESS_SEO.description,
-            url: `https://blessedville.edu${PROCESS_SEO.path}`,
+            url: `https://blessedvilleschools.co.ke${PROCESS_SEO.path}`,
           },
         ]}
       />
