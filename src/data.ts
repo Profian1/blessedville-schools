@@ -376,7 +376,7 @@ export const CAMPUS_HOTSPOTS = [
 ];
 
 export const HERO_IMAGES = [
-  "/home/hero/home1.png",
+  "/home/hero/home1.webp",
   "/home/hero/home2.jpeg",
   "/home/hero/home3.jpeg",
   "/home/hero/home4.jpeg",

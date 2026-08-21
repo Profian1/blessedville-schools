@@ -163,8 +163,8 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Utility bar */}
-      <div className={`fixed inset-x-0 z-[51] transition-all duration-500 ${
+      {/* Utility bar — hidden on phones, visible on iPads (portrait+) and laptops */}
+      <div className={`fixed inset-x-0 z-[51] hidden transition-all duration-500 md:block ${
         solid ? "-translate-y-full bg-navy/90" : "translate-y-0 bg-navy/40 backdrop-blur-sm"
       }`}>
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
@@ -198,7 +198,7 @@ export default function Navbar() {
         className={`fixed inset-x-0 z-50 transition-all duration-500 ${
           solid
             ? "top-0 bg-white/90 shadow-[0_8px_30px_-12px_rgba(8,8,8,0.18)] backdrop-blur-md"
-            : "top-9 bg-transparent"
+            : "top-0 md:top-9 bg-transparent"
         }`}
       >
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
